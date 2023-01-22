@@ -1,18 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attack_player : MonoBehaviour
+public class attack_player_ennemi2 : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float seuil_distance;
     public float speed;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -20,7 +15,7 @@ public class attack_player : MonoBehaviour
         if (distance<seuil_distance && distance>1)
         {
             gameObject.GetComponent<Patrol>().enabled = false;
-            transform.position = Vector3.MoveTowards( transform.position,player.transform.position,1*Time.deltaTime);
+            transform.position = Vector3.MoveTowards( transform.position,player.transform.position,speed*Time.deltaTime);
         }
     }
 }
