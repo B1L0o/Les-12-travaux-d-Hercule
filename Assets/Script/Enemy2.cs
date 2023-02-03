@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class Enemy2 : Enemy
 {
-    protected new void Start()
+    protected void Start()
     {
-        base.Start();
+        SetState(new Patrol(_waypoints,_speed,gameObject,_player));
+        _enemyState.InitialiseState();
     }
-    protected new void Update()
+    protected void Update()
     {
         float distance = Vector3.Distance (transform.position, _player.transform.position); 
         if (distance<_seuilDistance && distance>1) 
@@ -19,9 +20,8 @@ public class Enemy2 : Enemy
         }
         else
         {
-            base.Update();
+            _enemyState.ApplyState();
         }
-            
         
     }
 

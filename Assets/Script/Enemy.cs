@@ -13,11 +13,12 @@ public abstract class Enemy : MonoBehaviour
     protected float _speed;
     [SerializeField]
     protected int _health;
-    protected int _index_next_target=0;
-    protected Transform _target;
+    [SerializeField]
     protected GameObject _player;
+    protected EnemyState _enemyState;
     [SerializeField]
     protected Transform[] _waypoints;
+
     
     protected void RemoveHealth(int Damage)
     {
@@ -35,23 +36,12 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void Start()
-    {
-        _player = GameObject.FindWithTag("Player");
-        _target = _waypoints[0];
-        transform.Rotate(0,180,0,Space.World);
-    }
-    protected virtual void Update()
-    {
-        Vector3 direction = _target.position - transform.position;
-        transform.Translate(direction.normalized * _speed * Time.deltaTime,Space.World);
-        if (Vector3.Distance(transform.position,_target.position)<0.3f)
-        {
-            _index_next_target = (_index_next_target + 1) % _waypoints.Length;
-            _target = _waypoints[_index_next_target];
-            transform.Rotate(0,180,0,Space.World);
-        }
+    
 
+
+    protected void SetState(EnemyState enemyState)
+    {
+        _enemyState = enemyState;
     }
     protected abstract void Attack();
     

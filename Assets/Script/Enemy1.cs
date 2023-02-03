@@ -5,15 +5,27 @@ using UnityEngine;
 
 public class Enemy1 : Enemy
 {
-    protected new void Start()
+    //protected new void Start()
+    //{
+    //base.Start();
+    //}
+
+    //protected new void Update()
+//{
+    //base.Update();
+    //}
+
+    protected void Start()
     {
-        base.Start();
+        SetState(new Patrol(_waypoints,_speed,gameObject,_player));
+        _enemyState.InitialiseState();
     }
 
-    protected new void Update()
+    protected void Update()
     {
-        base.Update();
+        _enemyState.ApplyState();
     }
+
     protected override void Attack()
     {
         throw new NotImplementedException();
