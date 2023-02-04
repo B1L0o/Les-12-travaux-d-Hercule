@@ -8,17 +8,16 @@ public class Enemy3 : Enemy
     public Transform firePos;
     public GameObject bullet;
 
-    protected override void Update()
+    protected void Update()
     {
         float distance = Vector3.Distance (transform.position, _player.transform.position);
         if (distance<_seuilDistance && canShoot)
         {
            Attack();
-           
         }
     }
     
-    protected override void Start()
+    protected void Start()
     {
         _player = GameObject.FindWithTag("Player");
         canShoot = true;
