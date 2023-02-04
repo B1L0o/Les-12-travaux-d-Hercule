@@ -5,9 +5,9 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     public float moveSpeed;
     public float jumpForce;
 
@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 velocity = Vector3.zero;
     public float horizontalMovement;
 
+    public int health;
+    public int maxHealth;
+    public HealthBar healthBar;
 
     public void FixedUpdate()
     {
@@ -34,8 +37,13 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer(horizontalMovement);
 
     }
+    
+    void Start()
+    { 
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
-    // Update is called once per frame
     void Update ()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
@@ -72,6 +80,15 @@ public class PlayerMovement : MonoBehaviour
         else if (_velocity < -0.1f)
         {
             spriteRenderer.flipX = true;
+        }
+    }
+
+    void TakeDamage(int _damage)
+    {
+        health -= _damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
