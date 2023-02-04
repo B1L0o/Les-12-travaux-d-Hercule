@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -57,6 +58,10 @@ public class Player : MonoBehaviour
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
 
+        if (Input.GetKey(KeyCode.K))
+        {
+            TakeDamage(20);
+        }
     }
 
     void MovePlayer(float _horizontalMovement)
@@ -86,9 +91,11 @@ public class Player : MonoBehaviour
     void TakeDamage(int _damage)
     {
         health -= _damage;
+        healthBar.SetHealth(health);
         if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
+    
 }
