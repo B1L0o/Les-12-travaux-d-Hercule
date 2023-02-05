@@ -2016,8 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 350
-  jumpForce: 300
-  isJumping: 0
+  isJumping: 1
   isGrounded: 0
   groundCheck: {fileID: 591541203}
   groundCheckRadius: 0.4
@@ -2025,12 +2024,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   attackDelay: 1
-  weaponTransform: {fileID: 1538590947}
-  weaponRange: 0
-  weaponDamage: 0
-  ennemyPlayer:
-    serializedVersion: 2
-    m_Bits: 0
+  player: {fileID: 0}
   rb: {fileID: 1574811412}
   animator: {fileID: 1574811417}
   spriteRenderer: {fileID: 1574811415}
