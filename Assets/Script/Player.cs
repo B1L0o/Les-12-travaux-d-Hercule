@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
+    
     public float moveSpeed;
     public float jumpForce;
 
@@ -18,6 +19,12 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
+
+    public float attackDelay;
+    public Transform weaponTransform;
+    public float weaponRange;
+    public int weaponDamage;
+    public LayerMask ennemyPlayer;
     
     
 
@@ -47,20 +54,41 @@ public class Player : MonoBehaviour
 
     void Update ()
     {
+        // Jump Part 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
         }
+
         
+        // The Highest you are the Highest the gravity is 
+
+
+
+
+
+
+
+
+
+
+        // Code For Sprite Display
         Flip(rb.velocity.x);
-        
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
 
-        if (Input.GetKey(KeyCode.K))
+        
+        
+        
+        //Attack and Damage
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            TakeDamage(20);
+            StartCoroutine(TakeDMG(10));
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            StartCoroutine(Attack());
         }
     }
 
@@ -97,5 +125,27 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    IEnumerator Attack()
+    {
+        animator.Play("PlayerSwordSlash_");
+        yield return new WaitForSeconds(attackDelay);
+    }
     
+    IEnumerator TakeDMG(int _damage)
+    {
+        health -= _damage;
+        healthBar.SetHealth(health);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+        yield return new WaitForSeconds(attackDelay);
+    }
 }
