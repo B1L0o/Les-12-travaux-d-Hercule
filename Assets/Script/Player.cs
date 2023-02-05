@@ -12,11 +12,10 @@ public class Player : MonoBehaviour
 
     // Jump Variables //
     public bool isJumping;
-    private int maxJumps = 3;
+    public int maxJumps;
     private float jumpForce = 100;
     private float maxButtonHoldTime = .4f;
     private float holdForce = 100;
-    private float distanceToCollider = .08f;
     private float maxJumpSpeed = 6;
     private float maxFallSpeed = -20;
     private float fallSpeed = 3;
@@ -38,8 +37,7 @@ public class Player : MonoBehaviour
     
     
     // Animation Variables //
-    public float attackDelay;
-    public Player player;
+    private float attackDelay = 1;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
