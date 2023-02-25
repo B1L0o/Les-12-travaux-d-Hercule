@@ -24,6 +24,11 @@ public class Enemy2 : Enemy
         }
         
     }
+    
+    protected new void  OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+    }
 
     
     protected override void Attack()
