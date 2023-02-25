@@ -6,6 +6,7 @@ TagManager:
   tags:
   - fireball
   - Tilemap
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Weapon
   - 
   - 
   - 
