@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     void Start()
     { 
         health = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
         buttonHoldTime = maxButtonHoldTime;
         originalGravity = rb.gravityScale;
         numberOfJumpsLeft = maxJumps;

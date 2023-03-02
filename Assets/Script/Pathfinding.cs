@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pathfinding
@@ -10,12 +11,11 @@ public class Pathfinding
     private GridLogic<PathNode> grid;
     private List<PathNode> OpenList;
     private List<PathNode> CloseList;
-    public Pathfinding(int width, int height, Vector3 position)
+    public Pathfinding(int width, int height, Vector3 position,bool DebugMode)
     {
         grid = new GridLogic<PathNode>(width, height, 1, position,
-            (GridLogic<PathNode> g, int x, int y) => new PathNode(g, x, y));
+            (GridLogic<PathNode> g, int x, int y) => new PathNode(g, x, y),DebugMode);
     }
-
     public List<PathNode> FindPath(int startX, int startY,int endX,int endY)
     {
         PathNode startNode = grid.GetGridObject(startX, startY);
@@ -50,7 +50,11 @@ public class Pathfinding
                 CloseList.Add(currentNode);
                 foreach (PathNode pathNode in GetNeighbourList(currentNode))
                 {
-                    if (CloseList.Contains(pathNode)==false)
+                    if (pathNode.isWalkable == false)
+                    {
+                        CloseList.Add(pathNode);
+                    }
+                    else if (CloseList.Contains(pathNode)==false)
                     {
                         int NewPotentialGCost = currentNode.gCost + CalculDistanceCost(currentNode, pathNode);
                         if (NewPotentialGCost < pathNode.gCost)
@@ -60,7 +64,6 @@ public class Pathfinding
                             pathNode.hCost = CalculDistanceCost(pathNode, endNode);
                             pathNode.CalculFCost();
                         }
-
                         if (OpenList.Contains(pathNode)==false)
                         {
                             OpenList.Add(pathNode);
@@ -73,22 +76,69 @@ public class Pathfinding
         return null;
 
     }
+
+    public List<Vector3> FindPath(Vector3 startWorldPosition, Vector3 endWorldPosition)
+    {
+        Vector2Int position1 = grid.GetCellPositionFromWorldPosition(startWorldPosition);
+        Vector2Int position2 = grid.GetCellPositionFromWorldPosition(endWorldPosition);
+        if (position1.x>=0 && position1.y>=0 && position1.x<grid.GetWidth() && position1.y<grid.GetHeight()&&position2.x>=0 && position2.y>=0 && position2.x<grid.GetWidth() && position2.y<grid.GetHeight())
+        {
+            List<PathNode> path = FindPath(position1.x,position1.y,position2.x,position2.y);
+            if (path != null)
+            {
+                List<Vector3> vectorPath = new List<Vector3>();
+                foreach (PathNode pathNode in path)
+                {
+                    vectorPath.Add(grid.GetWorldPositionFromCellPosition(pathNode._x,pathNode._y));
+                }
+                return vectorPath;
+            }
+
+            return null;
+        }
+
+        return null;
+
+    }
     private List<PathNode> GetNeighbourList(PathNode currentNode) {
         List<PathNode> neighbourList = new List<PathNode>();
 
-        if (currentNode._x - 1 >= 0) {
+        if (currentNode._x - 1 >= 0 && grid.GetGridObject(currentNode._x - 1,currentNode._y).isWalkable) {
             neighbourList.Add(grid.GetGridObject(currentNode._x - 1, currentNode._y));
-            if (currentNode._y - 1 >= 0) neighbourList.Add(grid.GetGridObject(currentNode._x - 1, currentNode._y - 1));
-            if (currentNode._y + 1 < grid.GetHeight()) neighbourList.Add(grid.GetGridObject(currentNode._x - 1, currentNode._y + 1));
-        }
-        if (currentNode._x + 1 < grid.GetWidth()) {
-            neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y));
-            if (currentNode._y - 1 >= 0) neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y - 1));
-            if (currentNode._y + 1 < grid.GetHeight()) neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y + 1));
-        }
-        if (currentNode._y - 1 >= 0) neighbourList.Add(grid.GetGridObject(currentNode._x, currentNode._y - 1));
-        if (currentNode._y + 1 < grid.GetHeight()) neighbourList.Add(grid.GetGridObject(currentNode._x, currentNode._y + 1));
+            if (currentNode._y - 1 >= 0 && grid.GetGridObject(currentNode._x ,currentNode._y-1).isWalkable )
+            {
+                neighbourList.Add(grid.GetGridObject(currentNode._x - 1, currentNode._y - 1));   
+            }
 
+            if (currentNode._y + 1 < grid.GetHeight() && grid.GetGridObject(currentNode._x ,currentNode._y+1).isWalkable )
+            {
+                neighbourList.Add(grid.GetGridObject(currentNode._x - 1, currentNode._y + 1));
+            }
+            
+        }
+        if (currentNode._x + 1 < grid.GetWidth() && grid.GetGridObject(currentNode._x + 1,currentNode._y).isWalkable) {
+            neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y));
+            if (currentNode._y - 1 >= 0 && grid.GetGridObject(currentNode._x ,currentNode._y-1).isWalkable)
+            {
+                neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y - 1));
+            }
+
+            if (currentNode._y + 1 < grid.GetHeight() && grid.GetGridObject(currentNode._x ,currentNode._y+1).isWalkable)
+            {
+                neighbourList.Add(grid.GetGridObject(currentNode._x + 1, currentNode._y + 1));
+            }
+                
+        }
+
+        if (currentNode._y - 1 >= 0 && grid.GetGridObject(currentNode._x ,currentNode._y-1).isWalkable)
+        {
+            neighbourList.Add(grid.GetGridObject(currentNode._x, currentNode._y - 1));
+        }
+
+        if (currentNode._y + 1 < grid.GetHeight() && grid.GetGridObject(currentNode._x ,currentNode._y+1).isWalkable)
+        {
+            neighbourList.Add(grid.GetGridObject(currentNode._x, currentNode._y + 1));
+        }
         return neighbourList;
     }
 

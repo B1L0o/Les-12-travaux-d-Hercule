@@ -8,8 +8,6 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField]
-    protected float _seuilDistance;
-    [SerializeField]
     protected float _speed;
     [SerializeField]
     protected int _health;
