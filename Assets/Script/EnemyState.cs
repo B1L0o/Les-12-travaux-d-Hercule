@@ -54,7 +54,7 @@ public class Patrol : EnemyState
 public class FollowPlayer : EnemyState
 {
     private Pathfinding pathfinding;
-    private List<Vector3> path
+    public List<Vector3> path
     {
         get;
         set;
