@@ -10,16 +10,35 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    public ParticleSystem dust;
+    
+    
+    public AudioSource Heal;
+    public AudioSource jumpsound;
+    public AudioSource run;
+    public AudioSource attack;
+    public AudioSource airAttack;
+    public AudioSource bow;
+    public AudioSource hit;
+
+    private float timeInBetween_MeleeG;
+    private float timeInBetween_Bow;
+    public float startTimeAttackMeleeG;
+    public float startTimeAttackBow;
+
+
+
+
     // Jump Variables //
     public bool isJumping;
     public int maxJumps;
-    private float jumpForce = 100;
+    private float jumpForce = 20;
     private float maxButtonHoldTime = .4f;
     private float holdForce = 100;
     private float maxJumpSpeed = 6;
     private float maxFallSpeed = -20;
-    private float fallSpeed = 3;
-    private float gravityMultipler = 4;
+    private float fallSpeed = 50;
+    private float gravityMultipler = 7;
     private bool jumpPressed;
     private bool jumpHeld;
     private float buttonHoldTime;
@@ -27,6 +46,13 @@ public class Player : MonoBehaviour
     private int numberOfJumpsLeft;
     // Collision Handlers //
     public Transform groundCheck;
+    public Transform GroundattackPoint;
+    public Transform AirattackPoint;
+    public Transform firePosition;
+    public GameObject projectile;
+    public float groundAttackRange = 0.5f;
+    public float airAttackRange = 0.5f;
+    public LayerMask ennemyLayers;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
     public bool isGrounded;
@@ -38,6 +64,7 @@ public class Player : MonoBehaviour
     
     // Animation Variables //
     private float attackDelay = 1;
+    private float bowDelay = 100f;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
@@ -58,7 +85,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public HealthBar healthBar;
     // Health Variables //
-
+    
     
     
     public void FixedUpdate()
@@ -75,15 +102,41 @@ public class Player : MonoBehaviour
         buttonHoldTime = maxButtonHoldTime;
         originalGravity = rb.gravityScale;
         numberOfJumpsLeft = maxJumps;
+        moveSpeed = 600;
     }
     
 
     void Update ()
     {
+        if (isGrounded && (rb.velocity.x > 1 || rb.velocity.x < -1))
+        {
+            if (!run.isPlaying)
+            {
+                run.Play();
+
+            }
+            
+            
+        }
+        else if (!run.isPlaying)
+        {
+            run.Stop();
+        }
+
+
         // Jump Part //
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (numberOfJumpsLeft > 0)
+            {
+                CreateDust();
+                jumpsound.Play();
+            }
+            
             jumpPressed = true;
+            animator.SetBool("Jump",true);
+            animator.Play("Player_JUmp");
+
         }
         else
             jumpPressed = false;
@@ -104,20 +157,45 @@ public class Player : MonoBehaviour
         Flip(rb.velocity.x);
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        animator.SetFloat("yVelocity", rb.velocity.y);
+        animator.SetBool("Jump", !isGrounded);
+        // Sprite Display //
 
         
         
         
         // Attack and Damage //
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
             StartCoroutine(TakeDMG(10));
         }
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetKeyDown(KeyCode.F) && timeInBetween_MeleeG < 0)
         {
             StartCoroutine(Melee());
+            timeInBetween_MeleeG = startTimeAttackMeleeG;
         }
+        else
+        {
+            timeInBetween_MeleeG -= 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && timeInBetween_Bow < 0)
+        {
+            StartCoroutine(Distance());
+            timeInBetween_Bow = startTimeAttackBow;
+        }
+        else
+        {
+            timeInBetween_Bow -= 1;
+        }
+
         // Attack and Damage //
+
+        
+
+
     }
 
     void MovePlayer(float _horizontalMovement)
@@ -127,7 +205,7 @@ public class Player : MonoBehaviour
         
     }
 
-    void Flip(float _velocity) // The side Hercules is facing
+     void Flip(float _velocity) // The side Hercules is facing
     {
         if (_velocity > 0.1f)
         {
@@ -139,10 +217,21 @@ public class Player : MonoBehaviour
         }
     }
 
+     public void HealPlayer(int amount)
+     {
+         if (health < maxHealth)
+         {
+             Heal.Play();
+             health += amount;
+             healthBar.SetHealth(health);
+         }
+     }
+
     void TakeDamage(int _damage)
     {
         health -= _damage;
         healthBar.SetHealth(health);
+        hit.Play();
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -151,14 +240,52 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos() // Displays Circle for hitbox collisions with the grou,d //
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        if (GroundattackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(GroundattackPoint.position, groundAttackRange);
+        Gizmos.DrawWireSphere(AirattackPoint.position, airAttackRange);
+
     }
 
+    
+    
     IEnumerator Melee() // Melee Animation
     {
-        animator.Play("PlayerSwordSlash_");
+        if (!isGrounded)
+        {
+            animator.Play("AIR SLASH");
+            airAttack.Play();
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AirattackPoint.position,airAttackRange,ennemyLayers);
+            foreach (var enemy in hitEnemies)
+            {
+                Debug.Log("We hit" + enemy.name);
+            }
+
+        }
+        else
+        {
+            animator.Play("PlayerSwordSlash_");
+            attack.Play();
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(GroundattackPoint.position,groundAttackRange,ennemyLayers);
+            foreach (var enemy in hitEnemies)
+            {
+                Debug.Log("We hit" + enemy.name);
+            }
+
+        }
         yield return new WaitForSeconds(attackDelay);
+
+    }
+    IEnumerator Distance() // Bow Animation
+    {
+        animator.Play("Player Bow boom");
+        bow.Play();
+        Instantiate(projectile, firePosition.position, firePosition.rotation);
+        yield return new WaitForSeconds(bowDelay);
     }
     
     IEnumerator TakeDMG(int _damage) //Simple method used to inflict damage to Hercules
@@ -198,10 +325,12 @@ public class Player : MonoBehaviour
         if(isJumping)
         {
             rb.AddForce(Vector2.up * jumpForce);
+
             AdditionalAir();
         }
         if (rb.velocity.y > maxJumpSpeed)
         {
+            
             rb.velocity = new Vector2(rb.velocity.x, maxJumpSpeed);
         }
         Falling();
@@ -236,6 +365,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, maxFallSpeed);
         }
+        
     }
     
     private void GroundCheck() // Determines whether or not Hercules is grounded ,by using the hitbox under his feets
@@ -251,5 +381,12 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    void CreateDust()
+    {
+        dust.Play();
+    }
+    
+    
     
 }
