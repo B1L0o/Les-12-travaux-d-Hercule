@@ -86,7 +86,11 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     // Health Variables //
     
-    
+    [SerializeField] 
+    private Material _flashMaterial;
+    [SerializeField] 
+    private float _flashDuration;
+    private bool _isflashing=false;
     
     public void FixedUpdate()
     {
@@ -262,6 +266,10 @@ public class Player : MonoBehaviour
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AirattackPoint.position,airAttackRange,ennemyLayers);
             foreach (var enemy in hitEnemies)
             {
+                if (enemy.tag == "enemy")
+                {
+                    Debug.Log("bbbbbbb");
+                }
                 Debug.Log("We hit" + enemy.name);
             }
 
@@ -273,6 +281,10 @@ public class Player : MonoBehaviour
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(GroundattackPoint.position,groundAttackRange,ennemyLayers);
             foreach (var enemy in hitEnemies)
             {
+                if (enemy.tag == "enemy")
+                {
+                    Debug.Log("bbbbbbb");
+                }
                 Debug.Log("We hit" + enemy.name);
             }
 
@@ -288,9 +300,10 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(bowDelay);
     }
     
-    IEnumerator TakeDMG(int _damage) //Simple method used to inflict damage to Hercules
+    public IEnumerator TakeDMG(int _damage) //Simple method used to inflict damage to Hercules
     {
         health -= _damage;
+        Flash();
         healthBar.SetHealth(health);
         if (health <= 0)
         {
@@ -385,6 +398,25 @@ public class Player : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+    
+    protected void Flash()
+    {
+        if (_isflashing == false)
+        {
+            StartCoroutine(FlashRoutine());
+        }
+
+    }
+    protected IEnumerator FlashRoutine()
+    {
+        _isflashing = true;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Material originalMaterial = spriteRenderer.material;
+        spriteRenderer.material = _flashMaterial;
+        yield return new WaitForSeconds(_flashDuration);
+        spriteRenderer.material = originalMaterial;
+        _isflashing = false;
     }
     
     

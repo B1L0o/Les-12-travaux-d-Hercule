@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8750960415352070597}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Finish
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,12 +133,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82d9de6beb170248ad73d3ee342bc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 1
+  Damage: 2
   _speed: 2
   _health: 0
-  _player: {fileID: 0}
+  _player: {fileID: 3642400559322487645, guid: 27d437292f2874a41a9d372daada0486, type: 3}
   _waypoints:
   - {fileID: 8750960417026299631}
   - {fileID: 8750960416520742601}
+  _flashMaterial: {fileID: 2100000, guid: 08a2d2aae0b95c546a6ad8c0a027629a, type: 2}
+  _flashDuration: 0.125
   _DebugMode: 0
   _width: 20
   _height: 30
@@ -153,7 +157,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000014901161, y: 0.002896428}

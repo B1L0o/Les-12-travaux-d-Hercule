@@ -19,16 +19,17 @@ public class Enemy2 : Enemy
     protected void Start()
     {
         isabletopatrol = true;
-        SetState(new Patrol(_waypoints,_speed,gameObject,_player));
+        SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject));
         _enemyState.InitialiseState();
     }
     protected void Update()
     {
+        Attack();
         _enemyState.ApplyState();
         if ((_enemyState is Patrol||isabletopatrol==false) && _player.transform.position.x >= _waypoints[0].transform.position.x && _player.transform.position.x <= _waypoints[1].transform.position.x)
         {
             isabletopatrol = true;
-            SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player,gameObject,_waypoints[0],_groundy));
+            SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
             _enemyState.InitialiseState();
 
         }
@@ -43,21 +44,12 @@ public class Enemy2 : Enemy
             float distance = Vector3.Distance(transform.position,_waypoints[0].transform.position);
             if(distance<=1f)
             {
-                SetState(new Patrol(_waypoints,_speed,gameObject,_player));
+                SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject));
                 _enemyState.InitialiseState();
             }
             
         }
     }
     
-    protected new void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-    }
-
     
-    protected override void Attack()
-    {
-        throw new NotImplementedException();
-    }
 }

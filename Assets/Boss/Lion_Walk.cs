@@ -9,7 +9,7 @@ public class Lion_Walk : StateMachineBehaviour
     private Vector3 lionPosition;
     private List<Vector3> path;
 
-    private int AttackRange;
+    private float AttackRange;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -24,7 +24,8 @@ public class Lion_Walk : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         path = ((FollowPlayer)_enemyState).path;
-        if (Vector3.Distance(lionPosition,_playerPosition)<=AttackRange)
+        Debug.Log(Vector3.Distance(lionPosition,_playerPosition));
+        if (Vector3.Distance(lionPosition,_playerPosition)<=AttackRange && Mathf.Abs(lionPosition.y-_playerPosition.y)<=0.5)
         {
             animator.SetTrigger("Attack");
         }
@@ -34,10 +35,6 @@ public class Lion_Walk : StateMachineBehaviour
             animator.SetTrigger("Jump");
         }
         _enemyState.ApplyState();   
-        
-        
-        
-        
         
     }
 

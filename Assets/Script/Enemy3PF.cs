@@ -30,8 +30,4 @@ public class Enemy3PF : Enemy
         _animator = GetComponent<Animator>();
     }
     
-    protected override void Attack()
-    {
-        
-    }
 }

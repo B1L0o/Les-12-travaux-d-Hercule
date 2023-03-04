@@ -17,11 +17,10 @@ public class Enemy3 : Enemy
             Attack();
         }
     }
-
-    protected void Shoot()
+    
+    public void Shoot()
     {
         Instantiate(bullet,firePos.position,firePos.rotation);
-
     }
     
     protected void Start()

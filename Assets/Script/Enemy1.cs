@@ -7,24 +7,20 @@ public class Enemy1 : Enemy
 {
     protected void Start()
     {
-        SetState(new Patrol(_waypoints,_speed,gameObject,_player));
+        SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject));
         _enemyState.InitialiseState();
     }
 
     protected void Update()
     {
         _enemyState.ApplyState();
+        Attack();
     }
+    
 
-    protected new void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-    }
+    
 
-    protected override void Attack()
-    {
-        throw new NotImplementedException();
-    }
+   
 }
 
 

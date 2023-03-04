@@ -13,7 +13,7 @@ public class Lion : Enemy
     [SerializeField]
     private int _height;
     [SerializeField] 
-    private int AttackRange;
+    private float AttackRange;
 
     [SerializeField] 
     private int _groundy;
@@ -21,7 +21,7 @@ public class Lion : Enemy
     void Start()
     {
         IsInvulnerable = false;
-        SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player,gameObject,_waypoints[0],_groundy));
+        SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
         _enemyState.InitialiseState();
     }
 
@@ -36,7 +36,7 @@ public class Lion : Enemy
 
     public void SetEnemyState(float speed)
     {
-        SetState(new FollowPlayer(_width,_height,speed,_DebugMode,_player,gameObject,_waypoints[0],_groundy));
+        SetState(new FollowPlayer(_width,_height,speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
         _enemyState.InitialiseState();
     }
 
@@ -55,7 +55,7 @@ public class Lion : Enemy
         _speed = speed;
     }
 
-    public int GetAttackRange()
+    public float GetAttackRange()
     {
         return AttackRange;
     }
@@ -64,12 +64,12 @@ public class Lion : Enemy
         return _player.transform.position;
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         if (IsInvulnerable==false)
         {
-            _health = _height - damage;
-
+            _health = _health - damage;
+            Flash();
             if (_health<=50)
             {
                 GetComponent<Animator>().SetBool("IsEnraged",true);
@@ -82,17 +82,14 @@ public class Lion : Enemy
         
     }
 
-    public void Die()
-    {
-        Destroy(gameObject);
-    }
+   
     
     protected override void Attack()
     {
         Collider2D collider2DInfo = Physics2D.OverlapCircle(transform.position, AttackRange);
         if (collider2DInfo != null)
         {
-            Debug.Log("OUCH player");
+            StartCoroutine(_player.TakeDMG(Damage));
         }
     }
     

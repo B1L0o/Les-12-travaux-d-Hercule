@@ -6,6 +6,8 @@ using UnityEngine;
 public class FireballPF : MonoBehaviour
 {
     private GameObject _player;
+    [SerializeField]
+    private int Damage;
     private EnemyState _enemyState;
     [SerializeField]
     private float bulletSpeed;
@@ -37,6 +39,11 @@ public class FireballPF : MonoBehaviour
     {
         if (col.CompareTag("Player") || col.CompareTag("Tilemap"))
         {
+            if (col.CompareTag("Player"))
+            {
+                StartCoroutine(_player.GetComponent<Player>().TakeDMG(Damage));
+                Debug.Log(_player.GetComponent<Player>().health);
+            }
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

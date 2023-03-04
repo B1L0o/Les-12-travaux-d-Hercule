@@ -100,7 +100,7 @@ public class FollowPlayer : EnemyState
             {
                 for (int i=0;i+1<path.Count;i++)
                 {
-                    Debug.DrawLine(new Vector3(path[i].x,path[i].y),new Vector3(path[i+1].x,path[i+1].y),Color.green,0.5f);
+                    Debug.DrawLine(new Vector3(path[i].x,path[i].y),new Vector3(path[i+1].x,path[i+1].y),Color.green,0.5f,false);
                 }
             }
             

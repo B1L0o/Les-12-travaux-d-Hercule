@@ -7,10 +7,14 @@ public class Fireball : MonoBehaviour
 {
     public float bulletSpeed;
     private Rigidbody2D rb;
+    private GameObject _player;
+    [SerializeField]
+    private int Damage;
     public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right*bulletSpeed;
     }
@@ -19,6 +23,12 @@ public class Fireball : MonoBehaviour
     {
         if (col.CompareTag("Player") || col.CompareTag("Tilemap"))
         {
+            if (col.CompareTag("Player"))
+            {
+                StartCoroutine(_player.GetComponent<Player>().TakeDMG(Damage));
+                Debug.Log(_player.GetComponent<Player>().health);
+
+            }
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

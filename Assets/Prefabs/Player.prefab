@@ -66,7 +66,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3642400559322487622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -3.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.2, y: 3.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -166,6 +166,7 @@ MonoBehaviour:
   attack: {fileID: 3642400559322487617}
   airAttack: {fileID: 3642400559322487621}
   bow: {fileID: 3642400559322487620}
+  hit: {fileID: 0}
   startTimeAttackMeleeG: 200
   startTimeAttackBow: 400
   isJumping: 1
@@ -174,7 +175,7 @@ MonoBehaviour:
   GroundattackPoint: {fileID: 3642400560103251709}
   AirattackPoint: {fileID: 3642400559337188168}
   firePosition: {fileID: 3642400560209273013}
-  projectile: {fileID: 0}
+  projectile: {fileID: 7455745957186092564, guid: 237b9ede51d3048d0979ab9e37ae863f, type: 3}
   groundAttackRange: 0.98
   airAttackRange: 1.55
   ennemyLayers:
@@ -191,9 +192,11 @@ MonoBehaviour:
   moveSpeed: 600
   velocity: {x: 0, y: 0, z: 0}
   horizontalMovement: 0
-  health: 0
+  health: 100
   maxHealth: 100
   healthBar: {fileID: 0}
+  _flashMaterial: {fileID: 2100000, guid: 08a2d2aae0b95c546a6ad8c0a027629a, type: 2}
+  _flashDuration: 0.125
 --- !u!50 &3642400559322487646
 Rigidbody2D:
   serializedVersion: 4
