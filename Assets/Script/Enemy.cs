@@ -8,8 +8,6 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField]
-    protected float _seuilDistance;
-    [SerializeField]
     protected float _speed;
     [SerializeField]
     protected int _health;
@@ -28,12 +26,12 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //enlever au player de la vie
+            //enlever de la vie au Player
         }
-        else if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.CompareTag("Weapon"))
+        //{
+        //Destroy(gameObject);
+        //}
     }
 
     

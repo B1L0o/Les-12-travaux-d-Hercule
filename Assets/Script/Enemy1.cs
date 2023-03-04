@@ -5,16 +5,6 @@ using UnityEngine;
 
 public class Enemy1 : Enemy
 {
-    //protected new void Start()
-    //{
-    //base.Start();
-    //}
-
-    //protected new void Update()
-//{
-    //base.Update();
-    //}
-
     protected void Start()
     {
         SetState(new Patrol(_waypoints,_speed,gameObject,_player));
@@ -24,6 +14,11 @@ public class Enemy1 : Enemy
     protected void Update()
     {
         _enemyState.ApplyState();
+    }
+
+    protected new void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
     }
 
     protected override void Attack()
