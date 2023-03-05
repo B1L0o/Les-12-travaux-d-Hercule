@@ -11,8 +11,9 @@ public class Player : MonoBehaviour
 {
 
     public ParticleSystem dust;
-    
-    
+    public bool invicible;
+
+    private Shake _shake;
     public AudioSource Heal;
     public AudioSource jumpsound;
     public AudioSource run;
@@ -102,16 +103,28 @@ public class Player : MonoBehaviour
     void Start()
     { 
         health = maxHealth;
+        invicible = false;
         //healthBar.SetMaxHealth(maxHealth);
         buttonHoldTime = maxButtonHoldTime;
         originalGravity = rb.gravityScale;
         numberOfJumpsLeft = maxJumps;
         moveSpeed = 600;
+        _shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
     
 
     void Update ()
     {
+        if (timeInBetween_MeleeG > 0)
+        {
+            invicible = true;
+        }
+        else
+        {
+            invicible = false;
+        }
+        
+        
         if (isGrounded && (rb.velocity.x > 1 || rb.velocity.x < -1))
         {
             if (!run.isPlaying)
@@ -214,10 +227,14 @@ public class Player : MonoBehaviour
         if (_velocity > 0.1f)
         {
             spriteRenderer.flipX = false;
+            GroundattackPoint.localPosition = new Vector2(0.357f, 0);
         }
         else if (_velocity < -0.1f)
         {
+            GroundattackPoint.localPosition = new Vector2(-0.357f, 0);
             spriteRenderer.flipX = true;
+
+
         }
     }
 
@@ -263,12 +280,16 @@ public class Player : MonoBehaviour
         {
             animator.Play("AIR SLASH");
             airAttack.Play();
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AirattackPoint.position,airAttackRange,ennemyLayers);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AirattackPoint.position,airAttackRange);
             foreach (var enemy in hitEnemies)
             {
                 if (enemy.tag == "enemy")
                 {
                     Debug.Log("bbbbbbb");
+                    
+                    _shake.camShake();
+
+                    enemy.GetComponent<Enemy>().TakeDamage(20);
                 }
                 Debug.Log("We hit" + enemy.name);
             }
@@ -278,12 +299,16 @@ public class Player : MonoBehaviour
         {
             animator.Play("PlayerSwordSlash_");
             attack.Play();
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(GroundattackPoint.position,groundAttackRange,ennemyLayers);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(GroundattackPoint.position, groundAttackRange);
             foreach (var enemy in hitEnemies)
             {
                 if (enemy.tag == "enemy")
                 {
                     Debug.Log("bbbbbbb");
+                    _shake.camShake();
+
+                    enemy.GetComponent<Enemy>().TakeDamage(20);
+
                 }
                 Debug.Log("We hit" + enemy.name);
             }
@@ -302,18 +327,23 @@ public class Player : MonoBehaviour
     
     public IEnumerator TakeDMG(int _damage) //Simple method used to inflict damage to Hercules
     {
-        health -= _damage;
-        Flash();
-        healthBar.SetHealth(health);
-        if (health <= 0)
+        if (!invicible)
         {
-            Destroy(gameObject);
+            health -= _damage;
+            Flash();
+            _shake.camShake();
+            healthBar.SetHealth(health);
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+            yield return new WaitForSeconds(attackDelay);
         }
-        yield return new WaitForSeconds(attackDelay);
+       
     }
     
 
-    private void CheckForJump() // Determines if Hercules has remaining jumps 
+    private void CheckForJump() // Determines whether or not Hercules has remaining jumps 
     {
         if (jumpPressed)
         {

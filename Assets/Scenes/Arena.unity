@@ -109526,11 +109526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266260511474445518, guid: 316703b72e0c65940af32de0494439d7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4266260511474445518, guid: 316703b72e0c65940af32de0494439d7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4266260511474445518, guid: 316703b72e0c65940af32de0494439d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -109538,7 +109538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266260511474445518, guid: 316703b72e0c65940af32de0494439d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4266260511474445518, guid: 316703b72e0c65940af32de0494439d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110371,7 +110371,7 @@ PrefabInstance:
     - target: {fileID: 8233853864253758215, guid: 8c41a3b0d2157434aac93de1bc9d5661, type: 3}
       propertyPath: FadeSystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 656525833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c41a3b0d2157434aac93de1bc9d5661, type: 3}
 --- !u!1001 &2949456072690133340

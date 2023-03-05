@@ -7,7 +7,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     protected float cooldown = 1f;
     protected float lastAttackedTime = -9999f;
     [SerializeField]
@@ -38,6 +38,8 @@ public abstract class Enemy : MonoBehaviour
             {
                 Die();
             }
+        
+
     }
 
     protected virtual void Die()
