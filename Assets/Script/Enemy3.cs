@@ -36,7 +36,7 @@ public class Enemy3 : Enemy
         IEnumerator Attack_Coroutine()
         {
             canShoot = false;
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(3);
             canShoot = true;
         }
     }

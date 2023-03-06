@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  bulletSpeed: 2
+  bulletSpeed: 5
   _DebugMode: 1
   _width: 30
   _height: 20
