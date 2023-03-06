@@ -285,13 +285,9 @@ public class Player : MonoBehaviour
             {
                 if (enemy.tag == "enemy")
                 {
-                    Debug.Log("bbbbbbb");
-                    
                     _shake.camShake();
-
                     enemy.GetComponent<Enemy>().TakeDamage(20);
                 }
-                Debug.Log("We hit" + enemy.name);
             }
 
         }
@@ -304,13 +300,10 @@ public class Player : MonoBehaviour
             {
                 if (enemy.tag == "enemy")
                 {
-                    Debug.Log("bbbbbbb");
                     _shake.camShake();
-
                     enemy.GetComponent<Enemy>().TakeDamage(20);
 
                 }
-                Debug.Log("We hit" + enemy.name);
             }
 
         }
