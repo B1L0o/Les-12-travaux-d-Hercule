@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Lion_Walk : StateMachineBehaviour
     private Vector3 _playerPosition;
     private Vector3 lionPosition;
     private List<Vector3> path;
+    private Func<bool> _CanAttack;
 
     private float AttackRange;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -18,14 +20,36 @@ public class Lion_Walk : StateMachineBehaviour
         lionPosition = animator.GetComponent<Transform>().position;
         _playerPosition =  animator.GetComponent<Lion>().GetPlayerPosition();
         AttackRange = animator.GetComponent<Lion>().GetAttackRange();
+         bool CanAttack()
+        {
+            Collider2D coll = animator.GetComponent<Lion>().GetComponent<Collider2D>();
+            List<Collider2D> result = new List<Collider2D>();
+            ContactFilter2D filter = new ContactFilter2D().NoFilter();
+            int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
+            foreach (var collider in result)
+            {
+                if (collider.tag == "Player")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+         _CanAttack = CanAttack;
+
     }
+    
+    
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         path = ((FollowPlayer)_enemyState).path;
-        Debug.Log(Vector3.Distance(lionPosition,_playerPosition));
-        if (Vector3.Distance(lionPosition,_playerPosition)<=AttackRange && Mathf.Abs(lionPosition.y-_playerPosition.y)<=0.5)
+        //Vector3.Distance(lionPosition,_playerPosition)<=AttackRange
+        //Mathf.Abs(lionPosition.x-_playerPosition.x)<=AttackRange && Mathf.Abs(lionPosition.y-_playerPosition.y)<=0.5
+        if (_CanAttack())
         {
             animator.SetTrigger("Attack");
         }

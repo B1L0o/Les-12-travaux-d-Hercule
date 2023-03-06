@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8663191860665597525}
   m_Layer: 0
   m_Name: Lion
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 8663191861550127222}
   m_Layer: 0
   m_Name: Graphics
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

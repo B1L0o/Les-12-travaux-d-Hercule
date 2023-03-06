@@ -70,7 +70,7 @@ public class Lion : Enemy
         {
             _health = _health - damage;
             Flash();
-            if (_health<=50)
+            if (_health<=250)
             {
                 GetComponent<Animator>().SetBool("IsEnraged",true);
             }
