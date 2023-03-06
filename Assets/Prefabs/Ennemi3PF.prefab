@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3616965846474611723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ennemi3PF
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3616965847178078053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3616965847983782514}
   - component: {fileID: 3616965847983782512}
   - component: {fileID: 3616965847983782476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Graphics
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ MonoBehaviour:
   cooldown: 1
   Damage: 0
   _speed: 0
-  _health: 0
+  _health: 200
   _player: {fileID: 3642400559322487645, guid: 27d437292f2874a41a9d372daada0486, type: 3}
   _waypoints: []
   _flashMaterial: {fileID: 2100000, guid: 08a2d2aae0b95c546a6ad8c0a027629a, type: 2}

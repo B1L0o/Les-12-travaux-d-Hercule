@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
-  Damage: 3
-  _speed: 1
-  _health: 0
+  Damage: 10
+  _speed: 2
+  _health: 100
   _player: {fileID: 3642400559322487645, guid: 27d437292f2874a41a9d372daada0486, type: 3}
   _waypoints:
   - {fileID: 471183409394588194}
