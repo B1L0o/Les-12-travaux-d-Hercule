@@ -168,6 +168,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 2
-  _player: {fileID: 3642400559322487645, guid: 27d437292f2874a41a9d372daada0486, type: 3}
-  Damage: 5
+  Damage: 10
   explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}
