@@ -287,7 +287,7 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("bbbbbbb");
                     
-                    //_shake.camShake();
+                    _shake.camShake();
 
                     enemy.GetComponent<Enemy>().TakeDamage(20);
                 }
@@ -305,7 +305,7 @@ public class Player : MonoBehaviour
                 if (enemy.tag == "enemy")
                 {
                     Debug.Log("bbbbbbb");
-                    //_shake.camShake();
+                    _shake.camShake();
 
                     enemy.GetComponent<Enemy>().TakeDamage(20);
 
