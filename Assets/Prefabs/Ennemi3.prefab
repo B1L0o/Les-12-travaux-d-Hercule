@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4266260510026918874}
   m_Layer: 0
   m_Name: Graphics
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 4266260511474445518}
   m_Layer: 0
   m_Name: Ennemi3
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

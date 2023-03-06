@@ -28,7 +28,6 @@ public class Lion_Enrage : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         lion.SetIsInvulnerable(false);
-
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
