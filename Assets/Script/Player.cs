@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public AudioSource bow;
     public AudioSource hit;
 
-    private float timeInBetween_MeleeG;
+    public float timeInBetween_MeleeG;
     private float timeInBetween_Bow;
     public float startTimeAttackMeleeG;
     public float startTimeAttackBow;
@@ -195,7 +195,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            timeInBetween_MeleeG -= 1;
+            timeInBetween_MeleeG -= Time.deltaTime;
         }
 
         if (Input.GetKeyDown(KeyCode.E) && timeInBetween_Bow < 0)
@@ -205,7 +205,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            timeInBetween_Bow -= 1;
+            timeInBetween_Bow -= Time.deltaTime;
         }
 
         // Attack and Damage //
