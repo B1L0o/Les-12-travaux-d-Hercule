@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
     { 
         health = maxHealth;
         invicible = false;
-        //healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
         buttonHoldTime = maxButtonHoldTime;
         originalGravity = rb.gravityScale;
         numberOfJumpsLeft = maxJumps;
