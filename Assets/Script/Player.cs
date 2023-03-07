@@ -178,8 +178,11 @@ public class Player : MonoBehaviour
         animator.SetBool("Jump", !isGrounded);
         // Sprite Display //
 
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            rb.position = new Vector2(114.93f, -24.01f);
+        }
         
         // Attack and Damage //
         
@@ -188,7 +191,7 @@ public class Player : MonoBehaviour
             StartCoroutine(TakeDMG(10));
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && timeInBetween_MeleeG < 0)
+        if (Input.GetMouseButtonDown(0) && timeInBetween_MeleeG < 0)
         {
             StartCoroutine(Melee());
             timeInBetween_MeleeG = startTimeAttackMeleeG;
