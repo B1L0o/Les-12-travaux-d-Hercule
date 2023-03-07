@@ -12,15 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings Menu.unity
     guid: 40b19c9bd0df6492f9d080c4ebc0c544
   - enabled: 1
-    path: Assets/Scenes/Arena.unity
-    guid: 314b560ed3648418cbeea055b38d6b41
-  - enabled: 1
-    path: Assets/Scenes/Arena 1.unity
-    guid: 2ad93d4d4304641838e32f634ed09b8e
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Jungle.unity
-    guid: 30aa6cbcadc9f4754b44052f192672cf
+    path: Assets/Scenes/lvl1.unity
+    guid: 6eddc60fe7c743e499be28868de12967
   m_configObjects: {}
