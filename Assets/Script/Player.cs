@@ -251,16 +251,7 @@ public class Player : MonoBehaviour
          }
      }
 
-    void TakeDamage(int _damage)
-    {
-        health -= _damage;
-        healthBar.SetHealth(health);
-        hit.Play();
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
     private void OnDrawGizmos() // Displays Circle for hitbox collisions with the grou,d //
     {
@@ -331,7 +322,10 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(health);
             if (health <= 0)
             {
-                Destroy(gameObject);
+                GameOverManager.instance.WhenPlayerDeath();
+                gameObject.SetActive(false);
+                //Time.timeScale = 0.0f;
+
             }
             yield return new WaitForSeconds(attackDelay);
         }

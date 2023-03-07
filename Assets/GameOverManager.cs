@@ -1,9 +1,11 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
+    public string MainMenu;
     public GameObject gameOverUI;
     public static GameOverManager instance;
 
@@ -14,10 +16,32 @@ public class GameOverManager : MonoBehaviour
             Debug.LogWarning("Il y a plus d'une instance de GameOverManager !!!!");
             return;
         }
+
+        instance = this;
     }
 
     public void WhenPlayerDeath()
     {
+        if (CurrentSceneManager.instance.isPlayerPresentByDefault)
+        {
+            DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        }
         gameOverUI.SetActive(true);
+    }
+
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverUI.SetActive(false);
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene(MainMenu);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
