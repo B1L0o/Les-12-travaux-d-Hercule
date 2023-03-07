@@ -82,8 +82,13 @@ public class Lion : Enemy
         
     }
 
-   
-    
+    protected override void Die()
+    {
+        VictoryManager.instance.WhenBossDeath();
+        Destroy(gameObject);
+    }
+
+
     protected override void Attack()
     {
         Collider2D collider2DInfo = Physics2D.OverlapCircle(transform.position, AttackRange);
