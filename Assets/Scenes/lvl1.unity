@@ -6879,6 +6879,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 4, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -8397,7 +8407,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d5c5206d4fcf2d04db3de15c2313b29c, type: 2}
   - m_RefCount: 39
     m_Data: {fileID: 11400000, guid: 38350f3df9a6a604ca0e90398cdaae79, type: 2}
-  - m_RefCount: 119
+  - m_RefCount: 120
     m_Data: {fileID: 11400000, guid: 5e6c9e91b8f15cc49a9c9c5ac7a59532, type: 2}
   - m_RefCount: 41
     m_Data: {fileID: 11400000, guid: 2b4dfe3b4cfb7f548af1046c5c314121, type: 2}
@@ -8426,7 +8436,7 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: f6dd84eb0f3f04443a37f6d1613d4e4a, type: 3}
   - m_RefCount: 39
     m_Data: {fileID: 21300000, guid: 63735afc034c0524e91cd1b0527f49b2, type: 3}
-  - m_RefCount: 119
+  - m_RefCount: 120
     m_Data: {fileID: 21300000, guid: 459b45f9d9282e14fb67e49196dbae6e, type: 3}
   - m_RefCount: 41
     m_Data: {fileID: 21300000, guid: 8e23da192fe7e3a4381c4e8813edda5b, type: 3}
@@ -8449,7 +8459,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -152812337, guid: 86b96b2d42f9e4a408e898d9af1c5f6e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 605
+  - m_RefCount: 606
     m_Data:
       e00: 1
       e01: 0
@@ -8468,7 +8478,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 605
+  - m_RefCount: 606
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -27239,16 +27249,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 0, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 19, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -27863,7 +27863,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 2b4dfe3b4cfb7f548af1046c5c314121, type: 2}
-  - m_RefCount: 16
+  - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 5e6c9e91b8f15cc49a9c9c5ac7a59532, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 38350f3df9a6a604ca0e90398cdaae79, type: 2}
@@ -27890,12 +27890,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 8e23da192fe7e3a4381c4e8813edda5b, type: 3}
-  - m_RefCount: 16
+  - m_RefCount: 15
     m_Data: {fileID: 21300000, guid: 459b45f9d9282e14fb67e49196dbae6e, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 63735afc034c0524e91cd1b0527f49b2, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1921
+  - m_RefCount: 1920
     m_Data:
       e00: 1
       e01: 0
@@ -27914,7 +27914,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1921
+  - m_RefCount: 1920
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -28498,24 +28498,6 @@ CompositeCollider2D:
         Y: -290000000
       - X: 1320000000
         Y: -290000000
-    - - X: 8240000
-        Y: 479999
-      - X: 8240000
-        Y: 8900000
-      - X: 7600000
-        Y: 10120001
-      - X: 1959999
-        Y: 10120001
-      - X: 1760000
-        Y: 9480000
-      - X: 1760000
-        Y: 1160000
-      - X: 1799999
-        Y: 1119999
-      - X: 2399999
-        Y: -120000
-      - X: 8060000
-        Y: -120000
     - - X: 1090120064
         Y: 120000
       - X: 1059880000
@@ -28803,15 +28785,6 @@ CompositeCollider2D:
       - {x: -19.01197, y: -9.012}
       - {x: 59, y: -9.01203}
       - {x: 59.000034, y: -29}
-    - - {x: 0.80597943, y: -0.012}
-      - {x: 0.824, y: 0.0480038}
-      - {x: 0.8239971, y: 0.8900055}
-      - {x: 0.7599836, y: 1.0120001}
-      - {x: 0.1959938, y: 1.0119807}
-      - {x: 0.176, y: 0.9479965}
-      - {x: 0.1760076, y: 0.115992405}
-      - {x: 0.1800019, y: 0.111995704}
-      - {x: 0.24001691, y: -0.012}
     - - {x: 109.011986, y: -2.012}
       - {x: 109.011986, y: 0.012}
       - {x: 105.988, y: 0.0119707}
@@ -39237,11 +39210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 118
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2070752814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7569886549101864541, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
-  m_PrefabInstance: {fileID: 49593256}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2084959245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46351,7 +46319,7 @@ RectTransform:
   - {fileID: 4427340340055421765}
   - {fileID: 4427340341905995956}
   m_Father: {fileID: 5991136}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -46641,7 +46609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5699637817154163283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6311425019764092061}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: SettingMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5699637817154163283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46967,7 +46947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5699637817372679814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47248,7 +47228,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5699637818035442171}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6311425019764092061}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5699637818035442171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47478,7 +47470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5699637818750688138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6311425019764092061}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: MainMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5699637818750688138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48547,7 +48551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 2352797903882389875}
-  - {fileID: 2070752814}
 --- !u!1 &6311425019764092059
 GameObject:
   m_ObjectHideFlags: 0
@@ -48560,6 +48563,7 @@ GameObject:
   - component: {fileID: 6311425019764092058}
   - component: {fileID: 366594333}
   - component: {fileID: 6311425019764092060}
+  - component: {fileID: 6311425019764092061}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48581,6 +48585,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenu: Main Menu
   victoryUI: {fileID: 4427340341779857628}
+--- !u!114 &6311425019764092061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311425019764092059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e38befcb2d24fa7b550fa1e06fc37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SettingMenu: Settings Menu
+  MainMenu: Main Menu
+  pauseMenuUI: {fileID: 5699637817372679813}
+  _Player: {fileID: 2352797903882389834}
 --- !u!1 &8750960414976658710
 GameObject:
   m_ObjectHideFlags: 0
