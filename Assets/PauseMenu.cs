@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public string MainMenu;
     public GameObject pauseMenuUI;
     public Player _Player;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -45,11 +46,15 @@ public class PauseMenu : MonoBehaviour
     
     public void SettingMenuButton()
     {
+        DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        Resume();
         SceneManager.LoadScene(SettingMenu);
     }
     
     public void MainMenuButton()
     {
+        DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        Resume();
         SceneManager.LoadScene(MainMenu);
     }
 }
