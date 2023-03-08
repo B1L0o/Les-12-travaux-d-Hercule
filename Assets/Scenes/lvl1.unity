@@ -38350,6 +38350,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8663191861550127219, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8663191861550127222, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: Damage
       value: 15
