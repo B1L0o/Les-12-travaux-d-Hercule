@@ -13,11 +13,14 @@ public class Hydre : Enemy
     private bool isRightOriented;
     [SerializeField] 
     private GameObject skill1Collider;
-    [SerializeField] 
-    private float attackRange;
+    [SerializeField]
+    private GameObject skill2Collider;
+    [SerializeField]
+    private int DamageSkill2;
     public AudioSource audioSource;
     public AudioClip groundBreak;
     public AudioClip bossFightMusic;
+    public AudioClip hydreScream;
     void Start()
     {
         audioSource.clip = GetComponent<Hydre>().groundBreak;
@@ -70,8 +73,14 @@ public class Hydre : Enemy
         if (isInvulnerable==false)
         {
             _health = _health - damage;
-            if (_health<=250)
+            if (_health<=250 && GetComponent<Animator>().GetBool("IsEnraged")==false)
             {
+                counter = 0;
+                Damage = Damage * 2;
+                DamageSkill2 = DamageSkill2 * 2;
+                GetComponent<Animator>().SetInteger("counter",0);
+                GetComponent<Animator>().SetBool("IsEnraged",true);
+                
                 //Passer a la deuxième partie du combat de boss
             }
             if (_health<=0)
@@ -84,13 +93,35 @@ public class Hydre : Enemy
 
     protected override void Die()
     {
+        GetComponent<Animator>().SetTrigger("dead");
+        //VictoryManager.instance.WhenBossDeath();
+        //Destroy(gameObject);
+    }
+
+    public void TriggerVictory()
+    {
         VictoryManager.instance.WhenBossDeath();
-        Destroy(gameObject);
     }
 
     public bool isInSkill1Collider()
     {
         Collider2D coll =  skill1Collider.GetComponent<Collider2D>();
+        List<Collider2D> result = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D().NoFilter();
+        int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
+        foreach (var collider in result)
+        {
+            if (collider.tag == "Player")
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public bool isInSkill2Collider()
+    {
+        Collider2D coll =  skill2Collider.GetComponent<Collider2D>();
         List<Collider2D> result = new List<Collider2D>();
         ContactFilter2D filter = new ContactFilter2D().NoFilter();
         int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
@@ -113,15 +144,30 @@ public class Hydre : Enemy
         }
         
     }
+    public void AttackSkill2()
+    {
+        if (isInSkill2Collider())
+        {
+            StartCoroutine(_player.TakeDMG(DamageSkill2));
+        }
+
+    }
 
     public void PlayGroundBreakSound()
     {
         audioSource.Play();
     }
 
+    public void PlayHydreScream()
+    {
+        audioSource.clip = GetComponent<Hydre>().hydreScream;
+        audioSource.loop = false;
+        audioSource.Play();
+    }
+
     public void Shake()
     {
-        shake.camShake();
+        shake.bossWalkCamShake();
     }
 
     // Update is called once per frame

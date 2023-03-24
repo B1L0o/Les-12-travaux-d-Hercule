@@ -10,4 +10,9 @@ public class Shake : MonoBehaviour
     {
         camAnim.SetTrigger("Shake");
     }
+
+    public void bossWalkCamShake()
+    {
+        camAnim.SetTrigger("ShakeBossWalk");
+    }
 }

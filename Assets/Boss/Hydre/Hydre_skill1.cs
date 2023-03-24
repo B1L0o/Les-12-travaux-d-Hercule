@@ -16,7 +16,7 @@ public class Hydre_skill1 : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(bossTransform.position,player.transform.position)>6f)
+        if (animator.GetComponent<Hydre>().isInSkill1Collider()==false)
         {
             animator.SetBool("skill1",false);
         }

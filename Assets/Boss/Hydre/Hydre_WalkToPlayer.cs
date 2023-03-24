@@ -6,6 +6,7 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     private GameObject player;
+
     private Transform bossTransform;
     [SerializeField]
     private float speed;
@@ -26,12 +27,18 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
         {
             animator.SetBool("skill1",true);
         }
+        
+        else if (animator.GetComponent<Hydre>().isInSkill2Collider())
+        {
+            animator.SetTrigger("skill2");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("skill2");
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
