@@ -12,12 +12,15 @@ public class Hydre : Enemy
     [SerializeField]
     private bool isRightOriented;
     [SerializeField] 
+    private GameObject skill1Collider;
+    [SerializeField] 
     private float attackRange;
     public AudioSource audioSource;
     public AudioClip groundBreak;
     public AudioClip bossFightMusic;
     void Start()
     {
+        audioSource.clip = GetComponent<Hydre>().groundBreak;
         shake = GameObject.FindWithTag("ScreenShake").GetComponent<Shake>();
         counter = 0;
         isInvulnerable = true;
@@ -84,13 +87,36 @@ public class Hydre : Enemy
         VictoryManager.instance.WhenBossDeath();
         Destroy(gameObject);
     }
+
+    public bool isInSkill1Collider()
+    {
+        Collider2D coll =  skill1Collider.GetComponent<Collider2D>();
+        List<Collider2D> result = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D().NoFilter();
+        int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
+        foreach (var collider in result)
+        {
+            if (collider.tag == "Player")
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     protected override void Attack()
     {
-        Collider2D collider2DInfo = Physics2D.OverlapCircle(transform.position, attackRange);
-        if (collider2DInfo != null)
+        if (isInSkill1Collider())
         {
             StartCoroutine(_player.TakeDMG(Damage));
         }
+        
+    }
+
+    public void PlayGroundBreakSound()
+    {
+        audioSource.Play();
     }
 
     public void Shake()

@@ -22,7 +22,7 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
         animator.GetComponent<Hydre>().LookAtPlayer();
         Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
         bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
-        if (Vector2.Distance(bossTransform.position,player.transform.position)<=6f)
+        if (animator.GetComponent<Hydre>().isInSkill1Collider())
         {
             animator.SetBool("skill1",true);
         }
