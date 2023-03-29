@@ -26395,14 +26395,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.8666667
-    functionName: Shake
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.2666667
-    functionName: IncrementAnimationCounter
+    functionName: ScreamShake
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

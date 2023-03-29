@@ -7,16 +7,15 @@ public class Hydre_Walk : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     private GameObject target;
     private Transform bossTransform;
-    private AudioSource audioSource;
+
+    private AudioManager AudioManager;
     [SerializeField]
     private float speed;
    
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        audioSource = animator.GetComponent<Hydre>().audioSource;
-        //audioSource.clip = animator.GetComponent<Hydre>().groundBreak;
-        //audioSource.Play();
+        AudioManager =  animator.GetComponent<Hydre>().AudioManager;
         bossTransform = animator.GetComponent<Transform>();
         target = GameObject.FindGameObjectWithTag("target");
     }
@@ -38,9 +37,7 @@ public class Hydre_Walk : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        audioSource.clip = animator.GetComponent<Hydre>().bossFightMusic;
-        audioSource.Play();
-        audioSource.loop = true;
+        AudioManager.Play("BossFightMusic");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class hydre_enraged_transition : StateMachineBehaviour
 {
-    private AudioSource audioSource;
+    private AudioManager AudioManager;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        audioSource = animator.GetComponent<Hydre>().audioSource;
+        AudioManager =  animator.GetComponent<Hydre>().AudioManager;
         animator.GetComponent<Hydre>().SetIsInvulnerable(true);
     }
 
@@ -21,10 +21,8 @@ public class hydre_enraged_transition : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        audioSource.clip = animator.GetComponent<Hydre>().bossFightMusic;
-        audioSource.Play();
-        audioSource.loop = true;
         animator.GetComponent<Hydre>().SetIsInvulnerable(false);
+        AudioManager.UnPause("BossFightMusic");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

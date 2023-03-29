@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hydre : Enemy
 {
-    // Start is called before the first frame update
     private Shake shake;
     private int counter;
     private bool isInvulnerable;
@@ -17,16 +17,27 @@ public class Hydre : Enemy
     private GameObject skill2Collider;
     [SerializeField]
     private int DamageSkill2;
-    public AudioSource audioSource;
-    public AudioClip groundBreak;
-    public AudioClip bossFightMusic;
-    public AudioClip hydreScream;
+    [SerializeField]
+    private Slider slider;
+
+    public AudioManager AudioManager;
     void Start()
     {
-        audioSource.clip = GetComponent<Hydre>().groundBreak;
         shake = GameObject.FindWithTag("ScreenShake").GetComponent<Shake>();
         counter = 0;
         isInvulnerable = true;
+        SetMaxHealth(_health);
+    }
+
+    public void SetMaxHealth(int health)
+    {
+        slider.maxValue = health;
+        slider.value = health;
+    }
+
+    public void SetHealth(int health)
+    {
+        slider.value = health;
     }
 
     public void IncrementAnimationCounter()
@@ -73,18 +84,18 @@ public class Hydre : Enemy
         if (isInvulnerable==false)
         {
             _health = _health - damage;
-            if (_health<=250 && GetComponent<Animator>().GetBool("IsEnraged")==false)
+            SetHealth(_health);
+            if (_health<=2000 && GetComponent<Animator>().GetBool("IsEnraged")==false)
             {
                 counter = 0;
                 Damage = Damage * 2;
                 DamageSkill2 = DamageSkill2 * 2;
                 GetComponent<Animator>().SetInteger("counter",0);
                 GetComponent<Animator>().SetBool("IsEnraged",true);
-                
-                //Passer a la deuxième partie du combat de boss
             }
             if (_health<=0)
             {
+                AudioManager.Pause("BossFightMusic");
                 Die();
             }
         }
@@ -155,24 +166,24 @@ public class Hydre : Enemy
 
     public void PlayGroundBreakSound()
     {
-        audioSource.Play();
+        AudioManager.Play("GroundShake");
     }
+
+    
 
     public void PlayHydreScream()
     {
-        audioSource.clip = GetComponent<Hydre>().hydreScream;
-        audioSource.loop = false;
-        audioSource.Play();
+        AudioManager.Pause("BossFightMusic");
+        AudioManager.Play("HydreScream");
     }
 
-    public void Shake()
+    public void WalkShake()
     {
         shake.bossWalkCamShake();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ScreamShake()
     {
-        
+        shake.bossScreamCamShake();
     }
+
 }
