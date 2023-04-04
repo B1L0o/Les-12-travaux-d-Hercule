@@ -9,8 +9,7 @@ public class Hydre : Enemy
     private Shake shake;
     private int counter;
     private bool isInvulnerable;
-    [SerializeField]
-    private bool isRightOriented;
+    
     [SerializeField] 
     private GameObject skill1Collider;
     [SerializeField]
@@ -49,36 +48,7 @@ public class Hydre : Enemy
         isInvulnerable = _isInvulnerable;
     }
 
-    public void LookAtPlayer()
-    {
-        Vector3 scale = transform.localScale;
-        if (_player.transform.position.x>transform.position.x)
-        {
-            if (isRightOriented)
-            {
-                scale.x = Math.Abs(scale.x);
-            }
-            else
-            {
-                scale.x = Math.Abs(scale.x)*-1;
-            }
-            
-        }
-        else
-        {
-            if (isRightOriented)
-            {
-                scale.x = Math.Abs(scale.x)*-1;
-            }
-            else
-            {
-                scale.x = Math.Abs(scale.x);
-            }
-        }
-
-        transform.localScale = scale;
-
-    }
+    
     public override void TakeDamage(int damage)
     {
         if (isInvulnerable==false)

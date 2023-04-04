@@ -7,6 +7,8 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private bool isRightOriented;
     [SerializeField] 
     protected float cooldown = 1f;
     protected float lastAttackedTime = -9999f;
@@ -99,5 +101,65 @@ public abstract class Enemy : MonoBehaviour
         spriteRenderer.material = originalMaterial;
         _isflashing = false;
     }
-    
+    public void LookAtPlayer()
+    {
+        Vector3 scale = transform.localScale;
+        if (_player.transform.position.x>transform.position.x)
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            
+        }
+        else
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+        }
+
+        transform.localScale = scale;
+
+    }
+    public void LookAtSomething(Transform transformToLookAt)
+    {
+        Vector3 scale = transform.localScale;
+        if (transformToLookAt.position.x>transform.position.x)
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            
+        }
+        else
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+        }
+
+        transform.localScale = scale;
+
+    }
+
 }
