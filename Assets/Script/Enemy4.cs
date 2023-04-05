@@ -27,16 +27,19 @@ public class Enemy4 : Enemy
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_player.health);
-        if (Vector3.Distance(_player.transform.position,transform.position)<2f)
+        
+        if ((_player.transform.position.x >= _waypoints[0].transform.position.x && _player.transform.position.x <= _waypoints[1].transform.position.x))
         {
-            animator.SetBool("attack",true);
-        }
-        else if ((_player.transform.position.x >= _waypoints[0].transform.position.x && _player.transform.position.x <= _waypoints[1].transform.position.x))
-        {
-            animator.SetBool("attack",false);
             LookAtPlayer();
-            direction = (_player.transform.position - transform.position).normalized;
+            if (Vector2.Distance(_player.transform.position,transform.position)<2.1f)
+            {
+                animator.SetBool("attack",true);
+            }
+            else
+            {
+                animator.SetBool("attack",false);
+                direction = (_player.transform.position - transform.position).normalized;
+            }
         }
         else
         {
@@ -62,6 +65,18 @@ public class Enemy4 : Enemy
             rb.velocity = new Vector2(jumpForceX * direction.x, jumpForceY);
         }
        
+    }
+
+    public void StopJump()
+    {
+        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f),
+            new Vector2(transform.position.x + 0.5f, transform.position.y + 0.5f),whatIsGround);
+        if (isGrounded)
+        {
+            Debug.Log("aaaaaaaa");
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0f;
+        }
     }
     protected override bool CanAttack()
     {
