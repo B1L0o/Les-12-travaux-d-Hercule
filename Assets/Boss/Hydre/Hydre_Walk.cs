@@ -27,7 +27,7 @@ public class Hydre_Walk : StateMachineBehaviour
         
         Vector2 direction = new Vector3(target.transform.position.x - bossTransform.position.x,0);
         bossTransform.Translate(direction.normalized * speed * Time.fixedDeltaTime,Space.World);
-        if (Vector2.Distance(bossTransform.position,target.transform.position)<=1)
+        if (Vector2.Distance(bossTransform.position,target.transform.position)<=3)
         {
             animator.SetTrigger("isReachWaypoint");
         }
