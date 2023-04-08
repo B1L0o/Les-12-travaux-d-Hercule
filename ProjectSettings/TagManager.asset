@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - ScreenShake
   - target
+  - VoiceZone
   layers:
   - Default
   - TransparentFX
