@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class VictoryManager : MonoBehaviour
 {
     public string MainMenu;
+    public string NextLevel;
     public GameObject victoryUI;
     public static VictoryManager instance;
 
@@ -33,6 +34,10 @@ public class VictoryManager : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene(MainMenu);
+    }
+    public void NextLevelButton()
+    {
+        SceneManager.LoadScene(NextLevel);
     }
 
     public void Quit()

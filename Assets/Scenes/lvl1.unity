@@ -33123,6 +33123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hydre
       objectReference: {fileID: 0}
+    - target: {fileID: 7174156698880874454, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7174156698880874455, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -38346,7 +38350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8663191860665597524, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8663191860665597525, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: m_RootOrder
@@ -38423,6 +38427,10 @@ PrefabInstance:
     - target: {fileID: 8663191861550127222, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: _width
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663191861550127222, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
+      propertyPath: _health
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8663191861550127222, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: _height
@@ -39557,6 +39565,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5699637817372679813}
     - target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      propertyPath: NextLevel
+      value: CinematicLevel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 4427340341779857628}
@@ -39577,6 +39589,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6311425019764092060}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VictoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894747072343215497, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2894747073563377345, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     public ParticleSystem dust;
     public bool invicible;
-
+    private bool ApplyPoison;
     private Shake _shake;
     public AudioSource Heal;
     public AudioSource jumpsound;
@@ -330,6 +330,57 @@ public class Player : MonoBehaviour
         }
        
     }
+
+    public void StartPoisonEffectSpeed(float speed, float time)
+    {
+        StartCoroutine(PoisonEffectSpeed(speed, time));
+    }
+    IEnumerator PoisonEffectHealth(int damage, float delay) {
+        var waitForSeconds = new WaitForSeconds(delay);
+        while (ApplyPoison)
+        {
+            if (!invicible)
+            {
+                health -= damage;
+                Flash();
+                _shake.camShake();
+                healthBar.SetHealth(health);
+                if (health <= 0)
+                {
+                    GameOverManager.instance.WhenPlayerDeath();
+                    gameObject.SetActive(false);
+                }
+            }
+            yield return waitForSeconds;
+        }
+    }
+
+    IEnumerator PoisonEffectHealthDelay(int damage,float time,float delay)
+    {
+        ApplyPoison = true;
+        StartCoroutine(PoisonEffectHealth(damage,delay));
+        yield return new WaitForSeconds(time);
+        Debug.Log("ENDDDDDD");
+        ApplyPoison = false;
+        //StopCoroutine(PoisonEffectHealth(damage));
+    }
+
+    public void StartPoisonEffectHealth(int damage,float time,float delay)
+    {
+        StartCoroutine(PoisonEffectHealthDelay(damage, time,delay));
+    }
+
+    public IEnumerator PoisonEffectSpeed(float speed,float time)
+    {
+        if (!invicible)
+        {
+            float initialMoveSpeed = moveSpeed;
+            moveSpeed = speed;
+            yield return new WaitForSeconds(time);
+            moveSpeed = initialMoveSpeed;
+        }
+    }
+    
     
 
     private void CheckForJump() // Determines whether or not Hercules has remaining jumps 

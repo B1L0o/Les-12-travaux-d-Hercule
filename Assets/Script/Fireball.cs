@@ -26,7 +26,6 @@ public class Fireball : MonoBehaviour
             if (col.CompareTag("Player"))
             {
                 StartCoroutine(_player.GetComponent<Player>().TakeDMG(Damage));
-                Debug.Log(_player.GetComponent<Player>().health);
 
             }
             Instantiate(explosionEffect, transform.position, Quaternion.identity);

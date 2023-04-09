@@ -8,7 +8,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private bool isRightOriented;
+    protected bool isRightOriented;
     [SerializeField] 
     protected float cooldown = 1f;
     protected float lastAttackedTime = -9999f;
@@ -40,13 +40,11 @@ public abstract class Enemy : MonoBehaviour
             {
                 Die();
             }
-        
-
     }
 
     protected virtual void Die()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
     
     protected void SetState(EnemyState enemyState)
@@ -130,6 +128,32 @@ public abstract class Enemy : MonoBehaviour
 
         transform.localScale = scale;
 
+    }
+
+    public bool IsLookingAtSomething(Transform transformToLookAt)
+    {
+        if (transformToLookAt.position.x > transform.position.x)
+        {
+            if (isRightOriented)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if (isRightOriented)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
     public void LookAtSomething(Transform transformToLookAt)
     {

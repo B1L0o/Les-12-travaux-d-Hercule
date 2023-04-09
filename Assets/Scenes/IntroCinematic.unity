@@ -934,17 +934,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\r\nThis story begins in Thebes or Tirynthe, where Alcmene who is the
-    wife of King Amphitryon, is desired by Zeus, god of gods. He decides to take
-    advantage of the absence of Alcmene's husband to transform himself into him and
-    seduce her. After the three days spent together, Alcam\xE8ne becomes pregnant
-    by Zeus who promises that the child, who is named Heracles, will reign over all
-    his neighbors. Heracles grows up, becomes a hero, has several adventures and
-    marries Megara who is the daughter of Creon, king of Thebes. Hercules and Megara
-    had several children. However, Hera, the goddess wife of Zeus, furious that her
-    husband had again cheated on her with a simple mortal, decided to attack Heracles
-    once again. So she asked Lyssa, the spirit of mad rage, to sting him. Because
-    of this, he went mad and killed his wife and children with his bow.\r\n"
+  m_text: "This story begins in Thebes or Tirynthe, where Alcmene who is the wife
+    of King Amphitryon, is desired by Zeus, god of gods. He decides to take advantage
+    of the absence of Alcmene's husband to transform himself into him and seduce
+    her. After the three days spent together, Alcam\xE8ne becomes pregnant by Zeus
+    who promises that the child, who is named Heracles, will reign over all his neighbors.
+    Heracles grows up, becomes a hero, has several adventures and marries Megara
+    who is the daughter of Creon, king of Thebes. Heracles and Megara had several
+    children. However, Hera, the goddess wife of Zeus, furious that her husband had
+    again cheated on her with a simple mortal, decided to attack Heracles once again.
+    So she asked Lyssa, the spirit of mad rage, to sting him. Because of this, he
+    went mad and killed his wife and children with his bow.\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1439798a99fd194790275df4d8d7f89, type: 2}
   m_sharedMaterial: {fileID: 5968110813731215982, guid: b1439798a99fd194790275df4d8d7f89, type: 2}
@@ -1121,7 +1121,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: And this is where our adventure begins! But, before going to realize his
-    labours, Hercules had to remember his training.
+    labours, Heracles had to remember his training.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1439798a99fd194790275df4d8d7f89, type: 2}
   m_sharedMaterial: {fileID: 5968110813731215982, guid: b1439798a99fd194790275df4d8d7f89, type: 2}
@@ -1237,6 +1237,12 @@ PlayableDirector:
   - key: {fileID: 8347773635071251841, guid: a0cbff2778d475246a7faee2a7237d05, type: 2}
     value: {fileID: 1924409206}
   - key: {fileID: 5869460102591480219, guid: a0cbff2778d475246a7faee2a7237d05, type: 2}
+    value: {fileID: 156992583}
+  - key: {fileID: -2808107225097371246, guid: a0cbff2778d475246a7faee2a7237d05, type: 2}
+    value: {fileID: 1332987285}
+  - key: {fileID: 4337725186210589236, guid: a0cbff2778d475246a7faee2a7237d05, type: 2}
+    value: {fileID: 1924409206}
+  - key: {fileID: 1831840114407069057, guid: a0cbff2778d475246a7faee2a7237d05, type: 2}
     value: {fileID: 156992583}
   m_ExposedReferences:
     m_References: []
