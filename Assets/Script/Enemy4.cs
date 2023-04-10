@@ -73,34 +73,15 @@ public class Enemy4 : Enemy
             new Vector2(transform.position.x + 0.5f, transform.position.y + 0.5f),whatIsGround);
         if (isGrounded)
         {
-            Debug.Log("aaaaaaaa");
             rb.velocity = Vector3.zero;
             rb.angularVelocity = 0f;
         }
     }
-    protected override bool CanAttack()
-    {
-        Collider2D coll =  attackCollider.GetComponent<Collider2D>();
-        List<Collider2D> result = new List<Collider2D>();
-        ContactFilter2D filter = new ContactFilter2D().NoFilter();
-        int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
-        foreach (var collider in result)
-        {
-            if (collider.tag == "Player")
-            {
-                return true;
-            }
-        }
 
-        return false;
-    }
-
-    protected override void Attack()
+    public void AttackAnimationEvent()
     {
-        if (CanAttack())
-        {
-            StartCoroutine(_player.TakeDMG(Damage));
-        }
+        AttackWithoutCoolDown(attackCollider.GetComponent<Collider2D>());
     }
+    
     
 }

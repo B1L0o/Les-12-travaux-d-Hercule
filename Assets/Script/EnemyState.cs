@@ -10,6 +10,7 @@ public abstract class EnemyState : MonoBehaviour
     public abstract void ApplyState();
     
     
+    
 }
 
 public class Patrol : EnemyState
@@ -20,31 +21,65 @@ public class Patrol : EnemyState
     protected GameObject _player;
     protected GameObject _ennemy;
     protected float _speed;
+    protected bool _isRightOriented;
     
     
-    public Patrol(Transform[] waypoint,float speed, GameObject ennemy, GameObject player)
+
+    public Patrol(Transform[] waypoint,float speed, GameObject ennemy, GameObject player,bool isRightOriented)
     {
         _waypoints = waypoint;
         _speed = speed;
         _ennemy = ennemy;
         _player = player;
-
+        _isRightOriented = isRightOriented;
 
     }
     public override void InitialiseState()
     {
         _target = _waypoints[0];
     }
+    public void LookAtSomething(Transform transformToLookAt,bool isRightOriented)
+    {
+        Vector3 scale = _ennemy.transform.localScale;
+        if (transformToLookAt.position.x>_ennemy.transform.position.x)
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            
+        }
+        else
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+        }
 
+        _ennemy.transform.localScale = scale;
+
+    }
+
+    
     public override void ApplyState()
     {
+        LookAtSomething(_target.transform,_isRightOriented);
         Vector3 direction = _target.position - _ennemy.transform.position;
         _ennemy.transform.Translate(direction.normalized * _speed * Time.deltaTime,Space.World);
         if (Vector3.Distance(_ennemy.transform.position,_target.position)<0.3f)
         {
             _index_next_target = (_index_next_target + 1) % _waypoints.Length;
             _target = _waypoints[_index_next_target];
-            _ennemy.GetComponent<SpriteRenderer>().flipX = !(_ennemy.GetComponent<SpriteRenderer>().flipX);
+            //_ennemy.GetComponent<SpriteRenderer>().flipX = !(_ennemy.GetComponent<SpriteRenderer>().flipX);
         }
     }
 
@@ -68,8 +103,9 @@ public class FollowPlayer : EnemyState
     private GameObject _ennemy;
     private Transform _waypoint0;
     private int _groundy;
+    private bool _isRightOriented;
     private int j;
-    public FollowPlayer(int width, int height,float speed,bool debugMode,GameObject player, GameObject ennemy,Transform waypoint0,int groundy)
+    public FollowPlayer(int width, int height,float speed,bool debugMode,GameObject player, GameObject ennemy,Transform waypoint0,int groundy,bool isRightOriented)
     {
          
         _width = width;
@@ -80,20 +116,53 @@ public class FollowPlayer : EnemyState
         _ennemy = ennemy;
         _waypoint0 = waypoint0;
         _groundy = groundy;
-        
+        _isRightOriented = isRightOriented;
+
     }
+    public void LookAtSomething(Transform transformToLookAt,bool isRightOriented)
+    {
+        Vector3 scale = _ennemy.transform.localScale;
+        if (transformToLookAt.position.x>_ennemy.transform.position.x)
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            
+        }
+        else
+        {
+            if (isRightOriented)
+            {
+                scale.x = Math.Abs(scale.x)*-1;
+            }
+            else
+            {
+                scale.x = Math.Abs(scale.x);
+            }
+        }
+
+        _ennemy.transform.localScale = scale;
+
+    }
+
     public override void InitialiseState()
     {
-        _ennemy.GetComponent<SpriteRenderer>().flipX = true;
+        //_ennemy.GetComponent<SpriteRenderer>().flipX = true;
         pathfinding = new Pathfinding(_width, _height,new Vector3((int)_waypoint0.transform.position.x-2,_groundy),_DebugMode);
     }
     
     
     public override void ApplyState()
     {
-        _ennemy.GetComponent<SpriteRenderer>().flipX = _ennemy.transform.position.x > _player.transform.position.x;
+        //_ennemy.GetComponent<SpriteRenderer>().flipX = _ennemy.transform.position.x > _player.transform.position.x;
         j = 0;
         path = pathfinding.FindPath(_ennemy.transform.position, _player.transform.position);
+        LookAtSomething(_player.transform,_isRightOriented);
         if (path != null)
         {
             if (_DebugMode)

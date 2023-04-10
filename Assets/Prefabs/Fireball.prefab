@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2712492, guid: 7031fb9ef92944d478c8f647b631843a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ac1eaeb15e26c43a20d43d32df0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  Damage: 10
+  bulletSpeed: 0
+  Damage: 0
+  _player: {fileID: 0}
   explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}

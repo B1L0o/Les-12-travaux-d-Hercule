@@ -19,17 +19,17 @@ public class Enemy2 : Enemy
     protected void Start()
     {
         isabletopatrol = true;
-        SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject));
+        SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject,isRightOriented));
         _enemyState.InitialiseState();
     }
     protected void Update()
     {
-        Attack();
+        AttackWithOwnCollider();
         _enemyState.ApplyState();
         if ((_enemyState is Patrol||isabletopatrol==false) && _player.transform.position.x >= _waypoints[0].transform.position.x && _player.transform.position.x <= _waypoints[1].transform.position.x)
         {
             isabletopatrol = true;
-            SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
+            SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy,isRightOriented));
             _enemyState.InitialiseState();
 
         }
@@ -38,17 +38,17 @@ public class Enemy2 : Enemy
             if (isabletopatrol)
             {
                 isabletopatrol = false;
-                SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_waypoints[0].gameObject,gameObject,_waypoints[0],_groundy));
+                SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_waypoints[0].gameObject,gameObject,_waypoints[0],_groundy,isRightOriented));
                 _enemyState.InitialiseState();   
             }
             float distance = Vector3.Distance(transform.position,_waypoints[0].transform.position);
-            if(distance<=1f)
+            if(distance<=1.5f)
             {
-                SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject));
+                SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject,isRightOriented));
                 _enemyState.InitialiseState();
             }
-            
         }
+        
     }
     
     

@@ -13,6 +13,8 @@ public class Enemy6 : Enemy
     private GameObject poisonBall;
     [SerializeField]
     private Transform poisonBallPosition;
+    [SerializeField]
+    private GameObject ennemySpawnAfterDeath;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,10 +57,19 @@ public class Enemy6 : Enemy
         }
         
     }
-
-    public void Die()
+    
+    protected override void Die()
     {
-       Destroy(transform.parent.gameObject); 
+        for (int i = 0; i < Random.Range(1,5); i++)
+        {
+            GameObject enemy7 = Instantiate(ennemySpawnAfterDeath,poisonBallPosition.position,Quaternion.Euler(new Vector3(0, 0, 0)));
+            Enemy7_2 enemy7Object = enemy7.GetComponent<Enemy7_2>();
+            enemy7Object._player = _player;
+            enemy7Object.Damage = Random.Range(5, 41);
+            enemy7Object._speed = Random.Range(1f, 6f);
+            
+        }
+        Destroy(transform.parent.gameObject);
     }
     
 }

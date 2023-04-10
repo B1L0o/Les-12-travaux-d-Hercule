@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3545800032243612794
 Transform:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: -2712492, guid: 7031fb9ef92944d478c8f647b631843a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.22, y: 0.22}
@@ -145,10 +145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3f5927b53b4eb0a2f650f5f84e1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  _player: {fileID: 0}
+  isRightOriented: 0
   bulletSpeed: 5
-  _DebugMode: 0
+  Damage: 0
   _width: 30
   _height: 20
-  explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}
   _groundy: -10
+  _DebugMode: 0
+  explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}

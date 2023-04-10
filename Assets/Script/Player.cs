@@ -360,9 +360,7 @@ public class Player : MonoBehaviour
         ApplyPoison = true;
         StartCoroutine(PoisonEffectHealth(damage,delay));
         yield return new WaitForSeconds(time);
-        Debug.Log("ENDDDDDD");
         ApplyPoison = false;
-        //StopCoroutine(PoisonEffectHealth(damage));
     }
 
     public void StartPoisonEffectHealth(int damage,float time,float delay)

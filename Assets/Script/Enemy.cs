@@ -12,17 +12,14 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] 
     protected float cooldown = 1f;
     protected float lastAttackedTime = -9999f;
-    [SerializeField]
-    protected int Damage;
-    [SerializeField]
-    protected float _speed;
+    public int Damage;
+    public float _speed;
     [SerializeField]
     protected int _health;
-    [SerializeField]
-    protected Player _player;
+    public Player _player;
     protected EnemyState _enemyState;
     [SerializeField]
-    protected Transform[] _waypoints;
+    public Transform[] _waypoints;
     [SerializeField] 
     private Material _flashMaterial;
     [SerializeField] 
@@ -52,9 +49,9 @@ public abstract class Enemy : MonoBehaviour
         _enemyState = enemyState;
     }
 
-    protected virtual void Attack()
+    protected virtual void Attack(Collider2D coll)
     {
-        if (CanAttack())
+        if (CanAttack(coll))
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
@@ -65,9 +62,26 @@ public abstract class Enemy : MonoBehaviour
         
     }
 
-    protected virtual bool CanAttack()
+    protected void AttackWithOwnCollider()
     {
-        Collider2D coll = GetComponent<Collider2D>();
+        Attack(GetComponent<Collider2D>());
+    }
+    protected void AttackWithOwnColliderAndWithoutCoolDown()
+    {
+        AttackWithoutCoolDown(GetComponent<Collider2D>());
+    }
+    protected virtual void AttackWithoutCoolDown(Collider2D coll)
+    {
+        if (CanAttack(coll))
+        {
+            StartCoroutine(_player.TakeDMG(Damage));
+        }
+    }
+    
+
+    protected virtual bool CanAttack(Collider2D coll)
+    {
+        //Collider2D coll = GetComponent<Collider2D>();
         List<Collider2D> result = new List<Collider2D>();
         ContactFilter2D filter = new ContactFilter2D().NoFilter();
         int nb_collider = Physics2D.OverlapCollider(coll,filter,result);

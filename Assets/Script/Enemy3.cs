@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class Enemy3 : Enemy
 {
+
     private bool canShoot;
     public Transform firePos;
     public GameObject bullet;
     private Animator _animator;
-
+    [SerializeField]
+    private float range;
+    
     protected void Update()
     {
-        if (_player.transform.position.x>=transform.position.x&&  Mathf.Abs(_player.transform.position.y-transform.position.y)     <1&&canShoot)
+        if (Vector2.Distance(_player.transform.position,transform.position)<range&&Mathf.Abs(_player.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player.transform)&&canShoot)
         {
             _animator.Play("ennemi3_shoot", -1, 0f); 
-            Attack();
+            AttackWithOwnCollider();
         }
     }
     
     public void Shoot()
     {
-        Instantiate(bullet,firePos.position,firePos.rotation);
+        GameObject fireBall =  Instantiate(bullet,firePos.position,firePos.rotation);
+        Fireball fireballObject = fireBall.GetComponent<Fireball>();
+        fireballObject._player = _player;
+        fireballObject.bulletSpeed = _speed;
+        fireballObject.Damage = Damage;
     }
     
     protected void Start()
@@ -29,7 +36,7 @@ public class Enemy3 : Enemy
         _animator = GetComponent<Animator>();
     }
     
-    protected override void Attack()
+    protected override void Attack(Collider2D coll)
     {
        
         StartCoroutine(Attack_Coroutine());

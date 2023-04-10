@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4266260510026918873}
   - component: {fileID: 4266260510026918875}
   - component: {fileID: 4266260510026918874}
+  - component: {fileID: 4264283269165683072}
   m_Layer: 8
   m_Name: Graphics
   m_TagString: enemy
@@ -125,9 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607104e2b15ffbd4aac4ab4f022e4878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
-  Damage: 0
-  _speed: 0
+  isRightOriented: 0
+  cooldown: 0
+  Damage: 10
+  _speed: 5
   _health: 200
   _player: {fileID: 3642400559322487645, guid: 27d437292f2874a41a9d372daada0486, type: 3}
   _waypoints: []
@@ -135,6 +137,7 @@ MonoBehaviour:
   _flashDuration: 0.125
   firePos: {fileID: 4266260510579592981}
   bullet: {fileID: 3545800032243612795, guid: 5831257178ce130448e648561e82b2fa, type: 3}
+  range: 20
 --- !u!95 &4266260510026918874
 Animator:
   serializedVersion: 5
@@ -155,6 +158,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!50 &4264283269165683072
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266260510026918868}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4266260510579592978
 GameObject:
   m_ObjectHideFlags: 0
