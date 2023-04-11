@@ -10,6 +10,7 @@ public class Lion2_Enrage : StateMachineBehaviour
     {
         lion = animator.GetComponent<Lion2>();
         lion.SetIsInvulnerable(true);
+        lion.AudioManager.Pause("BossFightMusic");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -21,6 +22,7 @@ public class Lion2_Enrage : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         lion.SetIsInvulnerable(false);
+        lion.AudioManager.UnPause("BossFightMusic");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

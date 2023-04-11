@@ -60,8 +60,21 @@ public class Lion2 : Enemy
     }
     protected override void Die()
     {
+        transform.position = new Vector3(transform.position.x, -24.5f, transform.position.z);
+        GetComponent<Animator>().SetTrigger("dead");
+        //VictoryManager.instance.WhenBossDeath();
+        //Destroy(gameObject);
+    }
+
+    protected void PlayLionRoar()
+    {
+        AudioManager.Play("lionRoar");
+    }
+
+    
+    public void TriggerVictory()
+    {
         VictoryManager.instance.WhenBossDeath();
-        Destroy(gameObject);
     }
     public bool isInAttackCollider()
     {
