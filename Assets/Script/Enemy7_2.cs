@@ -27,14 +27,6 @@ public class Enemy7_2 : Enemy
     {
         _animator.SetTrigger("explode");
     }
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-        //if (col.CompareTag("Tilemap"))
-        //{
-            //_animator.SetTrigger("explode");
-        //}
-       
-    //}
     
     
 }

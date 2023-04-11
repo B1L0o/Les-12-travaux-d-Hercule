@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnableHydre : MonoBehaviour
+public class EnableBoss : MonoBehaviour
 {
     [SerializeField] private Player player;
     [SerializeField] private int seuil;
     [SerializeField] private GameObject graphics;
-    [SerializeField] private GameObject hydreHeathBar;
+    [SerializeField] private GameObject BossHeathBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class EnableHydre : MonoBehaviour
     {
         if (graphics.activeInHierarchy == false && Vector2.Distance(transform.position,player.transform.position)<seuil)
         {
-            hydreHeathBar.SetActive(true);
+            BossHeathBar.SetActive(true);
             graphics.SetActive(true);
         }
     }

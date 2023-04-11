@@ -117,7 +117,7 @@ public class Hydre : Enemy
         return false;
     }
 
-    protected void Attack()
+    protected void AttackSkill1()
     {
         if (isInSkill1Collider())
         {
