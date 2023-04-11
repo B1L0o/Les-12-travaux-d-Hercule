@@ -13,7 +13,6 @@ public class BirdBoss : MonoBehaviour
     private Vector2 direction;
     public float cooldown = 1f;
     private float lastAttackedTime = -9999f;
-    public bool isRightOriented = false;
     // Start is called before the first frame update
     void Start()
     {
