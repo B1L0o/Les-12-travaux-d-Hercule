@@ -20,7 +20,7 @@ public class Lion : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        IsInvulnerable = false;
+        IsInvulnerable = true;
         SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy,isRightOriented));
         _enemyState.InitialiseState();
     }

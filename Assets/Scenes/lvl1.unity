@@ -46063,7 +46063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663191862034427827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.63, y: -1.42, z: -0.049361907}
+  m_LocalPosition: {x: 7.96, y: -1.42, z: -0.049361907}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46090,7 +46090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8663191862365571466
 Transform:
   m_ObjectHideFlags: 0
@@ -46099,7 +46099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663191862365571467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.56, y: -22.8, z: 0.049361907}
+  m_LocalPosition: {x: 93.4, y: -22.8, z: 0.049361907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46169,7 +46169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2352797903882389834}
-  seuil: 8
+  seuil: 4
   graphics: {fileID: 8663191862034427827}
   BossHeathBar: {fileID: 1539430306016257438}
 --- !u!1 &8750960414976658710
