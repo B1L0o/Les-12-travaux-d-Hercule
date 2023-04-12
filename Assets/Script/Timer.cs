@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeValue = 90;
-    public AudioManager audioManager;
     public Text timeText;
     // Update is called once per frame
     void Update()
@@ -17,7 +16,6 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
-            audioManager.Pause("timepassingsound");
             //Appeler le gameOver
         }
         DisplayTime(timeValue);
@@ -38,7 +36,6 @@ public class Timer : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         if (seconds<=10)
         {
-            audioManager.Play("timepassingsound");
             timeText.color = Color.red;
         }
     }

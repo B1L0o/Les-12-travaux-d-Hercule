@@ -20,8 +20,8 @@ public class Lion : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        IsInvulnerable = false;
-        SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
+        IsInvulnerable = true;
+        SetState(new FollowPlayer(_width,_height,_speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy,isRightOriented));
         _enemyState.InitialiseState();
     }
 
@@ -36,7 +36,7 @@ public class Lion : Enemy
 
     public void SetEnemyState(float speed)
     {
-        SetState(new FollowPlayer(_width,_height,speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy));
+        SetState(new FollowPlayer(_width,_height,speed,_DebugMode,_player.gameObject,gameObject,_waypoints[0],_groundy,isRightOriented));
         _enemyState.InitialiseState();
     }
 
@@ -89,7 +89,7 @@ public class Lion : Enemy
     }
 
 
-    protected override void Attack()
+    protected  void Attack()
     {
         Collider2D collider2DInfo = Physics2D.OverlapCircle(transform.position, AttackRange);
         if (collider2DInfo != null)

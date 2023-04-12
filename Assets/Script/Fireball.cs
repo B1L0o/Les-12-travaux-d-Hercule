@@ -6,15 +6,13 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public float bulletSpeed;
+    public int Damage;
+    public Player _player;
     private Rigidbody2D rb;
-    private GameObject _player;
-    [SerializeField]
-    private int Damage;
     public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right*bulletSpeed;
     }
@@ -25,8 +23,7 @@ public class Fireball : MonoBehaviour
         {
             if (col.CompareTag("Player"))
             {
-                StartCoroutine(_player.GetComponent<Player>().TakeDMG(Damage));
-                Debug.Log(_player.GetComponent<Player>().health);
+                StartCoroutine(_player.TakeDMG(Damage));
 
             }
             Instantiate(explosionEffect, transform.position, Quaternion.identity);

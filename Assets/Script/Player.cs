@@ -11,11 +11,7 @@ public class Player : MonoBehaviour
 
     public ParticleSystem dust;
     public bool invicible;
-    public float poisonSpeed;
-    public float PoisonDelay;
-    public bool ispoisoned;
-    public float attackReduc;
-
+    private bool ApplyPoison;
     private Shake _shake;
     public AudioSource Heal;
     public AudioSource jumpsound;
@@ -126,12 +122,7 @@ public class Player : MonoBehaviour
         {
             invicible = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            StartCoroutine(IsPoisoned());
-            
-        }
+        
         
         if (isGrounded && (rb.velocity.x > 1 || rb.velocity.x < -1))
         {
@@ -339,6 +330,55 @@ public class Player : MonoBehaviour
         }
        
     }
+
+    public void StartPoisonEffectSpeed(float speed, float time)
+    {
+        StartCoroutine(PoisonEffectSpeed(speed, time));
+    }
+    IEnumerator PoisonEffectHealth(int damage, float delay) {
+        var waitForSeconds = new WaitForSeconds(delay);
+        while (ApplyPoison)
+        {
+            if (!invicible)
+            {
+                health -= damage;
+                Flash();
+                _shake.camShake();
+                healthBar.SetHealth(health);
+                if (health <= 0)
+                {
+                    GameOverManager.instance.WhenPlayerDeath();
+                    gameObject.SetActive(false);
+                }
+            }
+            yield return waitForSeconds;
+        }
+    }
+
+    IEnumerator PoisonEffectHealthDelay(int damage,float time,float delay)
+    {
+        ApplyPoison = true;
+        StartCoroutine(PoisonEffectHealth(damage,delay));
+        yield return new WaitForSeconds(time);
+        ApplyPoison = false;
+    }
+
+    public void StartPoisonEffectHealth(int damage,float time,float delay)
+    {
+        StartCoroutine(PoisonEffectHealthDelay(damage, time,delay));
+    }
+
+    public IEnumerator PoisonEffectSpeed(float speed,float time)
+    {
+        if (!invicible)
+        {
+            float initialMoveSpeed = moveSpeed;
+            moveSpeed = speed;
+            yield return new WaitForSeconds(time);
+            moveSpeed = initialMoveSpeed;
+        }
+    }
+    
     
 
     private void CheckForJump() // Determines whether or not Hercules has remaining jumps 
@@ -446,17 +486,7 @@ public class Player : MonoBehaviour
         spriteRenderer.material = originalMaterial;
         _isflashing = false;
     }
-
-    protected IEnumerator IsPoisoned()
-    {
-        moveSpeed /= poisonSpeed;
-        startTimeAttackMeleeG *= attackReduc;
-        ispoisoned = true;
-        yield return new WaitForSeconds(PoisonDelay);
-        moveSpeed *= poisonSpeed;
-        startTimeAttackMeleeG /= attackReduc;
-        ispoisoned = false;
-    }
+    
     
     
 }

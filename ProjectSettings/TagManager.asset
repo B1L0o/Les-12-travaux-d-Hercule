@@ -11,6 +11,7 @@ TagManager:
   - ScreenShake
   - target
   - VoiceZone
+  - birdBoss
   layers:
   - Default
   - TransparentFX

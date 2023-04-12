@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 50
   spriteRenderer: {fileID: 3208051734035355609}
-  _player: {fileID: 0}
+  _player: {fileID: 2352797903506404887, guid: 27d437292f2874a41a9d372daada0486, type: 3}
 --- !u!50 &3208051734035355591
 Rigidbody2D:
   serializedVersion: 4
