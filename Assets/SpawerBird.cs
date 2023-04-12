@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SpawerBird : MonoBehaviour
 {
+    public AudioManager audioManager;
     private int numberOfBirdsKilled;
     private int numberOfBirdsLeft;
     public Text textNumberOfBirdsKilled;
@@ -32,7 +33,7 @@ public class SpawerBird : MonoBehaviour
     }
     IEnumerator SpawnBirds()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         for (int i = 0; i < number; i++)
         {
             SpawnRandom();
@@ -43,21 +44,23 @@ public class SpawerBird : MonoBehaviour
     {
         if (numberOfBirdsKilled+numberOfBirdsLeft == number)
         {
+            Cursor.visible = true;
             if (numberOfBirdsLeft>=numberOfBirdsKilled)
             {
-                Debug.Log("Game Over");
+                GameOverManager.instance.WhenPlayerDeath();
             }
             else
             {
-                Debug.Log("Victory");
+                VictoryManager.instance.WhenBossDeath();
             }
             
         }
     }
-
+    
     
     public void IncreaseNumberOfBirdsKilled()
     {
+        audioManager.Play("shoot");
         numberOfBirdsKilled += 1;
         textNumberOfBirdsKilled.text = "Number of birds killed : " + numberOfBirdsKilled;
     }
