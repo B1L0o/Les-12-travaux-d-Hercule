@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
 
     public ParticleSystem dust;
     public bool invicible;
+    public float poisonSpeed;
+    public float PoisonDelay;
+    public bool ispoisoned;
+    public float attackReduc;
 
     private Shake _shake;
     public AudioSource Heal;
@@ -122,7 +126,12 @@ public class Player : MonoBehaviour
         {
             invicible = false;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            StartCoroutine(IsPoisoned());
+            
+        }
         
         if (isGrounded && (rb.velocity.x > 1 || rb.velocity.x < -1))
         {
@@ -437,7 +446,17 @@ public class Player : MonoBehaviour
         spriteRenderer.material = originalMaterial;
         _isflashing = false;
     }
-    
+
+    protected IEnumerator IsPoisoned()
+    {
+        moveSpeed /= poisonSpeed;
+        startTimeAttackMeleeG *= attackReduc;
+        ispoisoned = true;
+        yield return new WaitForSeconds(PoisonDelay);
+        moveSpeed *= poisonSpeed;
+        startTimeAttackMeleeG /= attackReduc;
+        ispoisoned = false;
+    }
     
     
 }
