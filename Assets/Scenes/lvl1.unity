@@ -40699,6 +40699,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 2352797904376227370}
   invicible: 0
+  poisonSpeed: 5
+  PoisonDelay: 3
+  ispoisoned: 0
   Heal: {fileID: 2352797903882389824}
   jumpsound: {fileID: 2352797903882389825}
   run: {fileID: 2352797903882389826}
