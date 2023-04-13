@@ -124,6 +124,7 @@ public class Hydre : Enemy
             StartCoroutine(_player.TakeDMG(Damage));
         }
         
+        
     }
     public void AttackSkill2()
     {

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRightOriented: 1
   cooldown: 2
-  Damage: 5
+  Damage: 2
   _speed: 5
   _health: 100
   _player: {fileID: 0}
@@ -212,7 +212,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &7350965598841758487
 GameObject:
   m_ObjectHideFlags: 0

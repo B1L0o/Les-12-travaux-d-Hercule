@@ -219,6 +219,9 @@ MonoBehaviour:
   _waypoints: []
   _flashMaterial: {fileID: 2100000, guid: 08a2d2aae0b95c546a6ad8c0a027629a, type: 2}
   _flashDuration: 0.125
+  _width: 0
+  _height: 0
+  _groundy: 0
   firePos: {fileID: 3616965847178078053}
   bullet: {fileID: 3545800032243612795, guid: acd9ffab8827ee84cbed2be32a006606, type: 3}
   range: 20
@@ -242,4 +245,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

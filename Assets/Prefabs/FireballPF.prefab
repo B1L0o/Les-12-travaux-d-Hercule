@@ -152,5 +152,5 @@ MonoBehaviour:
   _width: 30
   _height: 20
   _groundy: -10
-  _DebugMode: 1
+  _DebugMode: 0
   explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}

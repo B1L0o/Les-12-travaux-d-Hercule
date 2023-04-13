@@ -20,6 +20,7 @@ public class GameOverManager : MonoBehaviour
         instance = this;
     }
 
+    
     public void WhenPlayerDeath()
     {
         if (CurrentSceneManager.instance.isPlayerPresentByDefault)
@@ -29,6 +30,7 @@ public class GameOverManager : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+    
     public void RetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
