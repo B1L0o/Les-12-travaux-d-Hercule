@@ -39407,8 +39407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014de0128135b4740bf2b341527ad217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 1222232684}
+  objects: []
 --- !u!114 &4965731680262705100
 MonoBehaviour:
   m_ObjectHideFlags: 0
