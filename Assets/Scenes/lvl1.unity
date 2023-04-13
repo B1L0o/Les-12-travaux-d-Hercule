@@ -29866,6 +29866,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7.16
       objectReference: {fileID: 0}
+    - target: {fileID: 7174156698604830327, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7174156698880874454, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_Name
       value: Hydre
@@ -29922,6 +29926,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2352797903882389834}
+    - target: {fileID: 7174156699258925665, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
+      propertyPath: BossHeathBar
+      value: 
+      objectReference: {fileID: 1539430306016257438}
     - target: {fileID: 7174156699258925665, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: hydreHeathBar
       value: 
@@ -30350,7 +30358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217387078244277466, guid: 0cb27cca8a9e206458e4a959f62451a4, type: 3}
       propertyPath: Sounds.Array.data[0].volume
-      value: 0
+      value: 0.707
       objectReference: {fileID: 0}
     - target: {fileID: 3217387078244277466, guid: 0cb27cca8a9e206458e4a959f62451a4, type: 3}
       propertyPath: Sounds.Array.data[1].volume
@@ -32481,6 +32489,10 @@ PrefabInstance:
     - target: {fileID: 7871528351327731927, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: m_Name
       value: Lion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871528351327731927, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7871528351667152623, guid: 97106084f971a064abcc951e96a3dd80, type: 3}
       propertyPath: m_IsActive

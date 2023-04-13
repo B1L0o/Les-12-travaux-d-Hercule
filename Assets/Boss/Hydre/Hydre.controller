@@ -480,7 +480,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: skill3
     m_Type: 9
@@ -1005,16 +1005,16 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: -560, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2918392649173189270}
-    m_Position: {x: -720, y: -270, z: 0}
+    m_Position: {x: -440, y: -340, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6402694846684449258}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -560, y: 40, z: 0}
+  m_AnyStatePosition: {x: -400, y: -220, z: 0}
   m_EntryPosition: {x: 50, y: 190, z: 0}
-  m_ExitPosition: {x: -230, y: -390, z: 0}
+  m_ExitPosition: {x: -400, y: -1090, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -8103939404001192997}
 --- !u!1101 &8225448887612385768
