@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRightOriented: 0
   cooldown: 0
-  Damage: 40
+  Damage: 12
   _speed: 5
   _health: 50
   _player: {fileID: 0}

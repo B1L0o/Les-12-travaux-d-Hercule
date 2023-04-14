@@ -24,10 +24,10 @@ public class VictoryManager : MonoBehaviour
 
     public void WhenBossDeath()
     {
-        if (CurrentSceneManager.instance.isPlayerPresentByDefault)
-        {
-            DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
-        }
+        //if (CurrentSceneManager.instance.isPlayerPresentByDefault)
+        //{
+        //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        //}
         victoryUI.SetActive(true);
     }
     

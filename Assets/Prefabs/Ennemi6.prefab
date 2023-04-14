@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRightOriented: 1
   cooldown: 2
-  Damage: 5
+  Damage: 2
   _speed: 5
   _health: 100
   _player: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   range: 8
   poisonBall: {fileID: 6445421208194537476, guid: 0915a30035ca1984daa3de5141664066, type: 3}
   poisonBallPosition: {fileID: 7350965598841758486}
-  ennemySpawnAfterDeath: {fileID: 6434101945198226210, guid: 054d35b2b4714334a8e0cc21c3a3265d, type: 3}
+  ennemySpawnAfterDeath: {fileID: 3792354685428206623, guid: 054d35b2b4714334a8e0cc21c3a3265d, type: 3}
 --- !u!50 &3567458512122341495
 Rigidbody2D:
   serializedVersion: 4
@@ -212,7 +212,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &7350965598841758487
 GameObject:
   m_ObjectHideFlags: 0

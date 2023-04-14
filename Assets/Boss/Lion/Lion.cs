@@ -25,6 +25,14 @@ public class Lion : Enemy
         _enemyState.InitialiseState();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(20);
+        }
+    }
+
     public void Jump()
     {
         transform.position +=  (2.7f*Vector3.up)  * _speed * Time.deltaTime;
