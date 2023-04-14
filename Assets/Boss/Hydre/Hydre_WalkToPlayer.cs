@@ -14,7 +14,8 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
     {
         animator.GetComponent<Hydre>().SetIsInvulnerable(false);
         bossTransform = animator.GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
+        player = animator.GetComponent<Hydre>()._player.gameObject;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

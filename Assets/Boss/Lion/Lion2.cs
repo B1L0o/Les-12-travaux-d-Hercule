@@ -19,6 +19,14 @@ public class Lion2 : Enemy
         slider.value = health;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(20);
+        }
+    }
+
     public void SetHealth(int health)
     {
         slider.value = health;

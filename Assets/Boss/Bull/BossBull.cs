@@ -28,7 +28,9 @@ public class BossBull : Enemy
         animator = GetComponent<Animator>();
         SetMaxHealth(_health);
         isInvulnerable = true;
+        AudioManager.Play("BossFightMusic");
     }
+    
     
     public void IncrementAnimationCounter()
     {
@@ -132,6 +134,9 @@ public class BossBull : Enemy
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(20);
+        }
     }
 }

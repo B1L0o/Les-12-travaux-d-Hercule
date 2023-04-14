@@ -28,6 +28,14 @@ public class Hydre : Enemy
         SetMaxHealth(_health);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(20);
+        }
+    }
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
