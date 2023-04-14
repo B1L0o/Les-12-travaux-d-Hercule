@@ -26,7 +26,7 @@ public class Slide : MonoBehaviour
         }
 
         image.transform.position = new Vector3(currentpos.transform.position.x,height,0);
-        currentpos.transform.position = new Vector3(currentpos.transform.position.x + speed/10,0,0);
+        currentpos.transform.position = new Vector3(currentpos.transform.position.x + speed/100f,0,0);
 
 
 
