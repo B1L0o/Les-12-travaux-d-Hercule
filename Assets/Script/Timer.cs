@@ -34,9 +34,16 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        if (seconds<=10)
+        if (minutes==0 && seconds<=10)
         {
             timeText.color = Color.red;
         }
+
+        if (seconds==0 && minutes==0)
+        {
+            GameOverManager.instance.WhenPlayerDeath();
+        }
     }
+    
+    
 }
