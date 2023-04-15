@@ -173,7 +173,7 @@ MonoBehaviour:
   image: {fileID: 160381358}
   startpos: {fileID: 787106808}
   currentpos: {fileID: 455904778}
-  speed: 1
+  speed: 4
   height: 400
 --- !u!1 &446926281
 GameObject:

@@ -3525,7 +3525,7 @@ MonoBehaviour:
   image: {fileID: 7395817488444428245}
   startpos: {fileID: 803526981}
   currentpos: {fileID: 1182506807}
-  speed: 1
+  speed: 3
   height: 300
 --- !u!4 &7395817488444428244
 Transform:
