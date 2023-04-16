@@ -67,4 +67,49 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+    
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene("Select Level Menu");
+
+    }
+    public void level2()
+    {
+        SceneManager.LoadScene("Level 2");
+
+    }
+    
+    public void level3()
+    {
+        SceneManager.LoadScene("Level 3");
+
+    }
+    public void level4()
+    {
+        SceneManager.LoadScene("Level 4");
+
+    }
+    
+    public void level5()
+    {
+        SceneManager.LoadScene("lvl15");
+
+    }
+    
+    public void level6()
+    {
+        SceneManager.LoadScene("lvl16");
+
+    }
+    public void tutorial()
+    {
+        SceneManager.LoadScene("tutorial");
+
+    }
+    
+    public void back2()
+    {
+        SceneManager.LoadScene("Main Menu");
+
+    }
 }
