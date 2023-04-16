@@ -12,6 +12,8 @@ TagManager:
   - target
   - VoiceZone
   - birdBoss
+  - Bullet
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
