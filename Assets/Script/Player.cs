@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,8 +26,7 @@ public class Player : MonoBehaviour
     public float startTimeAttackBow;
 
 
-
-
+    
     // Jump Variables //
     public bool isJumping;
     public int maxJumps;
@@ -360,9 +358,7 @@ public class Player : MonoBehaviour
         ApplyPoison = true;
         StartCoroutine(PoisonEffectHealth(damage,delay));
         yield return new WaitForSeconds(time);
-        Debug.Log("ENDDDDDD");
         ApplyPoison = false;
-        //StopCoroutine(PoisonEffectHealth(damage));
     }
 
     public void StartPoisonEffectHealth(int damage,float time,float delay)

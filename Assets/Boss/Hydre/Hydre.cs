@@ -28,6 +28,14 @@ public class Hydre : Enemy
         SetMaxHealth(_health);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeDamage(20);
+        }
+    }
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -117,12 +125,13 @@ public class Hydre : Enemy
         return false;
     }
 
-    protected override void Attack()
+    protected void AttackSkill1()
     {
         if (isInSkill1Collider())
         {
             StartCoroutine(_player.TakeDMG(Damage));
         }
+        
         
     }
     public void AttackSkill2()

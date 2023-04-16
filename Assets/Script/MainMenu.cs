@@ -19,13 +19,13 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Settings Menu");
 
     }
 
     public void Back()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()
@@ -67,4 +67,52 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+    public void SelectLevel()
+        {
+            SceneManager.LoadScene("Select Level Menu");
+    
+        }
+    public void level1()
+    {
+        SceneManager.LoadScene("lvl1");
+    
+    }
+        public void level2()
+        {
+            SceneManager.LoadScene("Level 2");
+    
+        }
+        
+        public void level3()
+        {
+            SceneManager.LoadScene("Level 3");
+    
+        }
+        public void level4()
+        {
+            SceneManager.LoadScene("Level 4");
+        }
+        
+        public void level5()
+        {
+            SceneManager.LoadScene("lvl5");
+    
+        }
+        
+        public void level6()
+        {
+            SceneManager.LoadScene("lvl6");
+    
+        }
+        public void tutorial()
+        {
+            SceneManager.LoadScene("tutorial");
+    
+        }
+        
+        public void back2()
+        {
+            SceneManager.LoadScene("Main Menu");
+    
+        }
 }
