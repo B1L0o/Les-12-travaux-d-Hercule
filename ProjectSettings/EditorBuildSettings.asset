@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 3.unity
     guid: 47098d5488e1541bf8aa522340a4764d
   - enabled: 1
+    path: Assets/Scenes/Select Level Menu.unity
+    guid: a5995e7bcc3ad384fba7f39d8112c2bc
+  - enabled: 1
     path: Assets/Scenes/CinematicLevel4.unity
     guid: ff40cdf29dba62b489b63b43dda19313
   - enabled: 1
