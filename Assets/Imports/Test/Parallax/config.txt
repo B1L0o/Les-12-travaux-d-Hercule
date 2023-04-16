@@ -1,2 +1,0 @@
-Window 960 540 1
-Font fonts/consola.ttf 18 255 255 255
