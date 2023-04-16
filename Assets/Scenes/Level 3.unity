@@ -150873,7 +150873,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6641707231105350170, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      - m_Target: {fileID: 6641707232755305195}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: SettingMenuButton
         m_Mode: 1
@@ -151279,7 +151279,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6641707231105350170, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      - m_Target: {fileID: 6641707232755305195}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenuButton
         m_Mode: 1
@@ -151491,7 +151491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6641707231105350170, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      - m_Target: {fileID: 6641707232755305195}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -157932,7 +157932,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      - m_Target: {fileID: 6641707232755305198}
         m_TargetAssemblyTypeName: VictoryManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -158605,7 +158605,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      - m_Target: {fileID: 6641707232755305198}
         m_TargetAssemblyTypeName: VictoryManager, Assembly-CSharp
         m_MethodName: MainMenuButton
         m_Mode: 1
