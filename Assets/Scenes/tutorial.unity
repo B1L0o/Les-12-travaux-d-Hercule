@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 200051755}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: grrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33458,7 +33458,7 @@ MonoBehaviour:
   hit: {fileID: 0}
   timeInBetween_MeleeG: 0
   startTimeAttackMeleeG: 0.05
-  startTimeAttackBow: 400
+  startTimeAttackBow: 0.05
   isJumping: 1
   maxJumps: 2
   groundCheck: {fileID: 1654935949}
