@@ -11,19 +11,9 @@ public class server : MonoBehaviourPunCallbacks
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
-        if (host)
-        {
-            PhotonNetwork.CreateRoom("test");
-			PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
-        }
-        else
-        {
-            PhotonNetwork.JoinRoom("test");
-			PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
-        }
     }
 
-	void spawnplayer()
+    void spawnplayer()
 	{
 	PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
 	}
@@ -32,5 +22,18 @@ public class server : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
 	PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+	    if (host)
+	    {
+		    PhotonNetwork.CreateRoom("test");
+	    }
+	    else
+	    {
+		    PhotonNetwork.JoinRoom("test");
+		    PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
+	    }
     }
 }
