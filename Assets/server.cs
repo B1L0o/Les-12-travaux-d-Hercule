@@ -13,11 +13,6 @@ public class server : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    void spawnplayer()
-	{
-	PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
-	}
-
     // Update is called once per frame
     public override void OnConnectedToMaster()
     {
@@ -33,7 +28,14 @@ public class server : MonoBehaviourPunCallbacks
 	    else
 	    {
 		    PhotonNetwork.JoinRoom("test");
-		    PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);
+	    }
+    }
+
+    public override void OnJoinedRoom()
+    {
+	    if (!host)
+	    {
+		    PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);   
 	    }
     }
 }
