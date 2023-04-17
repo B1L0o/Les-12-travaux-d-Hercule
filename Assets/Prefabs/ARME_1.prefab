@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3208051734035355609}
   - component: {fileID: 3208051734035355590}
   - component: {fileID: 3208051734035355591}
+  - component: {fileID: 4739259569500629873}
   m_Layer: 0
   m_Name: ARME_1
   m_TagString: Untagged
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9557f6ea5f2044ee39b93690bd0b8b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 50
+  projectileSpeed: 10
   spriteRenderer: {fileID: 3208051734035355609}
   _player: {fileID: 2352797903506404887, guid: 27d437292f2874a41a9d372daada0486, type: 3}
 --- !u!50 &3208051734035355591
@@ -121,4 +122,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!58 &4739259569500629873
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208051734035355588}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.27
