@@ -97,7 +97,9 @@ public class Player2 : MonoBehaviour
     [SerializeField] private float _flashDuration;
     private bool _isflashing = false;
 
-    PhotonView view;
+    public bool host;
+
+    //public PhotonView view;
 
     public void FixedUpdate()
     {
@@ -108,7 +110,6 @@ public class Player2 : MonoBehaviour
 
     void Start()
     {
-        view = GetComponent<PhotonView>();
         health = maxHealth;
         invicible = false;
         healthBar.SetMaxHealth(maxHealth);
@@ -122,7 +123,7 @@ public class Player2 : MonoBehaviour
 
     void Update()
     {
-        if (view.IsMine)
+        if (host)
         {
 
             if (timeInBetween_MeleeG > 0)

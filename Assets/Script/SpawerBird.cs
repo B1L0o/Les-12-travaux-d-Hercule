@@ -47,10 +47,12 @@ public class SpawerBird : MonoBehaviour
             Cursor.visible = true;
             if (numberOfBirdsLeft>=numberOfBirdsKilled)
             {
+                Cursor.visible = true;
                 GameOverManager.instance.WhenPlayerDeath();
             }
             else
             {
+                Cursor.visible = true;
                 VictoryManager.instance.WhenBossDeath();
             }
             
