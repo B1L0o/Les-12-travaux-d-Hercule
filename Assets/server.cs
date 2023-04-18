@@ -5,8 +5,7 @@ using Photon.Pun;
 
 public class server : MonoBehaviourPunCallbacks
 {
-	public GameObject player;
-    public bool host;
+	public bool host;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +27,6 @@ public class server : MonoBehaviourPunCallbacks
 	    else
 	    {
 		    PhotonNetwork.JoinRoom("test");
-	    }
-    }
-
-    public override void OnJoinedRoom()
-    {
-	    if (!host)
-	    {
-		    PhotonNetwork.Instantiate(player.name,new Vector2(-10,3),Quaternion.identity);   
 	    }
     }
 }
