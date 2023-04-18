@@ -895,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 489, y: 371.29}
-  m_SizeDelta: {x: 867.556, y: 135.33}
+  m_AnchoredPosition: {x: 438.92, y: 440.66}
+  m_SizeDelta: {x: 996.97, y: 93.682}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746009242
 MonoBehaviour:
@@ -920,7 +920,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ea97e8a4a229463f8797224a0f86426, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Number of Birds Left : 0'
+  m_Text: 'Number of Birds that left : 0'
 --- !u!222 &1746009243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1322,8 +1322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483, y: 371.29}
-  m_SizeDelta: {x: 966, y: 119.386}
+  m_AnchoredPosition: {x: -508.28, y: 440.66}
+  m_SizeDelta: {x: 897.4324, y: 93.6732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952646410
 MonoBehaviour:
@@ -1347,7 +1347,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ea97e8a4a229463f8797224a0f86426, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

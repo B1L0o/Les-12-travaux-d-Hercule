@@ -180,6 +180,11 @@ public class Player : MonoBehaviour
         {
             rb.position = new Vector2(114.93f, -24.01f);
         }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            rb.position = new Vector2(
+                456.2f, -43.9f);
+        }
         
         // Attack and Damage //
         

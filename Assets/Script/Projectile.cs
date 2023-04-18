@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
         {
             if (col.CompareTag("enemy"))
             {
-                col.GetComponent<Enemy>().TakeDamage(20);
+                col.GetComponent<Enemy>().TakeDamage(10);
 
             }
             Destroy(gameObject);

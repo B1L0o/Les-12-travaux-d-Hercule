@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/player2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/player2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1 multi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1 multi.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/SpawerBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SpawerBird.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681749448284</updated>
       <workItem from="1681749459372" duration="1383000" />
+      <workItem from="1681826208213" duration="1976000" />
     </task>
     <servers />
   </component>

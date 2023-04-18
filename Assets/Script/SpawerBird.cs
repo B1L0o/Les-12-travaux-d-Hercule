@@ -69,7 +69,8 @@ public class SpawerBird : MonoBehaviour
     public void IncreaseNumberOfBirdsLeft()
     {
         numberOfBirdsLeft += 1;
-        textNumberOfBirdsLeft.text = "Number of birds left : " + numberOfBirdsLeft;
+        textNumberOfBirdsLeft.text = "Number of birds that left : " + numberOfBirdsLeft;
     }
+    
     
 }
