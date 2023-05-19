@@ -50,6 +50,13 @@ public class Amazone : Enemy
         animator.SetTrigger("death");
         enabled = false;
         tag = "Untagged";
+        StartCoroutine(DestroyBody());
+    }
+
+    IEnumerator DestroyBody()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
     public override void TakeDamage(int damage)
     {
