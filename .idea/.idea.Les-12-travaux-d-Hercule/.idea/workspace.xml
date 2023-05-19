@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_Move.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_Move.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnableTimer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnableTimer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/SpawerBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SpawerBird.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/deathZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/deathZone.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +21,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746c126b0b54f3b834845974d1a9190159000/4f/cda16d78/Resources.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/deathZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/Amazone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/SpawnerAmazones.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_Run.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_skill1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/KnockBack.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,7 +100,11 @@
       <option name="presentableId" value="Default" />
       <updated>1681749448284</updated>
       <workItem from="1681749459372" duration="1383000" />
-      <workItem from="1681826208213" duration="1976000" />
+      <workItem from="1681826208213" duration="3372000" />
+      <workItem from="1683560925924" duration="941000" />
+      <workItem from="1684486118690" duration="360000" />
+      <workItem from="1684486501779" duration="12702000" />
+      <workItem from="1684505251187" duration="4793000" />
     </task>
     <servers />
   </component>

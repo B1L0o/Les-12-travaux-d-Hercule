@@ -35,7 +35,7 @@ public class BossBull : Enemy
     public void IncrementAnimationCounter()
     {
         counter = counter + 1;
-        animator.SetInteger("counter",counter+1);
+        animator.SetInteger("counter",counter);
     }
     public void SetMaxHealth(int health)
     {
