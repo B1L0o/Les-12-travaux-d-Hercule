@@ -33,40 +33,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetResolution()
-    {
-        switch (Dresolution .value)
-        {
-            case 0:
-                Screen.SetResolution(640,360,isFS());
-                break;
-            case 1:
-                Screen.SetResolution(1280,720,isFS());
-                break;
-            case 2:
-                Screen.SetResolution(1920, 1080, isFS());
-                break;
-        }
-    }
+    
 
-    public bool isFS()
-    {
-        if (Fullscreen.isOn)
-        {
-            Screen.fullScreen = true;
-            return true;
-        }
-        else
-        {
-            Screen.fullScreen = false;
-            return true;
-        }
-    }
+    
 
-    public void Soundvolume()
-    {
-        
-    }
+    
     public void SelectLevel()
         {
             SceneManager.LoadScene("Select Level Menu");

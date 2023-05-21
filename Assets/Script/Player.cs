@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
 
 
         // Jump Part //
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             if (numberOfJumpsLeft > 0)
             {
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
         }
         else
             jumpPressed = false;
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             jumpHeld = true;
         }
@@ -193,7 +193,7 @@ public class Player : MonoBehaviour
             StartCoroutine(TakeDMG(10));
         }
 
-        if (Input.GetMouseButtonDown(0) && timeInBetween_MeleeG < 0)
+        if (Input.GetButtonDown("Attack") && timeInBetween_MeleeG < 0)
         {
             StartCoroutine(Melee());
             timeInBetween_MeleeG = startTimeAttackMeleeG;
@@ -203,7 +203,7 @@ public class Player : MonoBehaviour
             timeInBetween_MeleeG -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && timeInBetween_Bow < 0)
+        if (Input.GetButtonDown("Bow") && timeInBetween_Bow < 0)
         {
             StartCoroutine(Distance());
             timeInBetween_Bow = startTimeAttackBow;

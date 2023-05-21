@@ -56,4 +56,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvl6.unity
     guid: 77d0153c86d294f4d99c95ee6431da6b
+  - enabled: 1
+    path: Assets/Scenes/CinematicLevel6.unity
+    guid: 2b856bc7fa5e9a346bc29de64b8eebea
+  - enabled: 1
+    path: Assets/Scenes/CinematicLevel7.unity
+    guid: 61e5cd7b9d99bb74fba81bd25a675794
+  - enabled: 1
+    path: Assets/Scenes/CinematicLevel7_2.unity
+    guid: 8cd56ccb65a2f3b4ba5abb385494b2d0
+  - enabled: 1
+    path: Assets/Scenes/CinematicLevel8.unity
+    guid: ef91ab10eaea3864d816ea0ab212390f
   m_configObjects: {}

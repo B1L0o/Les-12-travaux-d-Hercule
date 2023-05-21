@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5805970628786186842}
   - component: {fileID: 5805970628786186843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attackCollider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5805970629501223384}
   - component: {fileID: 5805970629501223385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attackCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 5805970630181892999}
   - component: {fileID: 5805970630181893000}
   - component: {fileID: 5805970630181893001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Amazone
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06356998, y: 0.007946253}
+  m_Offset: {x: -0.06356998, y: 0.02430278}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -270,7 +270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28582415, y: 0.4195668}
+  m_Size: {x: 0.28582415, y: 0.38685375}
   m_EdgeRadius: 0
 --- !u!95 &5805970630181892999
 Animator:
@@ -329,7 +329,7 @@ MonoBehaviour:
   cooldown: 0
   Damage: 1
   _speed: 3
-  _health: 100
+  _health: 200
   _player: {fileID: 0}
   _waypoints: []
   _flashMaterial: {fileID: 2100000, guid: 08a2d2aae0b95c546a6ad8c0a027629a, type: 2}

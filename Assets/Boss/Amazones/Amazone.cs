@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Amazone : Enemy
+public class Amazone : Enemy,IPooledObject
 {
     private bool isDead;
     private Animator animator;
@@ -13,13 +13,20 @@ public class Amazone : Enemy
     private Collider2D attackCollider2;
     private Rigidbody2D rb;
     // Start is called before the first frame update
-    void Start()
+    public void OnObjectSpawn()
     {
         isDead = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        tag = "enemy";
+        animator.SetBool("restart",true);
+        enabled = true;
     }
 
+    public void SetHealth(int health)
+    {
+        _health = health;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -50,14 +57,10 @@ public class Amazone : Enemy
         animator.SetTrigger("death");
         enabled = false;
         tag = "Untagged";
-        StartCoroutine(DestroyBody());
-    }
+        animator.SetBool("restart",false);
 
-    IEnumerator DestroyBody()
-    {
-        yield return new WaitForSeconds(3);
-        Destroy(gameObject);
     }
+    
     public override void TakeDamage(int damage)
     {
         Flash();
@@ -68,4 +71,6 @@ public class Amazone : Enemy
             Die();
         }
     }
+
+    
 }

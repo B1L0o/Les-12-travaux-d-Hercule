@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class Diomede : Enemy
 {
+    [SerializeField] 
+    private Volume postProcessing;
     private KnockBack knockBack;
     private bool isDead;
     private Animator animator;
@@ -74,7 +77,10 @@ public class Diomede : Enemy
                 animator.SetInteger("counter",0);
                 SetIsInvulnerable(true);
                 knockBack.strength = knockBack.strength * 4;
+                postProcessing.enabled = true;
                 animator.SetBool("IsEnraged",true);
+                AudioManager.Pause("BossFightMusic");
+                AudioManager.Play("BossBattle2");
                
 
             }
