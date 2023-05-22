@@ -10,11 +10,14 @@ public class Fireball : MonoBehaviour
     public Player _player;
     private Rigidbody2D rb;
     public GameObject explosionEffect;
+    public Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right*bulletSpeed;
+        //rb.velocity = transform.right*bulletSpeed;
+        rb.velocity = direction*bulletSpeed;
+        explosionEffect.GetComponent<Transform>().localScale = GetComponent<Transform>().localScale;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

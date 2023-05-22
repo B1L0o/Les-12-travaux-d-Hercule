@@ -6960,7 +6960,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4409417015043184330, guid: 8f3e6824768d0694e9026d7b22ea606d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4409417015043184330, guid: 8f3e6824768d0694e9026d7b22ea606d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7967,7 +7967,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1430215112485784161, guid: 0cb27cca8a9e206458e4a959f62451a4, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1430215112485784161, guid: 0cb27cca8a9e206458e4a959f62451a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -204304,7 +204304,7 @@ RectTransform:
   - {fileID: 1471579068}
   - {fileID: 1034566354}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -212505,7 +212505,7 @@ Transform:
   m_Children:
   - {fileID: 5673501045043678306}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &5673501045043678304
 AudioListener:
