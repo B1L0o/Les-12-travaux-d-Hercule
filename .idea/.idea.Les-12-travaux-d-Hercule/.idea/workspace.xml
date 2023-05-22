@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/fly_spit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/fly_spit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dragon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_lift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dragon_lift.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CinematicLevel10_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CinematicLevel10_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballPF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballPF.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy3.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Fireball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +118,7 @@
       <workItem from="1684592678106" duration="11228000" />
       <workItem from="1684657716333" duration="10390000" />
       <workItem from="1684744565542" duration="18528000" />
+      <workItem from="1684775299454" duration="9572000" />
     </task>
     <servers />
   </component>

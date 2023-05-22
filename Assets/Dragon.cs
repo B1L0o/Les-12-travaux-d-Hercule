@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class Dragon : Enemy
 {
+   
     [SerializeField] 
     private Transform firePosition;
+    [SerializeField] 
+    private Transform fireFlyPosition;
     [SerializeField]
     private GameObject fireBallPrefab;
     public AudioManager audioManager;
@@ -39,24 +42,33 @@ public class Dragon : Enemy
         if (fireBallTransform.localScale.x>0)
         {
             fireballObject.direction = new Vector3(1f,0f,0f);
-            fireballObject.GetComponent<Transform>().localScale = new Vector3(fireBallScale, fireBallScale, fireBallScale);
 
         }
         else if(fireBallTransform.localScale.x<0)
         {
             fireballObject.direction = new Vector3(-1f,0f,0f);
-            fireballObject.GetComponent<Transform>().localScale = new Vector3(-fireBallScale, fireBallScale, fireBallScale);
 
         }
-        else
-        {
-            fireballObject.direction = new Vector3(0f,0f,0f);
-            fireballObject.GetComponent<Transform>().localScale = new Vector3(fireBallScale, fireBallScale, fireBallScale);
-        }
+        fireballObject.GetComponent<Transform>().localScale = new Vector3(fireBallScale, fireBallScale, fireBallScale);
         fireballObject._player = _player;
         fireballObject.bulletSpeed = Random.Range(5f,15f);
         fireballObject.Damage = Random.Range(3,7);
     }
+
+    public void ShootFireBallFly()
+    {
+        GameObject fireBall =  Instantiate(fireBallPrefab,fireFlyPosition.position,fireFlyPosition.rotation);
+        Fireball fireballObject = fireBall.GetComponent<Fireball>();
+        float fireBallScale = Random.Range(0.5f, 0.8f);
+        Vector2 target = (_player.transform.position - fireballObject.transform.position).normalized;
+        fireballObject.direction = target;
+        fireballObject.GetComponent<Transform>().localScale = new Vector3(fireBallScale, fireBallScale, fireBallScale);
+        fireballObject._player = _player;
+        fireballObject.bulletSpeed = Random.Range(5f,15f);
+        fireballObject.Damage = Random.Range(3,7);
+    }
+
+    
     
     public void IncrementAnimationCounter()
     {

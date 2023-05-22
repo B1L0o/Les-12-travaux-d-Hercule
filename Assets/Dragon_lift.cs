@@ -18,9 +18,12 @@ public class Dragon_lift : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         bossTransform = animator.GetComponent<Transform>();
         dragon = animator.GetComponent<Dragon>();
+        dragon.SetIsInvulnerable(true);
+
 
     }
 
+    
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
