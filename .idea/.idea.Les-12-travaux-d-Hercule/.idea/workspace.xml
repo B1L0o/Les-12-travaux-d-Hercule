@@ -3,7 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/DragonBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/DragonBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Attack1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Attack1.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Walk.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Walk.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_fly.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_fly.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_lift.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon_lift.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/QTE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/QTE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SettingsMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SettingsMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746c126b0b54f3b834845974d1a9190159000/4f/cda16d78/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/Amazone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/IPooledObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/WaveManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -19,7 +37,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_Run.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_skill1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/KnockBack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Geryon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Geryon_WalkEnrage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Laser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/QTE.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.8/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -38,13 +59,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/robin/.local/share/Symbols/src&quot;
-    ]
   }
 }</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
@@ -65,7 +79,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -111,9 +125,11 @@
       <workItem from="1684570198319" duration="6204000" />
       <workItem from="1684592678106" duration="11228000" />
       <workItem from="1684657716333" duration="10390000" />
-      <workItem from="1684766280534" duration="4000" />
-      <workItem from="1684766700830" duration="7000" />
-      <workItem from="1684766724940" duration="824000" />
+      <workItem from="1684744565542" duration="18528000" />
+      <workItem from="1684775299454" duration="9572000" />
+      <workItem from="1684829781878" duration="10740000" />
+      <workItem from="1684842602732" duration="7138000" />
+      <workItem from="1684858993957" duration="8847000" />
     </task>
     <servers />
   </component>

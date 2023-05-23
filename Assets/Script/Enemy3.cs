@@ -11,7 +11,10 @@ public class Enemy3 : Enemy
     private Animator _animator;
     [SerializeField]
     private float range;
+    private Transform fireBallTransform;
     
+    
+
     protected void Update()
     {
         if (Vector2.Distance(_player.transform.position,transform.position)<range&&Mathf.Abs(_player.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player.transform)&&canShoot)
@@ -20,11 +23,30 @@ public class Enemy3 : Enemy
             AttackWithOwnCollider();
         }
     }
-    
     public void Shoot()
     {
         GameObject fireBall =  Instantiate(bullet,firePos.position,firePos.rotation);
         Fireball fireballObject = fireBall.GetComponent<Fireball>();
+        if (fireBallTransform.lossyScale.x>0)
+        {
+            fireballObject.direction = new Vector3(1f,0f,0f);
+            fireballObject.GetComponent<Transform>().localScale = new Vector3(0.3f, 0.3f, 0.3f);
+
+
+        }
+        else if(fireBallTransform.lossyScale.x<0)
+        {
+            fireballObject.direction = new Vector3(-1f,0f,0f);
+            fireballObject.GetComponent<Transform>().localScale = new Vector3(-0.3f, 0.3f, 0.3f);
+
+
+        }
+        else
+        {
+            fireballObject.direction = new Vector3(0f,0f,0f);
+            fireballObject.GetComponent<Transform>().localScale = new Vector3(0.3f, 0.3f, 0.3f);
+
+        }
         fireballObject._player = _player;
         fireballObject.bulletSpeed = _speed;
         fireballObject.Damage = Damage;
@@ -34,6 +56,8 @@ public class Enemy3 : Enemy
     {
         canShoot = true;
         _animator = GetComponent<Animator>();
+        fireBallTransform = GetComponent<Transform>();
+        
     }
     
     protected override void Attack(Collider2D coll)

@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CinematicLevel8.unity
     guid: ef91ab10eaea3864d816ea0ab212390f
+  - enabled: 1
+    path: Assets/Scenes/QTE.unity
+    guid: eb0d6a3541969a74fb70b60278bbb8cd
   m_configObjects: {}

@@ -10,13 +10,23 @@ public class Fireball : MonoBehaviour
     public Player _player;
     private Rigidbody2D rb;
     public GameObject explosionEffect;
+    public Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right*bulletSpeed;
+        //Vector2 target = (_player.transform.position - transform.position).normalized;
+        rb.velocity = direction*bulletSpeed;
+        //rb.velocity = target*bulletSpeed;
+        
+        Vector3 relativePos = _player.transform.position - transform.position;
+        float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
+        explosionEffect.GetComponent<Transform>().localScale = GetComponent<Transform>().localScale;
     }
-
+    
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player") || col.CompareTag("Tilemap"))
