@@ -14,11 +14,16 @@ public class Dragon : Enemy
     private GameObject fireBallPrefab;
     public AudioManager audioManager;
     public GameObject attackGroundCollider;
+    public Transform landingPoint;
     private bool isInvulnerable;
     private Animator animator;
     private int counter;
     [SerializeField]
     private Slider slider;
+    public float timeBeforeSwitchingGround;
+    public float actualTimeBeforeSwitchingGround;
+    private bool isDead;
+
 
     private Transform fireBallTransform;
     public Transform transitionPoint;
@@ -31,6 +36,8 @@ public class Dragon : Enemy
         isInvulnerable = true;
         audioManager.Play("BossFightMusic");
         fireBallTransform = GetComponent<Transform>();
+        actualTimeBeforeSwitchingGround = timeBeforeSwitchingGround;
+        isDead = false;
     }
 
     
@@ -68,6 +75,8 @@ public class Dragon : Enemy
         fireballObject.Damage = Random.Range(3,7);
     }
 
+   
+
     
     
     public void IncrementAnimationCounter()
@@ -103,8 +112,9 @@ public class Dragon : Enemy
                 SetIsInvulnerable(true);
                 animator.SetBool("IsEnraged",true);
             }
-            if (_health<=0)
-            { 
+            if (_health<=0&&isDead==false)
+            {
+                isDead = true;
                 Die();
             }
         }

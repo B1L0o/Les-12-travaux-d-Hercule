@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dragon_fly : StateMachineBehaviour
+public class Dragon_WalkEnrage : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     private Rigidbody2D rb;
@@ -11,8 +11,7 @@ public class Dragon_fly : StateMachineBehaviour
     private Transform bossTransform;
     [SerializeField]
     private float speed;
-    
-
+   
     private float actualTimeIntervalBetweenFireBall;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -21,7 +20,7 @@ public class Dragon_fly : StateMachineBehaviour
         bossTransform = animator.GetComponent<Transform>();
         player = dragon._player.gameObject;
         dragon.SetIsInvulnerable(false);
-        actualTimeIntervalBetweenFireBall = Random.Range(3f,6f);
+        actualTimeIntervalBetweenFireBall = Random.Range(2f,4f);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,24 +30,39 @@ public class Dragon_fly : StateMachineBehaviour
         {
             actualTimeIntervalBetweenFireBall -= Time.deltaTime;
         }
+
+        if (dragon.actualTimeBeforeSwitchingGround>0)
+        {
+            dragon.actualTimeBeforeSwitchingGround -= Time.deltaTime;
+        }
         dragon.LookAtPlayer();
         Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
-        if(actualTimeIntervalBetweenFireBall<=0)
+        if (dragon.actualTimeBeforeSwitchingGround<=0)
         {
-            actualTimeIntervalBetweenFireBall = Random.Range(3f,6f);;
+            dragon.actualTimeBeforeSwitchingGround = dragon.timeBeforeSwitchingGround;
+            animator.SetTrigger("air");
+        }
+        else if (dragon.isInAttackCollider(dragon.attackGroundCollider))
+        {
+            animator.SetBool("attack1",true);
+        }
+        else if(actualTimeIntervalBetweenFireBall<=0)
+        {
+            actualTimeIntervalBetweenFireBall = Random.Range(2f,4f);;
             animator.SetTrigger("attack2");
         }
         
         
     }
-
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("air");
+        animator.ResetTrigger("attack2");
+
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
