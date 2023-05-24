@@ -3,24 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/DragonBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/DragonBoss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/sanctum_pixel/legendary-dragon-package/legendary-dragon/Sprite/black/dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Attack1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Attack1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Walk.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_Walk.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_fly.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_fly.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_lift.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dragon_lift.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/QTE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/QTE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Diomede/Diomede.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Diomede/Diomede.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Diomede/Medieval King Pack/Animations/Death.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Diomede/Medieval King Pack/Animations/Death.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Geryon/Death.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Geryon/Death.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SettingsMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SettingsMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Laser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/QTE.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.8/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -130,6 +119,7 @@
       <workItem from="1684829781878" duration="10740000" />
       <workItem from="1684842602732" duration="7138000" />
       <workItem from="1684858993957" duration="8847000" />
+      <workItem from="1684921386855" duration="4426000" />
     </task>
     <servers />
   </component>

@@ -3467,6 +3467,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 972481549}
     - target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+      propertyPath: NextLevel
+      value: CinematicLevel11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641707231105350171, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 207462363}

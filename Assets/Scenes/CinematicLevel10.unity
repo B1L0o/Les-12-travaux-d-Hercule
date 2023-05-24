@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02e2d828d2df4a49908424321c962b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToGo: lvl6
+  sceneToGo: lvl11_2
 --- !u!4 &156992585
 Transform:
   m_ObjectHideFlags: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

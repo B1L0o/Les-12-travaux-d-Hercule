@@ -140,8 +140,8 @@ public class Diomede : Enemy
         if (isInAttackCollider(skill1Collider))
         {
             StartCoroutine(_player.TakeDMG(Damage));
+            
         }
-        
         
     }
     public void AttackSkill2()
