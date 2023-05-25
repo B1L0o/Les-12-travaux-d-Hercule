@@ -103,8 +103,11 @@ public class Player2 : MonoBehaviour
 
     public void FixedUpdate()
     {
-        MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
-        IsJumping();
+        if (host)
+        {
+            MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
+            IsJumping();
+        }
     }
 
 
