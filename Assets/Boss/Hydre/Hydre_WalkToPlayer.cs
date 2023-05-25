@@ -6,30 +6,36 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     private GameObject player;
-
+    private Rigidbody2D rb;
+    private Hydre hydre;
     private Transform bossTransform;
     [SerializeField]
     private float speed;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Hydre>().SetIsInvulnerable(false);
+        hydre = animator.GetComponent<Hydre>();
+        hydre.SetIsInvulnerable(false);
         bossTransform = animator.GetComponent<Transform>();
         //player = GameObject.FindGameObjectWithTag("Player");
-        player = animator.GetComponent<Hydre>()._player.gameObject;
+        player = hydre._player.gameObject;
+        rb = animator.GetComponent<Rigidbody2D>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Hydre>().LookAtPlayer();
+        hydre.LookAtPlayer();
+        //Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+        //bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
         Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
-        if (animator.GetComponent<Hydre>().isInSkill1Collider())
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
+        if (hydre.isInAttackCollider(hydre.skill1Collider))
         {
             animator.SetBool("skill1",true);
         }
         
-        else if (animator.GetComponent<Hydre>().isInSkill2Collider())
+        else if (hydre.isInAttackCollider(hydre.skill2Collider))
         {
             animator.SetTrigger("skill2");
         }

@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Hydre_skill1 : StateMachineBehaviour
 {
-    private GameObject player;
+    private Player player;
+    private Hydre hydre;
     private Transform bossTransform;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        hydre = animator.GetComponent<Hydre>();
         bossTransform = animator.GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = hydre._player;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (animator.GetComponent<Hydre>().isInSkill1Collider()==false)
+        if (hydre.isInAttackCollider(hydre.skill1Collider)==false)
         {
             animator.SetBool("skill1",false);
         }

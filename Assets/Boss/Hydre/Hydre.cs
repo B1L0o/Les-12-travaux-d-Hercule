@@ -9,23 +9,25 @@ public class Hydre : Enemy
     private Shake shake;
     private int counter;
     private bool isInvulnerable;
-    
-    [SerializeField] 
-    private GameObject skill1Collider;
-    [SerializeField]
-    private GameObject skill2Collider;
+    private Animator animator;
+    public GameObject skill1Collider;
+    public GameObject skill2Collider;
     [SerializeField]
     private int DamageSkill2;
     [SerializeField]
     private Slider slider;
 
+    private bool isDead;
+
     public AudioManager AudioManager;
     void Start()
     {
+        isDead = false;
         shake = GameObject.FindWithTag("ScreenShake").GetComponent<Shake>();
         counter = 0;
         isInvulnerable = true;
         SetMaxHealth(_health);
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -49,7 +51,8 @@ public class Hydre : Enemy
 
     public void IncrementAnimationCounter()
     {
-        GetComponent<Animator>().SetInteger("counter",counter+1);
+        counter = counter + 1;
+        animator.SetInteger("counter",counter);
     }
     public void SetIsInvulnerable(bool _isInvulnerable)
     {
@@ -63,16 +66,17 @@ public class Hydre : Enemy
         {
             _health = _health - damage;
             SetHealth(_health);
-            if (_health<=2000 && GetComponent<Animator>().GetBool("IsEnraged")==false)
+            if (_health<=2000 &&animator.GetBool("IsEnraged")==false)
             {
                 counter = 0;
                 Damage = Damage * 2;
                 DamageSkill2 = DamageSkill2 * 2;
-                GetComponent<Animator>().SetInteger("counter",0);
-                GetComponent<Animator>().SetBool("IsEnraged",true);
+                animator.SetInteger("counter",0);
+                animator.SetBool("IsEnraged",true);
             }
-            if (_health<=0)
+            if (_health<=0 && isDead==false)
             {
+                isDead = true;
                 AudioManager.Pause("BossFightMusic");
                 Die();
             }
@@ -82,7 +86,7 @@ public class Hydre : Enemy
 
     protected override void Die()
     {
-        GetComponent<Animator>().SetTrigger("dead");
+        animator.SetTrigger("dead");
         //VictoryManager.instance.WhenBossDeath();
         //Destroy(gameObject);
     }
@@ -91,10 +95,10 @@ public class Hydre : Enemy
     {
         VictoryManager.instance.WhenBossDeath();
     }
-
-    public bool isInSkill1Collider()
+    
+    public bool isInAttackCollider(GameObject attackCollider)
     {
-        Collider2D coll =  skill1Collider.GetComponent<Collider2D>();
+        Collider2D coll =  attackCollider.GetComponent<Collider2D>();
         List<Collider2D> result = new List<Collider2D>();
         ContactFilter2D filter = new ContactFilter2D().NoFilter();
         int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
@@ -108,26 +112,12 @@ public class Hydre : Enemy
 
         return false;
     }
-    public bool isInSkill2Collider()
-    {
-        Collider2D coll =  skill2Collider.GetComponent<Collider2D>();
-        List<Collider2D> result = new List<Collider2D>();
-        ContactFilter2D filter = new ContactFilter2D().NoFilter();
-        int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
-        foreach (var collider in result)
-        {
-            if (collider.tag == "Player")
-            {
-                return true;
-            }
-        }
 
-        return false;
-    }
+    
 
     protected void AttackSkill1()
     {
-        if (isInSkill1Collider())
+        if (isInAttackCollider(skill1Collider))
         {
             StartCoroutine(_player.TakeDMG(Damage));
         }
@@ -136,7 +126,7 @@ public class Hydre : Enemy
     }
     public void AttackSkill2()
     {
-        if (isInSkill2Collider())
+        if (isInAttackCollider(skill2Collider))
         {
             StartCoroutine(_player.TakeDMG(DamageSkill2));
         }

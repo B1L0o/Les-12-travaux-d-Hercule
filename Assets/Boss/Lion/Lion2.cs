@@ -12,7 +12,8 @@ public class Lion2 : Enemy
     [SerializeField]
     private Slider slider;
     public AudioManager AudioManager;
-    
+    private Animator animator;
+    private bool isDead;
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -34,6 +35,8 @@ public class Lion2 : Enemy
 
     private void Start()
     {
+        isDead = false;
+        animator = GetComponent<Animator>();
         isInvulnerable = false;
         SetMaxHealth(_health);
         AudioManager.Play("BossFightMusic");
@@ -52,14 +55,15 @@ public class Lion2 : Enemy
         {
             _health = _health - damage;
             SetHealth(_health);
-            if (_health<=2000 && GetComponent<Animator>().GetBool("IsEnraged")==false)
+            if (_health<=2000 &&animator.GetBool("IsEnraged")==false)
             {
                 Damage = Damage * 2;
                 SetIsInvulnerable(true);
-                GetComponent<Animator>().SetBool("IsEnraged",true);
+                animator.SetBool("IsEnraged",true);
             }
-            if (_health<=0)
+            if (_health<=0&&isDead==false)
             {
+                isDead = true;
                 AudioManager.Pause("BossFightMusic");
                 Die();
             }
@@ -69,7 +73,7 @@ public class Lion2 : Enemy
     protected override void Die()
     {
         transform.position = new Vector3(transform.position.x, -24.5f, transform.position.z);
-        GetComponent<Animator>().SetTrigger("dead");
+        animator.SetTrigger("dead");
         //VictoryManager.instance.WhenBossDeath();
         //Destroy(gameObject);
     }

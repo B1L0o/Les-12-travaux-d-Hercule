@@ -37,7 +37,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6902228786074779176}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -2896529627140232943}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -279,6 +280,18 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-2896529627140232943
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37162cc587a30564ea61f585aa4dfc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-2849434733044511547
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32509a39a17378348a7b713f504c918a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 1
 --- !u!1102 &-2382502024677323373
 AnimatorState:
   serializedVersion: 6
@@ -327,7 +340,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: run
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4094455732993221563}
@@ -389,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56198b225889e324fbcfd57ad6c70535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 1
 --- !u!1101 &-115436170372156963
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -647,7 +660,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: skill_3 0
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 234879407856318942}
@@ -963,7 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623485b9225a6434b8f8a8ece17b240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.5
 --- !u!1107 &7944325145523280014
 AnimatorStateMachine:
   serializedVersion: 6

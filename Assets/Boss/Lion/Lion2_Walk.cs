@@ -6,8 +6,9 @@ using UnityEngine;
 public class Lion2_Walk : StateMachineBehaviour
 {
     private Lion2 lion;
-    private GameObject player;
+    private Player player;
     private Transform bossTransform;
+    private Rigidbody2D rb;
     [SerializeField]
     private float speed;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,22 +16,27 @@ public class Lion2_Walk : StateMachineBehaviour
         lion = animator.GetComponent<Lion2>();
         lion.SetIsInvulnerable(false);
         bossTransform = animator.GetComponent<Transform>();
-        player = lion._player.gameObject;
+        player = lion._player;
+        rb = animator.GetComponent<Rigidbody2D>();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         lion.LookAtPlayer();
+        //Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+        //bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
         Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
+        //bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
         if (lion.isInAttackCollider())
         {
             animator.SetBool("attack",true);
         }
     }
 
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
         
-    }
+    //}
 }

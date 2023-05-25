@@ -106,6 +106,7 @@ MonoBehaviour:
   seuil: 4
   graphics: {fileID: 7871528351667152623}
   BossHeathBar: {fileID: 0}
+  bossHeathBarText: {fileID: 0}
 --- !u!1 &7871528351327731927
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +153,7 @@ GameObject:
   - component: {fileID: 7871528351667152627}
   - component: {fileID: 7871528351667152625}
   - component: {fileID: 1514509432528220330}
+  - component: {fileID: 7702741431784342579}
   m_Layer: 8
   m_Name: Graphics
   m_TagString: enemy
@@ -287,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRightOriented: 1
   cooldown: 0
-  Damage: 2
+  Damage: 3
   _speed: 0
   _health: 4000
   _player: {fileID: 0}
@@ -297,3 +299,24 @@ MonoBehaviour:
   attackCollider: {fileID: 1514509430902886404}
   slider: {fileID: 0}
   AudioManager: {fileID: 0}
+--- !u!50 &7702741431784342579
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871528351667152623}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
