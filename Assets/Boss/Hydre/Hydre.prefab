@@ -163,7 +163,8 @@ MonoBehaviour:
   player: {fileID: 0}
   seuil: 14
   graphics: {fileID: 8601139769830310969}
-  hydreHeathBar: {fileID: 0}
+  BossHeathBar: {fileID: 0}
+  bossHeathBarText: {fileID: 0}
 --- !u!1 &7174156698880874454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,6 +4389,7 @@ GameObject:
   - component: {fileID: 8481292974444053625}
   - component: {fileID: 8481292974444053627}
   - component: {fileID: 8481292974444053626}
+  - component: {fileID: 1475722942704989325}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: enemy
@@ -4462,7 +4464,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 45.217392, y: 265.49463}
   m_SpriteTilingProperty:
@@ -4489,6 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb7223758beeed4b91cb296e5a41ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRightOriented: 1
   cooldown: 1
   Damage: 5
   _speed: 0
@@ -4497,12 +4500,32 @@ MonoBehaviour:
   _waypoints: []
   _flashMaterial: {fileID: 0}
   _flashDuration: 0
-  isRightOriented: 1
   skill1Collider: {fileID: 7174156697701186981}
   skill2Collider: {fileID: 7174156698451582559}
   DamageSkill2: 5
   slider: {fileID: 0}
   AudioManager: {fileID: 0}
+--- !u!50 &1475722942704989325
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601139769830310969}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8601147224880954199
 GameObject:
   m_ObjectHideFlags: 0

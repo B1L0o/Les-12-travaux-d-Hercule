@@ -302,11 +302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3148559078970815687, guid: c499d9ea35f704811b570bce6a3d30b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95.4
+      value: 102.04
       objectReference: {fileID: 0}
     - target: {fileID: 3148559078970815687, guid: c499d9ea35f704811b570bce6a3d30b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: -4.95
       objectReference: {fileID: 0}
     - target: {fileID: 3148559078970815687, guid: c499d9ea35f704811b570bce6a3d30b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3148559078970815689, guid: c499d9ea35f704811b570bce6a3d30b8, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3148559078970815689, guid: c499d9ea35f704811b570bce6a3d30b8, type: 3}
       propertyPath: m_Name
       value: PlayerSpawn
@@ -10907,8 +10911,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7174156698604830320, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.08
+      value: 9.72
       objectReference: {fileID: 0}
+    - target: {fileID: 7174156698604830327, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7174156698880874454, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_Name
       value: Hydre (1)
@@ -10923,7 +10931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174156698880874455, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 155.17
+      value: 115.17
       objectReference: {fileID: 0}
     - target: {fileID: 7174156698880874455, guid: eb6d0856b3ce5b245a5a0bf6a09653fb, type: 3}
       propertyPath: m_LocalPosition.y

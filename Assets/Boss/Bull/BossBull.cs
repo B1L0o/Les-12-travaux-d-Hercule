@@ -19,11 +19,14 @@ public class BossBull : Enemy
     private int counter;
     [SerializeField]
     private Slider slider;
+
+    private bool isDead;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         counter = 0;
         animator = GetComponent<Animator>();
         SetMaxHealth(_health);
@@ -67,8 +70,9 @@ public class BossBull : Enemy
                 SetIsInvulnerable(true);
                 animator.SetBool("IsEnraged",true);
             }
-            if (_health<=0)
+            if (_health<=0&&isDead==false)
             {
+                isDead = true;
                 //AudioManager.Pause("BossFightMusic");
                 Die();
             }
