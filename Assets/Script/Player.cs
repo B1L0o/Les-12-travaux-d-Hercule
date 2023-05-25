@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     // Movement Variables //
     public float moveSpeed;
     public Vector3 velocity = Vector3.zero;
-    public float horizontalMovement;
+    public float horizontalMovement = 0;
     // Movement Variables //
 
     
@@ -92,7 +92,8 @@ public class Player : MonoBehaviour
     
     public void FixedUpdate()
     {
-        MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
+        //MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
+        MovePlayer((horizontalMovement) * moveSpeed * Time.fixedDeltaTime);
         IsJumping();
     }
     
@@ -137,6 +138,22 @@ public class Player : MonoBehaviour
             run.Stop();
         }
 
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            horizontalMovement = 1;
+        }
+
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            horizontalMovement = 0;
+        } 
+        
+        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            horizontalMovement = -1;
+        }
 
         // Jump Part //
         if (Input.GetButtonDown("Jump"))
