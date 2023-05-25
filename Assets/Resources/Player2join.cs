@@ -103,11 +103,8 @@ public class Player2join : MonoBehaviour
 
     public void FixedUpdate()
     {
-	if (!host)
-        {
         MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
         IsJumping();
-	}
     }
 
 
