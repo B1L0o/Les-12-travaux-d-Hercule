@@ -30,6 +30,10 @@ public class server : MonoBehaviourPunCallbacks
 	    else
 	    {
 		    PhotonNetwork.JoinRoom("test");
+			var camFollow = GameObject.FindGameObjectWithTag("CamFollow");
+			var pl=GameObject.FindGameObjectWithTag("p2");
+        	camFollow.GetComponent<cameraFollow>().player=pl;
+        	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
 	    }
     }
     
