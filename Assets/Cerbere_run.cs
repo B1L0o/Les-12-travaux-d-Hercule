@@ -23,14 +23,32 @@ public class Cerbere_run : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        cerbere.LookAtPlayer();
-        if (cerbere.isInAttackCollider(cerbere.attack1Collider))
+        if (Vector2.Distance(player.transform.position,bossTransform.position)<5f)
         {
-            animator.SetBool("attack",true);
+            if (player.transform.position.x>bossTransform.position.x)
+            {
+                bossTransform.Translate(Vector2.left* speed * Time.fixedDeltaTime,Space.World);
+
+            }
+            else
+            {
+                bossTransform.Translate(Vector2.right* speed * Time.fixedDeltaTime,Space.World);
+            }
+
+            //rb.MovePosition(-bossTransform.forward * speed * Time.fixedDeltaTime);
         }
-        Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+        else
+        {
+            cerbere.LookAtPlayer();
+            if (cerbere.isInAttackCollider(cerbere.attack1Collider))
+            {
+                animator.SetBool("attack",true);
+            }
+            Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+        }
+        
         
         
         

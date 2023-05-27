@@ -3,12 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_MoveEnrage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_MoveEnrage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_rushPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull_rushPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon_Walk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon_WalkEnrage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon_WalkEnrage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_WalkToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_WalkToPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_RunToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_RunToPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2_Walk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_run.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cerbere_run.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +25,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746c126b0b54f3b834845974d1a9190159000/4f/cda16d78/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/Amazone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/IPooledObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/WaveManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,15 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\anisf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\anisf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\anisf\\AppData\\Local\\Symbols\\src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../exec2\Les 12 travaux d'Hercules.exe" />
@@ -59,7 +73,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -121,6 +135,7 @@
       <workItem from="1684921386855" duration="10608000" />
       <workItem from="1685003950844" duration="9184000" />
       <workItem from="1685111415140" duration="3430000" />
+      <workItem from="1685208974081" duration="5545000" />
     </task>
     <servers />
   </component>
