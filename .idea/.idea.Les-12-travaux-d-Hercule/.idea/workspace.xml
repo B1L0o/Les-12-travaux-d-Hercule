@@ -3,35 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Bull/BossBull.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Diomede/Diomede.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Diomede/Diomede.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/dragon.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Geryon/Geryon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Geryon/Geryon.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_Walk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_WalkToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_WalkToPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_skill1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/Hydre_skill1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_RunToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_RunToPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_enraged_transition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Hydre/hydre_enraged_transition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Lion/Lion.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Lion/Lion.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Lion/Lion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Lion/Lion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Lion/Lion2_Walk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_Stomp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_Stomp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_Walk.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_Walk.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_WalkEnrage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Geryon_WalkEnrage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Laser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/rock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/rock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +19,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746c126b0b54f3b834845974d1a9190159000/4f/cda16d78/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/Amazone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/IPooledObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Amazones/WaveManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,15 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/Users/robin/.local/share/Symbols/src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../exec2\Les 12 travaux d'Hercules.exe" />
@@ -88,7 +73,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -141,6 +126,7 @@
       <workItem from="1684858993957" duration="8847000" />
       <workItem from="1684921386855" duration="10608000" />
       <workItem from="1685003950844" duration="7272000" />
+      <workItem from="1685202362419" duration="599000" />
     </task>
     <servers />
   </component>
