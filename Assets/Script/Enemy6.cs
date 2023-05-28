@@ -6,6 +6,7 @@ using Debug = UnityEngine.Debug;
 
 public class Enemy6 : Enemy
 {
+    private bool isDead;
     private Animator _animator;
     [SerializeField]
     private float range;
@@ -18,6 +19,7 @@ public class Enemy6 : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         _animator = GetComponent<Animator>();
     }
 
@@ -51,8 +53,9 @@ public class Enemy6 : Enemy
     {
         Flash();
         _health = _health - damage;
-        if (_health<=0)
+        if (_health<=0 &&isDead==false)
         {
+            isDead = true;
             _animator.SetTrigger("death");
         }
         
