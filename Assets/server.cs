@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+
 public class server : MonoBehaviourPunCallbacks
 {
+	private GameObject camFollow;
+	private GameObject MainCamera;
 	public bool host;
     // Start is called before the first frame update
     void Start()
@@ -33,4 +36,5 @@ public class server : MonoBehaviourPunCallbacks
         	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
 	    }
     }
+    
 }

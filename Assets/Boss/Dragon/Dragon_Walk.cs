@@ -31,21 +31,38 @@ public class Dragon_Walk : StateMachineBehaviour
         {
             actualTimeIntervalBetweenFireBall -= Time.deltaTime;
         }
-        dragon.LookAtPlayer();
-        Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
-        if (dragon.isInAttackCollider(dragon.attackGroundCollider))
+        if (Vector2.Distance(player.transform.position,bossTransform.position)<6f)
         {
-            animator.SetBool("attack1",true);
+            if (player.transform.position.x>bossTransform.position.x)
+            {
+                bossTransform.Translate(Vector2.left* speed * Time.fixedDeltaTime,Space.World);
+
+            }
+            else
+            {
+                bossTransform.Translate(Vector2.right* speed * Time.fixedDeltaTime,Space.World);
+            }
+
+            //rb.MovePosition(-bossTransform.forward * speed * Time.fixedDeltaTime);
         }
-        else if(actualTimeIntervalBetweenFireBall<=0)
+        else
         {
-            actualTimeIntervalBetweenFireBall = Random.Range(3f,6f);;
-            animator.SetTrigger("attack2");
+            dragon.LookAtPlayer();
+            Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+            if (dragon.isInAttackCollider(dragon.attackGroundCollider))
+            {
+                animator.SetBool("attack1",true);
+            }
+            else if(actualTimeIntervalBetweenFireBall<=0)
+            {
+                actualTimeIntervalBetweenFireBall = Random.Range(3f,6f);;
+                animator.SetTrigger("attack2");
+            }
         }
-        
-        
+
+
     }
 
     

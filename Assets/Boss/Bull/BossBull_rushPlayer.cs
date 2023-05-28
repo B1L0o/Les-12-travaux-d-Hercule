@@ -30,7 +30,7 @@ public class BossBull_rushPlayer : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (time>=accelerationTime)
+        if (time>=accelerationTime || Vector2.Distance(player.transform.position,bossTransform.position)<6f)
         {
             animator.SetBool("taunt",false);
             

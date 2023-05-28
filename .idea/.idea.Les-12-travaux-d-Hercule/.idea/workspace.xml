@@ -3,15 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARENE.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2-2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/tutorial.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_attack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_attack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_run.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_run.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl12-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl12-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy6.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Ennemi7_2_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Ennemi7_2_Walk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/cerbere.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/cerbere.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/Users/robin/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/Users/robin/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\anisf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\anisf\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\anisf\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../exec2\Les 12 travaux d'Hercules.exe" />
@@ -65,7 +65,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -73,7 +73,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -125,8 +125,10 @@
       <workItem from="1684842602732" duration="7138000" />
       <workItem from="1684858993957" duration="8847000" />
       <workItem from="1684921386855" duration="10608000" />
-      <workItem from="1685003950844" duration="7272000" />
-      <workItem from="1685202362419" duration="599000" />
+      <workItem from="1685003950844" duration="9184000" />
+      <workItem from="1685111415140" duration="3430000" />
+      <workItem from="1685208974081" duration="5545000" />
+      <workItem from="1685288344647" duration="899000" />
     </task>
     <servers />
   </component>

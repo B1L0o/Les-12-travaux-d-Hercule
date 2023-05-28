@@ -6,7 +6,7 @@ public class Ennemi7_2_Walk : StateMachineBehaviour
 {
     private Enemy7_2 enemy7;
     private Player player;
-   
+    public float timeValue = 10;
     private float speed;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,6 +19,14 @@ public class Ennemi7_2_Walk : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (timeValue>0)
+        {
+            timeValue -= Time.deltaTime;
+        }
+        else
+        {
+            animator.SetTrigger("explode");
+        }
         enemy7.LookAtPlayer();
         if (Vector2.Distance(player.transform.position,enemy7.transform.position)<1f)
         {

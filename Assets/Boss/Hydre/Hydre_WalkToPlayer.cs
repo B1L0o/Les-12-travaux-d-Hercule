@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hydre_WalkToPlayer : StateMachineBehaviour
@@ -24,22 +25,42 @@ public class Hydre_WalkToPlayer : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        hydre.LookAtPlayer();
-        //Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        //bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
-        Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
-        if (hydre.isInAttackCollider(hydre.skill1Collider))
+        if (Vector2.Distance(player.transform.position,bossTransform.position)<3f)
         {
-            animator.SetBool("skill1",true);
+            if (player.transform.position.x>bossTransform.position.x)
+            {
+                bossTransform.Translate(Vector2.left* speed * Time.fixedDeltaTime,Space.World);
+
+            }
+            else
+            {
+                bossTransform.Translate(Vector2.right* speed * Time.fixedDeltaTime,Space.World);
+            }
+
+            //rb.MovePosition(-bossTransform.forward * speed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            hydre.LookAtPlayer();
+            //Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+            //bossTransform.position = Vector2.MoveTowards(bossTransform.position, target, speed * Time.fixedDeltaTime);
+            Vector2 target = new Vector2(player.transform.position.x, bossTransform.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+            if (hydre.isInAttackCollider(hydre.skill1Collider))
+            {
+                animator.SetBool("skill1",true);
+            }
+        
+            else if (hydre.isInAttackCollider(hydre.skill2Collider))
+            {
+                animator.SetTrigger("skill2");
+            }
         }
         
-        else if (hydre.isInAttackCollider(hydre.skill2Collider))
-        {
-            animator.SetTrigger("skill2");
-        }
     }
+
+    
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
