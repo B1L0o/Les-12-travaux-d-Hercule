@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_attack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_attack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_run.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cerbere_run.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl12-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl12-2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy6.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Ennemi7_2_Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Ennemi7_2_Walk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cerbere.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cerbere.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
