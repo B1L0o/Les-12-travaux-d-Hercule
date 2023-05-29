@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
+    public bool orientedToPlayer;
     public float bulletSpeed;
     public int Damage;
     public Player _player;
@@ -18,11 +19,12 @@ public class Fireball : MonoBehaviour
         //Vector2 target = (_player.transform.position - transform.position).normalized;
         rb.velocity = direction*bulletSpeed;
         //rb.velocity = target*bulletSpeed;
-        
-        Vector3 relativePos = _player.transform.position - transform.position;
-        float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        
+        if (orientedToPlayer)
+        {
+            Vector3 relativePos = _player.transform.position - transform.position;
+            float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
         explosionEffect.GetComponent<Transform>().localScale = GetComponent<Transform>().localScale;
     }
     

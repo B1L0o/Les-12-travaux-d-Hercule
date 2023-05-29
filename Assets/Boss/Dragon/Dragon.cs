@@ -46,6 +46,7 @@ public class Dragon : Enemy
         GameObject fireBall =  Instantiate(fireBallPrefab,firePosition.position,firePosition.rotation);
         Fireball fireballObject = fireBall.GetComponent<Fireball>();
         float fireBallScale = Random.Range(0.5f, 0.8f);
+        fireballObject.orientedToPlayer = true;
         if (fireBallTransform.localScale.x>0)
         {
             fireballObject.direction = new Vector3(1f,0f,0f);
@@ -67,6 +68,7 @@ public class Dragon : Enemy
         GameObject fireBall =  Instantiate(fireBallPrefab,fireFlyPosition.position,fireFlyPosition.rotation);
         Fireball fireballObject = fireBall.GetComponent<Fireball>();
         float fireBallScale = Random.Range(0.5f, 0.8f);
+        fireballObject.orientedToPlayer = true;
         Vector2 target = (_player.transform.position - fireballObject.transform.position).normalized;
         fireballObject.direction = target;
         fireballObject.GetComponent<Transform>().localScale = new Vector3(fireBallScale, fireBallScale, fireBallScale);
