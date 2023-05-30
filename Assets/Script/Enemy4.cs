@@ -31,7 +31,8 @@ public class Enemy4 : Enemy
         if ((_player.transform.position.x >= _waypoints[0].transform.position.x && _player.transform.position.x <= _waypoints[1].transform.position.x))
         {
             LookAtPlayer();
-            if (Vector2.Distance(_player.transform.position,transform.position)<2.1f)
+            //Vector2.Distance(_player.transform.position,transform.position)<2.1f
+            if (CanAttack(attackCollider.GetComponent<Collider2D>()))
             {
                 animator.SetBool("attack",true);
             }

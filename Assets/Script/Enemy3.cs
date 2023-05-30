@@ -27,6 +27,7 @@ public class Enemy3 : Enemy
     {
         GameObject fireBall =  Instantiate(bullet,firePos.position,firePos.rotation);
         Fireball fireballObject = fireBall.GetComponent<Fireball>();
+        fireballObject.orientedToPlayer = false;
         if (fireBallTransform.lossyScale.x>0)
         {
             fireballObject.direction = new Vector3(1f,0f,0f);
@@ -39,12 +40,6 @@ public class Enemy3 : Enemy
             fireballObject.direction = new Vector3(-1f,0f,0f);
             fireballObject.GetComponent<Transform>().localScale = new Vector3(-0.3f, 0.3f, 0.3f);
 
-
-        }
-        else
-        {
-            fireballObject.direction = new Vector3(0f,0f,0f);
-            fireballObject.GetComponent<Transform>().localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
         }
         fireballObject._player = _player;

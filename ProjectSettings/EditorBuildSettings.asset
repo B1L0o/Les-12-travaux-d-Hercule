@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl1.unity
     guid: 6eddc60fe7c743e499be28868de12967
   - enabled: 1
-    path: Assets/Scenes/lvl11_2.unity
+    path: Assets/Scenes/lvl11_2test.unity
     guid: 58a862d201bb22e4cbfe29bc824111d5
   - enabled: 1
     path: Assets/Scenes/lvl10-2.unity
@@ -42,11 +42,26 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl 7-2.unity
     guid: 4a6535338eaf1439084cf1026f85a288
   - enabled: 1
+    path: Assets/Scenes/lvl 11-2.unity
+    guid: 2baef2a313e694967b8bd402c3339226
+  - enabled: 1
+    path: Assets/Scenes/lvl12-2.unity
+    guid: f93d204a1c0a34d9f953f9ea8312522e
+  - enabled: 1
+    path: Assets/Scenes/lvl 9-2.unity
+    guid: 77f0f164ad35f4817812649fb77dfc15
+  - enabled: 1
+    path: Assets/Scenes/lvl 9-1.unity
+    guid: aa7e2d1893cc74f83800baf82b1778a7
+  - enabled: 1
     path: Assets/Scenes/CinematicLevel2.unity
     guid: cef4306db0fe1db47a87213057256c44
   - enabled: 1
     path: Assets/Scenes/CinematicLevel10_2.unity
     guid: b2f5b3d502e2a06409f7397c15f3618d
+  - enabled: 1
+    path: Assets/Scenes/lvl 8-1.unity
+    guid: 596508b609c9c48b6a0e7e2150423f31
   - enabled: 1
     path: Assets/Scenes/CinematicLevel11.unity
     guid: a6901dd5388aaea45b6aef7de56a071f
