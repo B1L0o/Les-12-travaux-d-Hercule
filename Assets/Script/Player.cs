@@ -228,6 +228,11 @@ public class Player : MonoBehaviour
             rb.position = new Vector2(
                 142.2f, 8.1f);
         }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            rb.position = new Vector2(
+                735.4f, 9.08f);
+        }
         if (Input.GetKeyDown(KeyCode.L))
         {
             HealPlayer(25);
