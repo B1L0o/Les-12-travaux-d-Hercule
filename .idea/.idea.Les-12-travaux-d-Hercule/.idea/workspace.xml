@@ -3,12 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Boss/Dragon/Dragon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballExplosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CinematicLevel6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CinematicLevel6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Select Level Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Select Level Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl 7-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl 7-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl 7.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl 7.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl 8-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl 8-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl11_2test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl11_2test.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl12-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl12-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy3.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy4.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Fireball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl12-2test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl12-2test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/SwitchSceneCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SwitchSceneCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,6 +137,7 @@
       <workItem from="1685208974081" duration="5545000" />
       <workItem from="1685288344647" duration="899000" />
       <workItem from="1685375048379" duration="3714000" />
+      <workItem from="1685523071924" duration="3213000" />
     </task>
     <servers />
   </component>

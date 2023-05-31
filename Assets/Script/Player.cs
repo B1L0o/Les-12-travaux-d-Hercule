@@ -192,16 +192,48 @@ public class Player : MonoBehaviour
         animator.SetBool("Jump", !isGrounded);
         // Sprite Display //
 
+        
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             rb.position = new Vector2(114.93f, -24.01f);
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             rb.position = new Vector2(
                 456.2f, -43.9f);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            rb.position = new Vector2(
+                310f, 11.68f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            rb.position = new Vector2(
+                353.3f, 16f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            rb.position = new Vector2(
+                507.3f, 10.3f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            rb.position = new Vector2(
+                546.95f, 12.37f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            rb.position = new Vector2(
+                142.2f, 8.1f);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            HealPlayer(25);
+        }
+        
+        
         
         // Attack and Damage //
         
