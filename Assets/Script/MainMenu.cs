@@ -73,7 +73,6 @@ public class MainMenu : MonoBehaviour
         public void level6()
         {
             SceneManager.LoadScene("lvl6");
-    
         }
         public void tutorial()
         {
@@ -86,4 +85,30 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("Main Menu");
     
         }
+        public void level7()
+        {
+            SceneManager.LoadScene("lvl 7-1");
+        }
+        public void level8()
+        {
+            SceneManager.LoadScene("lvl 8-1");
+        }
+        public void level9()
+        {
+            SceneManager.LoadScene("lvl 9-1");
+        }
+        public void level10()
+        {
+            SceneManager.LoadScene("lvl 10-1");
+        }
+        public void level11()
+        {
+            SceneManager.LoadScene("lvl 11-2");
+        }
+        public void level12()
+        {
+            SceneManager.LoadScene("lvl12-1");
+        }
+        
+        
 }

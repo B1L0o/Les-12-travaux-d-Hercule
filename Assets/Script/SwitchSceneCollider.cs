@@ -13,9 +13,10 @@ public class SwitchSceneCollider : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            VictoryManager.instance.WhenBossDeath();
-            //SceneManager.LoadScene(sceneToGo);
+            //VictoryManager.instance.WhenBossDeath();
+            SceneManager.LoadScene(sceneToGo);
         }
     }
 }
+
 
