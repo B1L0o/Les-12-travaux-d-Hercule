@@ -30,7 +30,7 @@ public class LastZoneToPlaySound : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("lvl1");
+        SceneManager.LoadScene("lvl 1");
     }
     
 }
