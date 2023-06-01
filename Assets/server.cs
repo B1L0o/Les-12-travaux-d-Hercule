@@ -23,9 +23,10 @@ public class server : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-	    Debug.Log("bbbbbb");
+	    Debug.Log("I joined the room");
 	    if (host==false)
 	    {
+		    Debug.Log("take control");
 		    var pl=GameObject.FindGameObjectWithTag("p2");
 		    pl.GetComponent<ownershittransfer>().takecontrol();
 	    }
