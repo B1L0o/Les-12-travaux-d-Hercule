@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681c915ee2ad26242919bbe7ac04a080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: 1
+  host: 0
 --- !u!4 &369164934
 Transform:
   m_ObjectHideFlags: 0
@@ -29641,6 +29641,23 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8237878261481057825, guid: 775d42b0b45d14e85934a3d6abd07ab7, type: 3}
   m_PrefabInstance: {fileID: 1559336594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &835773015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2352797903506404910, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+  m_PrefabInstance: {fileID: 1919491827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &835773031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835773015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ef8df48390409498bb721d96e6efcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843859790
 GameObject:
   m_ObjectHideFlags: 0
@@ -31200,7 +31217,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: host
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: healthBar
@@ -31208,6 +31225,10 @@ PrefabInstance:
       objectReference: {fileID: 1539430306016257439}
     - target: {fileID: 547824645888898269, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547824645888898269, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
+      propertyPath: OwnershipTransfer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2352797903506404891, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
@@ -37494,9 +37515,13 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 547824645888898269, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: OwnershipTransfer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: host
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: healthBar

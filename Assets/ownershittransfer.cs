@@ -17,3 +17,4 @@ public class ownershittransfer : MonoBehaviour
         base.GetComponent<PhotonView>().RequestOwnership();
     }
 }
+
