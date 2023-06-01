@@ -9,7 +9,7 @@ public class server : MonoBehaviourPunCallbacks
 	private GameObject camFollow;
 	private GameObject MainCamera;
 	public bool host;
-    // Start is called before the first frame update
+	// Start is called before the first frame update
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
@@ -34,7 +34,7 @@ public class server : MonoBehaviourPunCallbacks
 			var pl=GameObject.FindGameObjectWithTag("p2");
         	camFollow.GetComponent<cameraFollow>().player=pl;
         	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
-			pl.GetComponent<PhotonView>().RequestOwnership();
+			pl.GetComponent<ownershittransfer>().takecontrol();
 	    }
     }
     
