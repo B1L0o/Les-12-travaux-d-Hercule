@@ -5,19 +5,25 @@ using Photon.Pun;
 using Photon.Realtime;
 
 
-public class ownershittransfer : MonoBehaviour , IOnPhotonViewControllerChange
+public class ownershittransfer : MonoBehaviour , IPunOwnershipCallbacks
 {
-    public void OnOwnershipRequest(PhotonView tv, Photon.Realtime.Player pl)
-    {
-        base.GetComponent<PhotonView>().TransferOwnership(pl);
-    }
 
     public void takecontrol()
     {
         base.GetComponent<PhotonView>().RequestOwnership();
     }
 
-    public void OnControllerChange(Photon.Realtime.Player newController, Photon.Realtime.Player previousController)
+    public void OnOwnershipRequest(PhotonView targetView, Photon.Realtime.Player requestingPlayer)
+    {
+        base.GetComponent<PhotonView>().TransferOwnership(requestingPlayer);
+    }
+
+    public void OnOwnershipTransfered(PhotonView targetView, Photon.Realtime.Player previousOwner)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnOwnershipTransferFailed(PhotonView targetView, Photon.Realtime.Player senderOfFailedRequest)
     {
         throw new System.NotImplementedException();
     }
