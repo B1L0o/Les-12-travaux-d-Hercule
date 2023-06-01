@@ -34,6 +34,7 @@ public class server : MonoBehaviourPunCallbacks
 			var pl=GameObject.FindGameObjectWithTag("p2");
         	camFollow.GetComponent<cameraFollow>().player=pl;
         	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
+			pl.GetComponent<PhotonView>().RequestOwnership();
 	    }
     }
     
