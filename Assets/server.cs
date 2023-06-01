@@ -21,11 +21,18 @@ public class server : MonoBehaviourPunCallbacks
 	PhotonNetwork.JoinLobby();
     }
 
+    public override void OnJoinedRoom()
+    {
+	    Debug.Log("bbbbbb");
+	    var pl=GameObject.FindGameObjectWithTag("p2");
+	    pl.GetComponent<ownershittransfer>().takecontrol();
+    }
     public override void OnJoinedLobby()
     {
 	    if (host)
 	    {
 		    PhotonNetwork.CreateRoom("test");
+		    
 	    }
 	    else
 	    {
@@ -34,8 +41,9 @@ public class server : MonoBehaviourPunCallbacks
 			var pl=GameObject.FindGameObjectWithTag("p2");
         	camFollow.GetComponent<cameraFollow>().player=pl;
         	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
-			pl.GetComponent<ownershittransfer>().takecontrol();
+			//pl.GetComponent<ownershittransfer>().takecontrol();
 	    }
     }
     
 }
+

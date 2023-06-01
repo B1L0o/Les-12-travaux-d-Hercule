@@ -10,14 +10,15 @@ public class ownershittransfer : MonoBehaviour , IPunOwnershipCallbacks
 
     public void takecontrol()
     {
+        PhotonNetwork.AddCallbackTarget(this);
         base.GetComponent<PhotonView>().RequestOwnership();
     }
 
-    public void OnOwnershipRequest(PhotonView targetView, Photon.Realtime.Player requestingPlayer)
+    public void OnOwnershipRequest(PhotonView targetView,  Photon.Realtime.Player requestingPlayer)
     {
         base.GetComponent<PhotonView>().TransferOwnership(requestingPlayer);
     }
-
+    
     public void OnOwnershipTransfered(PhotonView targetView, Photon.Realtime.Player previousOwner)
     {
         throw new System.NotImplementedException();
@@ -28,4 +29,5 @@ public class ownershittransfer : MonoBehaviour , IPunOwnershipCallbacks
         throw new System.NotImplementedException();
     }
 }
+
 
