@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1 multi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1 multi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ownershittransfer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ownershittransfer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/server.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
