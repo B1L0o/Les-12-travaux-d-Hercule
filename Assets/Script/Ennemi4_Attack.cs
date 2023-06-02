@@ -6,11 +6,11 @@ public class Ennemi4_Attack : StateMachineBehaviour
 {
     
 
-    private Enemy4 ennemi4;
+    private Ennemy4Multi ennemi4;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ennemi4 = animator.GetComponent<Enemy4>();
+        ennemi4 = animator.GetComponent<Ennemy4Multi>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
