@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using ExitGames.Client.Photon;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
 
-public class server : MonoBehaviourPunCallbacks
+public class server : MonoBehaviourPunCallbacks , IOnEventCallback
 {
 	private GameObject camFollow;
 	private GameObject MainCamera;
@@ -24,6 +26,13 @@ public class server : MonoBehaviourPunCallbacks
 	        // }
     }
 
+    public void attackevent()
+    {
+	    RaiseEventOptions evt= new RaiseEventOptions{Receivers = ReceiverGroup.All};
+	    PhotonNetwork.RaiseEvent(1, 1, evt, SendOptions.SendReliable);
+    }
+    
+    
     // Update is called once per frame
     public override void OnConnectedToMaster()
     {
@@ -57,6 +66,23 @@ public class server : MonoBehaviourPunCallbacks
 			//pl.GetComponent<ownershittransfer>().takecontrol();
 	    }
     }
-    
+
+    public void OnEvent(EventData photonEvent)
+    {
+	    byte eventcode = photonEvent.Code;
+	    if (eventcode==1 )
+	    {
+		    if (host)
+		    {
+			    var pl=GameObject.FindGameObjectWithTag("Player");
+			    pl.GetComponent<Player2>().StartCoroutine(pl.GetComponent<Player2>().Melee());
+		    }
+		    else
+		    {
+			    var pl=GameObject.FindGameObjectWithTag("p2");
+			    pl.GetComponent<Player2join>().StartCoroutine(pl.GetComponent<Player2join>().Melee());
+		    }
+	    }
+	}
 }
 

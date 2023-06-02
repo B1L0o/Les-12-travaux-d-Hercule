@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using ExitGames.Client.Photon;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
@@ -7,6 +9,10 @@ using Photon.Realtime;
 
 public class ownershittransfer : MonoBehaviour , IPunOwnershipCallbacks
 {
+    public void Start()
+    {
+        PhotonNetwork.AddCallbackTarget(this);
+    }
 
     public void takecontrol()
     {
