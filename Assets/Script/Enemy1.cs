@@ -8,7 +8,14 @@ public class Enemy1 : Enemy
     
     protected void Start()
     {
-        SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject,isRightOriented));
+        if (_player2 is not null)
+        {
+            SetState(new Patrol(_waypoints,_speed,gameObject,_player2.gameObject,isRightOriented));
+        }
+        else
+        {
+            SetState(new Patrol(_waypoints,_speed,gameObject,_player.gameObject,isRightOriented));
+        }
         _enemyState.InitialiseState();
     }
 
