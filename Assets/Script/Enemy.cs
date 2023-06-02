@@ -18,6 +18,7 @@ public abstract class Enemy : MonoBehaviour
     protected int _health;
     public Player _player;
     public Player2 _player2;
+    public Player2join _player2Join;
     protected EnemyState _enemyState;
     [SerializeField]
     public Transform[] _waypoints;

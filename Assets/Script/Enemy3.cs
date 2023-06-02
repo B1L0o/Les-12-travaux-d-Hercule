@@ -17,12 +17,28 @@ public class Enemy3 : Enemy
 
     protected void Update()
     {
-        if (Vector2.Distance(_player.transform.position,transform.position)<range&&Mathf.Abs(_player.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player.transform)&&canShoot)
+        if (_player2 is null)
         {
-            _animator.Play("ennemi3_shoot", -1, 0f); 
-            AttackWithOwnCollider();
+            if (Vector2.Distance(_player.transform.position,transform.position)<range&&Mathf.Abs(_player.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player.transform)&&canShoot)
+            {
+                _animator.Play("ennemi3_shoot", -1, 0f); 
+                AttackWithOwnCollider();
+            }
         }
+        else
+        {
+            if ((Vector2.Distance(_player2.transform.position,transform.position)<range&&Mathf.Abs(_player2.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player2.transform)&&canShoot)
+                ||
+                Vector2.Distance(_player2Join.transform.position,transform.position)<range&&Mathf.Abs(_player2Join.transform.position.y-transform.position.y)<1 && IsLookingAtSomething(_player2Join.transform)&&canShoot
+                )
+            {
+                _animator.Play("ennemi3_shoot", -1, 0f); 
+                AttackWithOwnCollider();
+            }
+        }
+        
     }
+    
     public void Shoot()
     {
         GameObject fireBall =  Instantiate(bullet,firePos.position,firePos.rotation);
