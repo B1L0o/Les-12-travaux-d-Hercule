@@ -108,7 +108,9 @@ public class Player2 : MonoBehaviour
             MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
             IsJumping();
         }
+        
     }
+    
 
 
     void Start()
