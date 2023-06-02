@@ -60,6 +60,7 @@ public abstract class Enemy : MonoBehaviour
                 if (_player2 is not null)
                 {
                     StartCoroutine(_player2.TakeDMG(Damage));
+                    StartCoroutine(GameObject.FindGameObjectWithTag("p2").GetComponent<Player2join>().TakeDMG(0));
                 }
                 else
                 {
@@ -96,7 +97,7 @@ public abstract class Enemy : MonoBehaviour
         int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
         foreach (var collider in result)
         {
-            if (collider.tag == "Player")
+            if (collider.tag == "Player" || collider.tag == "p2")
             {
                 return true;
             }
