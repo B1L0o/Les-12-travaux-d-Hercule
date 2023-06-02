@@ -17,6 +17,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField]
     protected int _health;
     public Player _player;
+    public Player2 _player2;
+    public Player2join _player2Join;
     protected EnemyState _enemyState;
     [SerializeField]
     public Transform[] _waypoints;
@@ -49,13 +51,26 @@ public abstract class Enemy : MonoBehaviour
         _enemyState = enemyState;
     }
 
+    
     protected virtual void Attack(Collider2D coll)
     {
         if (CanAttack(coll))
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
-                StartCoroutine(_player.TakeDMG(Damage));
+                if (_player2 is not null)
+                {
+                    StartCoroutine(_player2.TakeDMG(Damage));
+                }
+                else if (_player2Join is not null)
+                {
+                    StartCoroutine(_player2Join.TakeDMG(Damage));
+
+                }
+                else
+                {
+                    StartCoroutine(_player.TakeDMG(Damage));
+                }
                 lastAttackedTime = Time.time;
             }
         }
@@ -74,7 +89,19 @@ public abstract class Enemy : MonoBehaviour
     {
         if (CanAttack(coll))
         {
-            StartCoroutine(_player.TakeDMG(Damage));
+            if (_player2 is not null)
+            {
+                StartCoroutine(_player2.TakeDMG(Damage));
+            }
+            else if (_player2Join is not null)
+            {
+                StartCoroutine(_player2Join.TakeDMG(Damage));
+
+            }
+            else
+            {
+                StartCoroutine(_player.TakeDMG(Damage));
+            }
         }
     }
     
@@ -87,7 +114,7 @@ public abstract class Enemy : MonoBehaviour
         int nb_collider = Physics2D.OverlapCollider(coll,filter,result);
         foreach (var collider in result)
         {
-            if (collider.tag == "Player")
+            if (collider.tag == "Player" || collider.tag == "p2")
             {
                 return true;
             }

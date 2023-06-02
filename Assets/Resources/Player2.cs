@@ -108,7 +108,9 @@ public class Player2 : MonoBehaviour
             MovePlayer(Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime);
             IsJumping();
         }
+        
     }
+    
 
 
     void Start()
@@ -121,9 +123,18 @@ public class Player2 : MonoBehaviour
         numberOfJumpsLeft = maxJumps;
         moveSpeed = 600;
         _shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        int isHost = PlayerPrefs.GetInt("host", 2);
+        if (isHost==0)
+        {
+            host = false;
+        }
+        else if(isHost==1)
+        { 
+            host = true;
+        }
+            
     }
-
-
+    
     void Update()
     {
         if (host)
@@ -209,6 +220,8 @@ public class Player2 : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && timeInBetween_MeleeG < 0)
             {
+                var server=GameObject.FindGameObjectWithTag("server");
+                server.GetComponent<server>().attackevent();
                 StartCoroutine(Melee());
                 timeInBetween_MeleeG = startTimeAttackMeleeG;
             }
@@ -285,7 +298,7 @@ public class Player2 : MonoBehaviour
 
 
 
-        IEnumerator Melee() // Melee Animation
+        public IEnumerator Melee() // Melee Animation
         {
             if (!isGrounded)
             {
@@ -499,7 +512,7 @@ public class Player2 : MonoBehaviour
             dust.Play();
         }
 
-        protected void Flash()
+        public void Flash()
         {
             if (_isflashing == false)
             {

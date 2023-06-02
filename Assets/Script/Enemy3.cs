@@ -22,7 +22,9 @@ public class Enemy3 : Enemy
             _animator.Play("ennemi3_shoot", -1, 0f); 
             AttackWithOwnCollider();
         }
+        
     }
+    
     public void Shoot()
     {
         GameObject fireBall =  Instantiate(bullet,firePos.position,firePos.rotation);
