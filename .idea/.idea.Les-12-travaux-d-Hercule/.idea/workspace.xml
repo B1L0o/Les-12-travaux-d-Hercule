@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ennemi4/Ennemi4.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ennemi4/Ennemi4.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ennemi7/Ennemi7.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Ennemi7/Ennemi7.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Multiplayer/lvl1 multi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Multiplayer/lvl1 multi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/KnockBack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy6Multi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy_3_Multi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ennemi7_Walk_Multi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FireballMulti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PoisonBallMulti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/QTE.cs" root0="FORCE_HIGHLIGHTING" />
@@ -144,7 +144,7 @@
       <workItem from="1685721073723" duration="1082000" />
       <workItem from="1685722196209" duration="2700000" />
       <workItem from="1685725932078" duration="726000" />
-      <workItem from="1685726689076" duration="9608000" />
+      <workItem from="1685726689076" duration="10828000" />
     </task>
     <servers />
   </component>
