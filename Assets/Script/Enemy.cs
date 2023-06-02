@@ -60,7 +60,7 @@ public abstract class Enemy : MonoBehaviour
                 if (_player2 is not null)
                 {
                     StartCoroutine(_player2.TakeDMG(Damage));
-                    StartCoroutine(GameObject.FindGameObjectWithTag("p2").GetComponent<Player2join>().TakeDMG(0));
+                    GameObject.FindGameObjectWithTag("p2").GetComponent<Player2join>().Flash();
                 }
                 else
                 {

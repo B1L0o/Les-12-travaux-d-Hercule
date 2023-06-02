@@ -511,7 +511,7 @@ public class Player2 : MonoBehaviour
             dust.Play();
         }
 
-        protected void Flash()
+        public void Flash()
         {
             if (_isflashing == false)
             {

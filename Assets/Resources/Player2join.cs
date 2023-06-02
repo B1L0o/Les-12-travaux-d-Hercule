@@ -513,7 +513,7 @@ if (!host)
             dust.Play();
         }
 
-        protected void Flash()
+        public void Flash()
         {
             if (_isflashing == false)
             {
