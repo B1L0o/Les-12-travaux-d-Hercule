@@ -17,6 +17,7 @@ TagManager:
   - grrid
   - p2
   - CamFollow
+  - server
   layers:
   - Default
   - TransparentFX

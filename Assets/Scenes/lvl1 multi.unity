@@ -1677,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957804797014849643, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_RootOrder
-      value: 115
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 8957804797014849643, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 369164933}
   m_Layer: 0
   m_Name: server
-  m_TagString: Untagged
+  m_TagString: server
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681c915ee2ad26242919bbe7ac04a080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: 0
+  host: 1
 --- !u!4 &369164934
 Transform:
   m_ObjectHideFlags: 0
@@ -31744,7 +31744,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: host
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: healthBar
@@ -31760,7 +31760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2352797903506404891, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2352797903506404891, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38060,7 +38060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: host
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: healthBar
@@ -38117,6 +38117,14 @@ PrefabInstance:
     - target: {fileID: 2352797903506404910, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: m_TagString
       value: p2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563389987241005919, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: ShowParameterInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563389987241005919, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: ShowLayerWeightsInspector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: m_PositionModel.TeleportEnabled

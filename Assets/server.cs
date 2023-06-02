@@ -29,7 +29,13 @@ public class server : MonoBehaviourPunCallbacks , IOnEventCallback
     public void attackevent()
     {
 	    RaiseEventOptions evt= new RaiseEventOptions{Receivers = ReceiverGroup.All};
-	    PhotonNetwork.RaiseEvent(1, 1, evt, SendOptions.SendReliable);
+	    if (host)
+	    {
+		    PhotonNetwork.RaiseEvent(1, 1, evt, SendOptions.SendReliable);
+	    }
+	    else
+	    {	PhotonNetwork.RaiseEvent(0, 0, evt, SendOptions.SendReliable);
+	    }
     }
     
     
@@ -70,18 +76,15 @@ public class server : MonoBehaviourPunCallbacks , IOnEventCallback
     public void OnEvent(EventData photonEvent)
     {
 	    byte eventcode = photonEvent.Code;
-	    if (eventcode==1 )
+	    if (eventcode==1 && !host)
 	    {
-		    if (host)
-		    {
-			    var pl=GameObject.FindGameObjectWithTag("Player");
-			    pl.GetComponent<Player2>().StartCoroutine(pl.GetComponent<Player2>().Melee());
-		    }
-		    else
-		    {
-			    var pl=GameObject.FindGameObjectWithTag("p2");
-			    pl.GetComponent<Player2join>().StartCoroutine(pl.GetComponent<Player2join>().Melee());
-		    }
+		    var pl=GameObject.FindGameObjectWithTag("Player");
+		    pl.GetComponent<Player2>().StartCoroutine(pl.GetComponent<Player2>().Melee());
+	    }
+	    if (eventcode==0 && host)
+	    {
+		    var pl=GameObject.FindGameObjectWithTag("p2");
+		    pl.GetComponent<Player2join>().StartCoroutine(pl.GetComponent<Player2join>().Melee());
 	    }
 	}
 }
