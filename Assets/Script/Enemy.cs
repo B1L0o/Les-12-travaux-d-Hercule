@@ -57,13 +57,13 @@ public abstract class Enemy : MonoBehaviour
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
-                if (_player is not null)
+                if (_player2 is not null)
                 {
-                    StartCoroutine(_player.TakeDMG(Damage));
+                    StartCoroutine(_player2.TakeDMG(Damage));
                 }
                 else
                 {
-                    StartCoroutine(_player2.TakeDMG(Damage));
+                    StartCoroutine(_player.TakeDMG(Damage));
                 }
                 lastAttackedTime = Time.time;
             }
