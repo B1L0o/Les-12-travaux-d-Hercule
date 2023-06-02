@@ -108,6 +108,18 @@ public class MainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("lvl 12-1");
         }
+
+        public void host()
+        {
+            PlayerPrefs.SetInt("host",1);
+            SceneManager.LoadScene("lvl1 multi");
+        }
+        
+        public void join()
+        {
+            PlayerPrefs.SetInt("host",0);
+            SceneManager.LoadScene("lvl1 multi");
+        }
         
         
 }

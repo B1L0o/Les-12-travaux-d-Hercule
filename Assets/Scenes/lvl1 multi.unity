@@ -30031,7 +30031,7 @@ PrefabInstance:
     - target: {fileID: 845192476094996378, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
       propertyPath: gameOverUI
       value: 
-      objectReference: {fileID: 316160056}
+      objectReference: {fileID: 1953573813}
     - target: {fileID: 6641707231105350162, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
       propertyPath: m_RootOrder
       value: 114
@@ -38150,6 +38150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357fc5cf7ae87ae4aa3bd4eb9ab7c808, type: 3}
+--- !u!1 &1953573813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4722344097180312893, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+  m_PrefabInstance: {fileID: 316160054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1963224381
 PrefabInstance:
   m_ObjectHideFlags: 0
