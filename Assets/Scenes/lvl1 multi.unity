@@ -31735,12 +31735,16 @@ PrefabInstance:
       value: player2
       objectReference: {fileID: 0}
     - target: {fileID: 6672666491182275602, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
+      propertyPath: m_PositionModel.TeleportEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_PositionModel.InterpolateOption
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6672666491182275602, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_PositionModel.TeleportIfDistanceGreaterThan
-      value: 0.2
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
@@ -38043,12 +38047,16 @@ PrefabInstance:
       value: p2
       objectReference: {fileID: 0}
     - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: m_PositionModel.TeleportEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: m_PositionModel.InterpolateOption
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: m_PositionModel.TeleportIfDistanceGreaterThan
-      value: 0.2
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
