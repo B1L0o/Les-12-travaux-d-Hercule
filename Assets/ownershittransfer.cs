@@ -16,12 +16,13 @@ public class ownershittransfer : MonoBehaviour , IPunOwnershipCallbacks
 
     public void OnOwnershipRequest(PhotonView targetView,  Photon.Realtime.Player requestingPlayer)
     {
+        Debug.Log("transfer?");
         base.GetComponent<PhotonView>().TransferOwnership(requestingPlayer);
     }
     
     public void OnOwnershipTransfered(PhotonView targetView, Photon.Realtime.Player previousOwner)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("transfered");
     }
 
     public void OnOwnershipTransferFailed(PhotonView targetView, Photon.Realtime.Player senderOfFailedRequest)

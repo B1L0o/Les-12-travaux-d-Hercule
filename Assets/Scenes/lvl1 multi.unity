@@ -31684,7 +31684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 547824645888898269, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: OwnershipTransfer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2352797903506404891, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_RootOrder
@@ -31733,6 +31733,14 @@ PrefabInstance:
     - target: {fileID: 2352797903506404910, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: m_Name
       value: player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
+      propertyPath: m_PositionModel.InterpolateOption
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
+      propertyPath: m_PositionModel.TeleportIfDistanceGreaterThan
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
@@ -37972,7 +37980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 547824645888898269, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: OwnershipTransfer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: host
@@ -38033,6 +38041,14 @@ PrefabInstance:
     - target: {fileID: 2352797903506404910, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: m_TagString
       value: p2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: m_PositionModel.InterpolateOption
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672666491182275602, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
+      propertyPath: m_PositionModel.TeleportIfDistanceGreaterThan
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
