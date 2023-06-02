@@ -40,7 +40,7 @@ public class FireballMulti : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") || col.CompareTag("Tilemap"))
+        if (col.CompareTag("Player") || col.CompareTag("p2")||col.CompareTag("Tilemap"))
         {
             if (col.CompareTag("Player") || col.CompareTag("p2"))
             {
@@ -61,3 +61,4 @@ public class FireballMulti : MonoBehaviour
        
     }
 }
+

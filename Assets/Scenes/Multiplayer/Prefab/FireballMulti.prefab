@@ -172,5 +172,5 @@ MonoBehaviour:
   Damage: 0
   _player2: {fileID: 0}
   _player2Join: {fileID: 0}
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 8046048145619866448, guid: 8327281c58963364bbf36b1c9b92baa2, type: 3}
   direction: {x: 0, y: 0, z: 0}
