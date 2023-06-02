@@ -15,15 +15,15 @@ public class server : MonoBehaviourPunCallbacks , IOnEventCallback
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
-        // int isHost = PlayerPrefs.GetInt("host", 2);
-        // if (isHost==0)
-        // {
-	        // host = false;
-	        // }
-        // else if(isHost==1)
-        // {
-	        // host = true;
-	        // }
+        int isHost = PlayerPrefs.GetInt("host", 2);
+        if (isHost==0)
+        {
+	        host = false;
+	    }
+        else if(isHost==1)
+        {
+	        host = true;
+	    }
     }
 
     public void attackevent()

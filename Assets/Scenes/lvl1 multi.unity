@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681c915ee2ad26242919bbe7ac04a080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: 1
+  host: 0
 --- !u!4 &369164934
 Transform:
   m_ObjectHideFlags: 0
@@ -31683,7 +31683,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: host
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 39604624220648079, guid: 7e80d321270c0a949ba491d4a52e6d99, type: 3}
       propertyPath: healthBar
@@ -37999,7 +37999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: host
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2185891170277047017, guid: 28fd5920b7493614a8adf7469c30c53a, type: 3}
       propertyPath: healthBar

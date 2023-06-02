@@ -123,17 +123,16 @@ public class Player2 : MonoBehaviour
         numberOfJumpsLeft = maxJumps;
         moveSpeed = 600;
         _shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
-        // int isHost = PlayerPrefs.GetInt("host", 2);
-        
-        // if (isHost==0)
-        // {
-            // host = false;
-            // }
-            // else if(isHost==1)
-            // {
-            // host = true;
-            // }
-            // Debug.Log(host);
+        int isHost = PlayerPrefs.GetInt("host", 2);
+        if (isHost==0)
+        {
+            host = false;
+        }
+        else if(isHost==1)
+        { 
+            host = true;
+        }
+            
     }
     
     void Update()
