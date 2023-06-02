@@ -14,7 +14,6 @@ public class Enemy6Multi : Enemy
     private Transform poisonBallPosition;
     [SerializeField]
     private GameObject ennemySpawnAfterDeath;
-    private bool isPlayer2;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +29,6 @@ public class Enemy6Multi : Enemy
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
-                isPlayer2 = true;
                 _animator.SetTrigger("attack");
                 lastAttackedTime = Time.time;
             }
@@ -39,7 +37,6 @@ public class Enemy6Multi : Enemy
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
-                isPlayer2 = false;
                 _animator.SetTrigger("attack");
                 lastAttackedTime = Time.time;
             }
@@ -76,7 +73,7 @@ public class Enemy6Multi : Enemy
         {
             GameObject enemy7 = Instantiate(ennemySpawnAfterDeath,poisonBallPosition.position,Quaternion.Euler(new Vector3(0, 0, 0)));
             Enemy7_2 enemy7Object = enemy7.GetComponent<Enemy7_2>();
-            if (isPlayer2==false)
+            if (Vector2.Distance(_player2Join.transform.position,transform.position)<Vector2.Distance(_player2.transform.position,transform.position))
             {
                 enemy7Object._player2Join = _player2Join;
             }

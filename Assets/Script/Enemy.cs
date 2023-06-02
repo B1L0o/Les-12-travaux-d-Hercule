@@ -84,7 +84,14 @@ public abstract class Enemy : MonoBehaviour
     {
         if (CanAttack(coll))
         {
-            StartCoroutine(_player.TakeDMG(Damage));
+            if (_player2 is not null)
+            {
+                StartCoroutine(_player2.TakeDMG(Damage));
+            }
+            else
+            {
+                StartCoroutine(_player.TakeDMG(Damage));
+            }
         }
     }
     
