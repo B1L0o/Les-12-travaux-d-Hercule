@@ -108,6 +108,11 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("lvl 12-1");
         }
 
+        public void multiplayer()
+        {
+            SceneManager.LoadScene("Multiplayer Menu");
+        }
+
         public void host()
         {
             PlayerPrefs.SetInt("host",1);

@@ -24,8 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl 1.unity
     guid: 6eddc60fe7c743e499be28868de12967
   - enabled: 1
-    path: Assets/Scenes/lvl1 multi.unity
+    path: Assets/Scenes/Multiplayer/lvl1 multi.unity
     guid: ce6b32a2f0f008f448141186ca898ae9
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer Menu.unity
+    guid: c7023f3facd660f4ea423083540c10ea
   - enabled: 1
     path: Assets/Scenes/lvl 7-1.unity
     guid: 38ecbf8fa75274bfd87e2a9d0a71c1a6
