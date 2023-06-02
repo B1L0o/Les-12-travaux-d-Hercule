@@ -223,6 +223,8 @@ if (!host)
 
             if (Input.GetMouseButtonDown(0) && timeInBetween_MeleeG < 0)
             {
+                var server=GameObject.FindGameObjectWithTag("server");
+                server.GetComponent<server>().attackevent();
                 StartCoroutine(Melee());
                 timeInBetween_MeleeG = startTimeAttackMeleeG;
             }
@@ -298,8 +300,7 @@ if (!host)
         }
 
 
-
-        IEnumerator Melee() // Melee Animation
+        public IEnumerator Melee() // Melee Animation
         {
             if (!isGrounded)
             {
