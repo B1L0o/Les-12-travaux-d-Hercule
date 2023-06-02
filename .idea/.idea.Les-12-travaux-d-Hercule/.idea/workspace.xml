@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Les-12-travaux-d-Hercule/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player2join.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player2join.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ownershittransfer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ownershittransfer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/server.cs" afterDir="false" />
-    </list>
+    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_Run.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/Diomede_skill1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Boss/Diomede/KnockBack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/script/QTE.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/QTE.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.8/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -139,7 +133,7 @@
       <workItem from="1685650563338" duration="780000" />
       <workItem from="1685698605990" duration="2966000" />
       <workItem from="1685721073723" duration="1082000" />
-      <workItem from="1685722196209" duration="1348000" />
+      <workItem from="1685722196209" duration="1673000" />
     </task>
     <servers />
   </component>
