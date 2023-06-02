@@ -17,6 +17,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField]
     protected int _health;
     public Player _player;
+    public Player2 _player2;
     protected EnemyState _enemyState;
     [SerializeField]
     public Transform[] _waypoints;
@@ -49,13 +50,21 @@ public abstract class Enemy : MonoBehaviour
         _enemyState = enemyState;
     }
 
+    
     protected virtual void Attack(Collider2D coll)
     {
         if (CanAttack(coll))
         {
             if (Time.time > lastAttackedTime + cooldown)
             {
-                StartCoroutine(_player.TakeDMG(Damage));
+                if (_player is not null)
+                {
+                    StartCoroutine(_player.TakeDMG(Damage));
+                }
+                else
+                {
+                    StartCoroutine(_player2.TakeDMG(Damage));
+                }
                 lastAttackedTime = Time.time;
             }
         }
