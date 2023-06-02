@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy6Multi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy6Multi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="38b5cd6c-dd08-4aad-a589-b20539ee5a44" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +139,7 @@
       <workItem from="1685721073723" duration="1082000" />
       <workItem from="1685722196209" duration="2700000" />
       <workItem from="1685725932078" duration="726000" />
-      <workItem from="1685726689076" duration="7341000" />
+      <workItem from="1685726689076" duration="7807000" />
     </task>
     <servers />
   </component>

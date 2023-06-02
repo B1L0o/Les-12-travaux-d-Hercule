@@ -62,6 +62,11 @@ public abstract class Enemy : MonoBehaviour
                 {
                     StartCoroutine(_player2.TakeDMG(Damage));
                 }
+                else if (_player2Join is not null)
+                {
+                    StartCoroutine(_player2Join.TakeDMG(Damage));
+
+                }
                 else
                 {
                     StartCoroutine(_player.TakeDMG(Damage));
@@ -87,6 +92,11 @@ public abstract class Enemy : MonoBehaviour
             if (_player2 is not null)
             {
                 StartCoroutine(_player2.TakeDMG(Damage));
+            }
+            else if (_player2Join is not null)
+            {
+                StartCoroutine(_player2Join.TakeDMG(Damage));
+
             }
             else
             {
