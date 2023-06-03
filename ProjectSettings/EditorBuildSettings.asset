@@ -18,6 +18,27 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl 12-1.unity
     guid: 6d3d493f6329f104e9a9473ee1f877f9
   - enabled: 1
+    path: Assets/Scenes/Multiplayer/Level 4 multiplayer.unity
+    guid: 1807e09bc3df90341863d04dadcf951e
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/lvl 3 multiplayer.unity
+    guid: 2547d9db3356fac48b3281eb77ff0b24
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/lvl 7-1 multiplayer.unity
+    guid: c2d03574d581ae14991290fd74d2f718
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/lvl 8-1 multiplayer.unity
+    guid: 5e1d8ff34c9f09a4a8a722e66bb122a8
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/lvl 10-1 multiplayer.unity
+    guid: 9d162a0b4c672a240871bc62cc24b64f
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/lvl 12-1 multiplayer.unity
+    guid: 245ff74d9c64ac54fbff219ce9a87d7f
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Select Level Menu multi.unity
+    guid: 2897f0498bf21c748a13d9eca89c88b1
+  - enabled: 1
     path: Assets/Scenes/Settings Menu.unity
     guid: 40b19c9bd0df6492f9d080c4ebc0c544
   - enabled: 1
