@@ -17765,7 +17765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522767467}
   - component: {fileID: 1522767466}
-  - component: {fileID: 1522767465}
+  - component: {fileID: 1522767468}
   m_Layer: 0
   m_Name: EndOfLevel
   m_TagString: Untagged
@@ -17773,19 +17773,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1522767465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522767464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18e473ec9cfdf643bef7b7c8115016a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToGo: Main Menu
 --- !u!61 &1522767466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17827,6 +17814,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522767468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522767464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f001e05a81ecc4e928790c35036297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToGo: Main Menu
 --- !u!1 &1532325511
 GameObject:
   m_ObjectHideFlags: 0
