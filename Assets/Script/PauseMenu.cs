@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -51,9 +52,23 @@ public class PauseMenu : MonoBehaviour
         Resume();
         SceneManager.LoadScene(SettingMenu);
     }
+    public void SettingMenuButtonMulti()
+    {
+        PhotonNetwork.Disconnect();
+        //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        Resume();
+        SceneManager.LoadScene(SettingMenu);
+    }
     
     public void MainMenuButton()
     {
+        //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
+        Resume();
+        SceneManager.LoadScene(MainMenu);
+    }
+    public void MainMenuButtonMulti()
+    {
+        PhotonNetwork.Disconnect();
         //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
         Resume();
         SceneManager.LoadScene(MainMenu);

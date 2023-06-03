@@ -1629,7 +1629,7 @@ PrefabInstance:
       objectReference: {fileID: 871333324}
     - target: {fileID: 6504334553158170575, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SettingMenuButton
+      value: SettingMenuButtonMulti
       objectReference: {fileID: 0}
     - target: {fileID: 6504334554125530215, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1645,7 +1645,7 @@ PrefabInstance:
       objectReference: {fileID: 871333324}
     - target: {fileID: 6504334554773700116, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenuButton
+      value: MainMenuButtonMulti
       objectReference: {fileID: 0}
     - target: {fileID: 7151253869350561810, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_Color.b
