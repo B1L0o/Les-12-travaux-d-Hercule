@@ -1605,27 +1605,47 @@ PrefabInstance:
       objectReference: {fileID: 871333323}
     - target: {fileID: 4722344097695416606, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RetryButton
+      value: RetryButtonMulti
       objectReference: {fileID: 0}
     - target: {fileID: 4722344098149449062, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 871333323}
+    - target: {fileID: 4722344098149449062, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 4722344098203423465, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 871333323}
+    - target: {fileID: 4722344098203423465, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButtonMulti
       objectReference: {fileID: 0}
     - target: {fileID: 6504334553158170575, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 871333324}
+    - target: {fileID: 6504334553158170575, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SettingMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 6504334554125530215, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 871333324}
+    - target: {fileID: 6504334554125530215, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 6504334554773700116, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 871333324}
+    - target: {fileID: 6504334554773700116, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 7151253869350561810, guid: 941fd3530002a4ae1a2232f9e7029576, type: 3}
       propertyPath: m_Color.b
@@ -30127,6 +30147,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d55c0603637b86b40bb611aa1f9c679e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &871333324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6641707231105350170, guid: c9dd3e9075102d0448ca7aba39ebdb80, type: 3}
+  m_PrefabInstance: {fileID: 871333322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e38befcb2d24fa7b550fa1e06fc37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &872503406

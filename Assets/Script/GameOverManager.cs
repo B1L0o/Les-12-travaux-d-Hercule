@@ -1,5 +1,6 @@
 
 using System;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,11 +38,26 @@ public class GameOverManager : MonoBehaviour
         //gameOverUI.SetActive(false);
     }
 
+    
+    public void RetryButtonMulti()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //gameOverUI.SetActive(false);
+    }
+
+    public void MainMenuButtonMulti()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene(MainMenu);
+    }
+
     public void MainMenuButton()
     {
         //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
         SceneManager.LoadScene(MainMenu);
     }
+    
 
     public void Quit()
     {
