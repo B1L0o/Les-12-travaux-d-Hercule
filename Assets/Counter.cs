@@ -28,5 +28,9 @@ public class Counter : MonoBehaviour
     {
         currentWalls++;
         WallText.text = "Number of walls repared: " + currentWalls.ToString();
+        if (currentWalls==4)
+        {
+            VictoryManager.instance.WhenBossDeath();
+        }
     }
 }
