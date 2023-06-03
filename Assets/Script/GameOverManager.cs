@@ -57,7 +57,12 @@ public class GameOverManager : MonoBehaviour
         //DontDestroyLoadScene.instance.RemoveFromDontDestroyOnLoad();
         SceneManager.LoadScene(MainMenu);
     }
-    
+
+    public void QuitMulti()
+    {
+        PhotonNetwork.Disconnect();
+        Application.Quit();
+    }
 
     public void Quit()
     {

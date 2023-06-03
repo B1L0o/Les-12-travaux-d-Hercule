@@ -116,13 +116,13 @@ public class MainMenu : MonoBehaviour
         public void host()
         {
             PlayerPrefs.SetInt("host",1);
-            SceneManager.LoadScene("lvl1 multi");
+            SceneManager.LoadScene("lvl 1 multi final");
         }
         
         public void join()
         {
             PlayerPrefs.SetInt("host",0);
-            SceneManager.LoadScene("lvl1 multi");
+            SceneManager.LoadScene("lvl 1 multi final");
         }
         
         
