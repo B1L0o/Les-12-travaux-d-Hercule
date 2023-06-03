@@ -116,13 +116,13 @@ public class MainMenu : MonoBehaviour
         public void host()
         {
             PlayerPrefs.SetInt("host",1);
-            SceneManager.LoadScene("lvl 1 multi final");
+            SceneManager.LoadScene("Level 2 multiplayer");
         }
         
         public void join()
         {
             PlayerPrefs.SetInt("host",0);
-            SceneManager.LoadScene("lvl 1 multi final");
+            SceneManager.LoadScene("Level 2 multiplayer");
         }
         
         

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717f8acf6638e9d4cb76b720132ad6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRightOriented: 1
+  isRightOriented: 0
   cooldown: 2
   Damage: 2
   _speed: 5
