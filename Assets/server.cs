@@ -55,17 +55,22 @@ public class server : MonoBehaviourPunCallbacks , IOnEventCallback
 	    }
 	    
     }
+
+    
     public override void OnJoinedLobby()
     {
 	    if (host)
 	    {
-		    PhotonNetwork.CreateRoom("test");
+		    //PhotonNetwork.CreateRoom("test");
+		    PhotonNetwork.CreateRoom("");
+
 		    
 	    }
 	    else
 	    {
-		    PhotonNetwork.JoinRoom("test");
-			var camFollow = GameObject.FindGameObjectWithTag("CamFollow");
+		    //PhotonNetwork.JoinRoom("test");
+		    PhotonNetwork.JoinRandomRoom();
+		    var camFollow = GameObject.FindGameObjectWithTag("CamFollow");
 			var pl=GameObject.FindGameObjectWithTag("p2");
         	camFollow.GetComponent<cameraFollow>().player=pl;
         	camFollow.transform.GetChild(0).gameObject.GetComponent<cameraFollow>().player = pl;
