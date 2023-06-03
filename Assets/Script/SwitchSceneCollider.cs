@@ -11,7 +11,7 @@ public class SwitchSceneCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player")||col.CompareTag("p2"))
         {
             //VictoryManager.instance.WhenBossDeath();
             SceneManager.LoadScene(sceneToGo);

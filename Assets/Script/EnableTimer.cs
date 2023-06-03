@@ -9,7 +9,11 @@ public class EnableTimer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Timer.SetActive(true);
+        if (col.CompareTag("Player") || col.CompareTag("p2"))
+        {
+            Timer.SetActive(true);
+        }
+        
     }
 }
 

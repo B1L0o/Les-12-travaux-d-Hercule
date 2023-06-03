@@ -308132,6 +308132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: castledoors
       objectReference: {fileID: 0}
+    - target: {fileID: 4091572194291138388, guid: 8c41a3b0d2157434aac93de1bc9d5661, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5270055116375745175, guid: 8c41a3b0d2157434aac93de1bc9d5661, type: 3}
       propertyPath: m_RootOrder
       value: 59
